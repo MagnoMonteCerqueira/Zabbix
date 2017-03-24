@@ -1,12 +1,15 @@
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/zabbix.jpg)
+##                                      Simples Template Zabbix Para Windows.
 
-## Quer contribuir com a Comunidade Zabbix? 
+##### A ideia desse template e facilitar a vida em unificar todos os hosts windows em um template unico.
 
-### Em caso de dúvida, sugestão ou dificuldade junte-se a nós no Grupo do Telegram!
+##### O Template_AGENTE_WINDOWS_LLD_VERSAO-1.0 , Ja vai configurado com as opções abaixo e suas respectivas informações de como utilizar.
 
-* Grupo: https://t.me/ZabbixBrasil 
 
+##### O que acompanha o template!
+
+
+##### 1) Dados Coletados:
 
 
 ## Contatos:
