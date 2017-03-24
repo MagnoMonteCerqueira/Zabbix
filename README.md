@@ -17,7 +17,7 @@
 
 
 
-<b/>
+
 ## Copyright "©"  
 
 The zabbix templates and softwares available here are released under the GNU General Public License (GPL) version 2. The formal terms of the GPL can be found at http://www.fsf.org/licenses/.
@@ -33,3 +33,4 @@ https://www.udemy.com/zabbix-avancado/
 
 https://www.udemy.com/curso-integracao-zabbix-glpi/
 
+<b/>
