@@ -12,15 +12,13 @@
 ##### Fabricante HP:
 ##### Modelos: HP 1212nf
 
-
-
-##### O Template_AGENTE_WINDOWS_LLD_VERSAO-1.0 , Ja vai configurado com as opções abaixo e suas respectivas informações de como utilizar.
-
-
 ##### O que acompanha o template!
 
 
 ##### 1) Dados Coletados:
+
+
+
 
 
 ## Contatos:
