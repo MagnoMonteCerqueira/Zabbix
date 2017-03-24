@@ -2,7 +2,10 @@
 ##                                      Template SNMP em LLD Zabbix Para Impressora!
 
 ##### A ideia desse template e facilitar a vida em template unico para impressoras.
+##### O template da suporte para as seguintes impressoras:
 
+##### Fabricante Samsung:
+Samsung K7400LX
 
 
 ##### O Template_AGENTE_WINDOWS_LLD_VERSAO-1.0 , Ja vai configurado com as opções abaixo e suas respectivas informações de como utilizar.
