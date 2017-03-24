@@ -2,7 +2,8 @@
 ##                                      Template SNMP em LLD Zabbix Para Impressora!
 
 ##### A ideia desse template e facilitar a vida em template unico para impressoras.
-##### O template da suporte para as seguintes impressoras:
+
+## O template da suporte para as seguintes impressoras:
 
 ##### Fabricante Samsung:
 ##### Modelos: 
