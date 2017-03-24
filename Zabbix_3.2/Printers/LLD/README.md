@@ -5,7 +5,14 @@
 ##### O template da suporte para as seguintes impressoras:
 
 ##### Fabricante Samsung:
-Samsung K7400LX
+##### Modelos: 
+##### Samsung K7400LX, Samsung CLX-8640, Samsung X4220RX, Samsung M5370LX, 
+
+
+##### Fabricante HP:
+##### Modelos:
+##### HP 1212nf
+
 
 
 ##### O Template_AGENTE_WINDOWS_LLD_VERSAO-1.0 , Ja vai configurado com as opções abaixo e suas respectivas informações de como utilizar.
