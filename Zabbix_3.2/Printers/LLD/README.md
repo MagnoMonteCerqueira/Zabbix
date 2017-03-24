@@ -1,7 +1,7 @@
 
 ##                                      Template SNMP em LLD Zabbix Para Impressora!
 
-##### A ideia desse template e facilitar a vida em template unico para impressoras.
+##### A ideia desse template e facilitar a vida em poder utilizar um template unico para as impressoras do ambiente ganhando tempo valioso ao invés de ter um template para cada host.
 
 ### O template da suporte para as seguintes impressoras:
 
