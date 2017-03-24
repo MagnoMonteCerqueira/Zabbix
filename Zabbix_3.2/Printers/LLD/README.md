@@ -36,7 +36,7 @@
 
 * 03- Perda de Pacotes
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-perda-de-pacotes.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-perda-de-pacote.PNG)
 
 * 04- Tempo Ligado
 
