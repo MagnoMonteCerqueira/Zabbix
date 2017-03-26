@@ -10,7 +10,7 @@
 
 
 ##### Fabricante HP:
-##### Modelos: HP 1212nf, HP LaserJet P2055dn.
+##### Modelos: HP LaserJet 1212nf, HP LaserJet P2055dn, HP LaserJet HP3525dn.
 
 ##### O que acompanha o template!
 
