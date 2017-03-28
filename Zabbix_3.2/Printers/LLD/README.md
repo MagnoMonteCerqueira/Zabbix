@@ -113,7 +113,7 @@
 ##### 1) Vamos acessar o arquivo de configuração abaixo e inserir a unidade de medida para informar as paginas impressas com os valores reais.
 
 ##### com o comando vim vamos editar o arquivo.
-##### vim /usr/share/zabbix/include/func.inc.php
+##### # vim /usr/share/zabbix/include/func.inc.php
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-editar-frontend.PNG)
 
