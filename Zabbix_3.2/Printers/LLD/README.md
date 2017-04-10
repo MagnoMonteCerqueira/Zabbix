@@ -6,7 +6,7 @@
 ### O template da suporte para as seguintes impressoras:
 
 ##### Fabricante Samsung:
-##### Modelos: Samsung K-7400LX, Samsung CLX-8640, Samsung X-4220RX, Samsung M-5370LX, Samsung CLX-6260.
+##### Modelos: Samsung K-7400LX, Samsung CLX-8640, Samsung X-4220RX, Samsung M-5370LX, Samsung CLX-6260, Samsung M4510.
 
 
 ##### Fabricante HP:
