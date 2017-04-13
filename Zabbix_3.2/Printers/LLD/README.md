@@ -12,6 +12,9 @@
 ##### Fabricante HP:
 ##### Modelos: HP LaserJet 1212nf, HP LaserJet P2055dn, HP LaserJet HP3525dn.
 
+##### Fabricante Canon:
+##### Modelos: Canon IR C1335.
+
 ##### O que acompanha o template!
 
 ##
