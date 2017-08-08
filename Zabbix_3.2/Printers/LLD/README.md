@@ -20,7 +20,7 @@
 ##### Fabricante Kyocera:
 ##### Modelos: Ecosys M2035DN.
 
-##### Fabricante SHARP:
+##### Fabricante Sharp:
 ##### Modelos: MX-2010U.
 
 ##### O que acompanha o template!
