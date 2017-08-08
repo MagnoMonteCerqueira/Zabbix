@@ -3,6 +3,8 @@
 
 ##### A ideia desse template e facilitar a vida em poder utilizar um template unico para as impressoras do ambiente ganhando tempo valioso ao invés de ter um template para cada host.
 
+##### Este template foi criado sobre a versao do Zabbix Server 3.2.5
+
 ### O template da suporte para as seguintes impressoras:
 
 ##### Fabricante Samsung:
@@ -14,6 +16,12 @@
 
 ##### Fabricante Canon:
 ##### Modelos: Canon IR C1335.
+
+##### Fabricante Kyocera:
+##### Modelos: Ecosys M2035DN.
+
+##### Fabricante SHARP:
+##### Modelos: MX-2010U.
 
 ##### O que acompanha o template!
 
