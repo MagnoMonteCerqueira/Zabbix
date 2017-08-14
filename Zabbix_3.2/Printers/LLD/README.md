@@ -147,11 +147,4 @@
 
 
 
-### Material de Referencia:
 
-
-https://www.udemy.com/curso-zabbix/
-
-https://www.udemy.com/zabbix-avancado/
-
-https://www.udemy.com/curso-integracao-zabbix-glpi/
