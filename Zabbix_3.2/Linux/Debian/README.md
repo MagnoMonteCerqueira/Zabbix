@@ -1,27 +1,14 @@
 
 ##                                      Template Agente Zabbix em LLD Para Linux Debian !
 
-##### A ideia desse template e facilitar a vida em poder utilizar um template unico para as impressoras do ambiente ganhando tempo valioso ao invés de ter um template para cada host.
+##### A ideia desse template e facilitar a vida em poder utilizar um template unico para Linux do ambiente ganhando tempo valioso ao invés de ter um template para cada host.
 
-##### Este template foi criado sobre a versao do Zabbix Server 3.2.5
+##### Este template foi criado sobre a versao do Zabbix Server 3.4.1
 
-### O template da suporte para as seguintes impressoras:
+### O template da suporte para os sistemas operacionais Linux.
 
-##### Fabricante Samsung:
-##### Modelos: Samsung K-7400LX, Samsung CLX-8640, Samsung X-4220RX, Samsung M-5370LX, Samsung CLX-6260, Samsung M4510.
-
-
-##### Fabricante HP:
-##### Modelos: HP LaserJet 1212nf, HP LaserJet P2055dn, HP LaserJet HP3525dn.
-
-##### Fabricante Canon:
-##### Modelos: Canon IR C1335.
-
-##### Fabricante Kyocera:
-##### Modelos: Ecosys M2035DN.
-
-##### Fabricante Sharp:
-##### Modelos: MX-2010U.
+##### Linux Debian:
+##### Debian 9.
 
 ##### O que acompanha o template!
 
@@ -117,22 +104,6 @@
 * 16 Nivel do Yellow
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-toner-yellow.PNG)
-
-
-## Configurações Adicionais!
-
-##### 1) Vamos acessar o arquivo de configuração abaixo e inserir a unidade de medida para informar as paginas impressas com os valores reais.
-
-##### com o comando vim vamos editar o arquivo.
-##### # vim /usr/share/zabbix/include/func.inc.php
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-editar-frontend.PNG)
-
-
-##### 2) Vamos seguir ate a linha 618 e inserir na blackList a unidade de medida para postar as informações desejadas.
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-editar-frontend-unidade.PNG)
-
 
 ##
 ## Contatos:
