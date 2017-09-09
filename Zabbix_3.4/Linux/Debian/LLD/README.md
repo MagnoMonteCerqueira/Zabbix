@@ -4,6 +4,8 @@
 
 ##### Este template foi criado sobre a versao do Zabbix Server 3.4.1
 
+### OBS: Servidor testado com 1 placa de rede e 1 disco.
+
 ### O template da suporte para os sistemas operacionais Linux.
 
 ##### Linux Debian:
