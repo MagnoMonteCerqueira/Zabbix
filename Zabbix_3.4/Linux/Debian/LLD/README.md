@@ -72,7 +72,7 @@
 ##
 * 10- Espaco em Disco %.
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/Linux/espaco-en-disco-pc.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/Linux/espaco-em-disco-pc.PNG)
 
 ##
 * 11- Trafego de Rede.
