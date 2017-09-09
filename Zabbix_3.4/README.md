@@ -1,5 +1,5 @@
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/web-banner-zabbix-3.png)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/Zabbix/3.4.0rc1.png)
 
 
 ## Quer contribuir com a Comunidade Zabbix? 
