@@ -19,90 +19,85 @@
 ##
 ##### 2) Em LLD:
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-lld.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/Linux/Discovery_linux.PNG)
 
 ##
 ##### 3) Em Graficos:
 
 ##
-* 01- Disponibilidade
+* 01- Disponibilidade.
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-disponibilidade.PNG)
-
-##
-* 02- Latencia
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-latencia.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/Linux/disponibilidade.PNG)
 
 ##
-* 03- Perda de Pacotes
+* 02- Latencia.
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-perda-de-pacote.PNG)
-
-##
-* 04- Tempo Ligado
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-tempo-ligado.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/linux/latencia.PNG)
 
 ##
-* 05 Paginas Impressas
+* 03- Perda de Pacotes.
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-paginas-impressas.PNG)
-
-##
-* 06 Paginas Por Dia
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-paginas-por-dia.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/linux/perda-de-pacote.PNG)
 
 ##
-* 07 Paginas Por Semana
+* 04- Tempo Ligado.
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-paginas-por-semana.PNG)
-
-##
-* 08 Paginas Por Mes
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-paginas-por-mes.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/linux/tempo-ligado.PNG)
 
 ##
-* 09 Tempo de Vida do Fusor
+* 05- Memoria.
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-vida-do-fusor.PNG)
-
-##
-* 10 Nivel de Papel na Bandeja Tray 1
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-bandeja-01.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/Linux/memoria.PNG)
 
 ##
-* 11 Nivel de Papel na bandeja Tray 2
+* 06- Memoria Swap.
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-bandeja-02.PNG)
-
-##
-* 12 Nivel de Papel na bandeja MP Tray
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-mp-01.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/Linux/memoria-swap.PNG))
 
 ##
-* 13 Nivel do Black Toner
+* 07- Processador.
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-toner-black.PNG)
-
-##
-* 14 Nivel do Cyan 
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-toner-cyan.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/Linux/processador.PNG)
 
 ##
-* 15 Nivel do Magenta
+* 08- I/O de Disco.
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-toner-magenta.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/Linux/i-o-disco.PNG)
 
 ##
-* 16 Nivel do Yellow
+* 09- Espaco em Disco.
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-toner-yellow.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/Linux/espaco-em-disco.PNG)
+
+##
+* 10- Espaco em Disco %.
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/Linux/espaco-en-disco-pc.PNG)
+
+##
+* 11- Trafego de Rede.
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/Linux/trafego-de-rede.PNG)
+
+##
+* 12- Informacoes Trafego de Entrada.
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/Linux/informacoes-trafego-de-entrada.PNG)
+
+##
+* 13- Informacoes Trafego de Saida.
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/Linux/informacoes-trafego-de-saida.PNG)
+
+##
+* 14- Total Trafego de Rede.
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/Linux/total-trafego-de-rede.PNG)
+
+##
+* 15- Total de Informacoes Trafego de Rede. 
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/Linux/total-de-informacoes-trafego-de-rede.PNG)
 
 ##
 ## Contatos:
