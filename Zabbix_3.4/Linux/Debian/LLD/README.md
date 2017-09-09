@@ -77,7 +77,7 @@
 ##
 * 11- Trafego de Rede.
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/Linux/trafego-de-rede.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/Linux/trafego-de-rd.PNG)
 
 ##
 * 12- Informacoes Trafego de Entrada.
