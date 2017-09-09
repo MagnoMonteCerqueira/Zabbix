@@ -1,5 +1,5 @@
 
-##                                      Template SNMP em LLD Zabbix Para Impressora!
+##                                      Template Agente Zabbix em LLD Para Linux Debian !
 
 ##### A ideia desse template e facilitar a vida em poder utilizar um template unico para as impressoras do ambiente ganhando tempo valioso ao invés de ter um template para cada host.
 
