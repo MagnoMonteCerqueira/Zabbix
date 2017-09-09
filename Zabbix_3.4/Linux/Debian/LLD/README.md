@@ -97,7 +97,7 @@
 ##
 * 15- Total de Informacoes Trafego de Rede. 
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/Linux/total-de-informacoes-trafego-de-rede.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/Linux/informacoes-total-trafego-de-rede.PNG)
 
 ##
 ## Contatos:
