@@ -15,7 +15,7 @@
 ##
 ##### 1) Dados Coletados:
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/Linux/Dados_recentes.PNG)
 
 ##
 ##### 2) Em LLD:
