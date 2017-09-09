@@ -32,17 +32,17 @@
 ##
 * 02- Latencia.
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/linux/latencia.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/Linux/latencia.PNG)
 
 ##
 * 03- Perda de Pacotes.
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/linux/perda-de-pacote.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/Linux/perda-de-pacote.PNG)
 
 ##
 * 04- Tempo Ligado.
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/linux/tempo-ligado.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/Linux/tempo-ligado.PNG)
 
 ##
 * 05- Memoria.
