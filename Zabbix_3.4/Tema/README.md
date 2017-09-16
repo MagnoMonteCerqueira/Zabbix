@@ -10,7 +10,8 @@
 ##
 ##### 1) Vamos acessar o Zabbix Server com o aplicativo winscp:
 
-## https://winscp.net/download/WinSCP-5.11.1-Portable.zip
+##### https://winscp.net/download/WinSCP-5.11.1-Portable.zip
+
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados.PNG)
 
