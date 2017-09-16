@@ -31,6 +31,11 @@
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Background/tema.PNG)
 
 ##
+##### 5) Imagem inserida tela inicial!
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Background/fundo.PNG)
+
+##
 ## Contatos:
 
 
