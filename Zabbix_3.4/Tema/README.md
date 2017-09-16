@@ -28,7 +28,7 @@
 ##
 ##### 4) Configurar tema no perfil conforme imagem abaixo!
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-disponibilidade.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Background/tema.PNG)
 
 ##
 ## Contatos:
