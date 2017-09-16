@@ -36,6 +36,11 @@
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Background/fundo.PNG)
 
 ##
+##### OBS:
+
+####### Imagens utilizada com resolucao 1440 x 1024.
+
+##
 ## Contatos:
 
 
