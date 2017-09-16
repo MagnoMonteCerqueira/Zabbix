@@ -13,111 +13,22 @@
 ##### https://winscp.net/download/WinSCP-5.11.1-Portable.zip
 
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Background/winscp.PNG)
 
 ##
-##### 2) Em LLD:
+##### 2) Apos baixar o Winscp, acessar a pasta de instalação do zabbix em img e inserir nosso plano de fundo, alterar os arquivos  login-zabbix.jpg, zabbix-inicial.fw.png, zabbix-interna.fw.png pelas imagens de sua escolha!
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-lld.PNG)
-
-##
-##### 3) Em Graficos:
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Background/img.PNG)
 
 ##
-* 01- Disponibilidade
+##### 3) Inserir na pasta style, o arquivo blue-theme.css ja configurado para popular as imagens em nosso Zabbix Server!
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Background/estilo.PNG)
+
+##
+##### 4) Configurar tema no perfil conforme imagem abaixo!
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-disponibilidade.PNG)
-
-##
-* 02- Latencia
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-latencia.PNG)
-
-##
-* 03- Perda de Pacotes
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-perda-de-pacote.PNG)
-
-##
-* 04- Tempo Ligado
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-tempo-ligado.PNG)
-
-##
-* 05 Paginas Impressas
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-paginas-impressas.PNG)
-
-##
-* 06 Paginas Por Dia
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-paginas-por-dia.PNG)
-
-##
-* 07 Paginas Por Semana
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-paginas-por-semana.PNG)
-
-##
-* 08 Paginas Por Mes
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-paginas-por-mes.PNG)
-
-##
-* 09 Tempo de Vida do Fusor
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-vida-do-fusor.PNG)
-
-##
-* 10 Nivel de Papel na Bandeja Tray 1
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-bandeja-01.PNG)
-
-##
-* 11 Nivel de Papel na bandeja Tray 2
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-bandeja-02.PNG)
-
-##
-* 12 Nivel de Papel na bandeja MP Tray
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-mp-01.PNG)
-
-##
-* 13 Nivel do Black Toner
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-toner-black.PNG)
-
-##
-* 14 Nivel do Cyan 
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-toner-cyan.PNG)
-
-##
-* 15 Nivel do Magenta
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-toner-magenta.PNG)
-
-##
-* 16 Nivel do Yellow
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-coletados-toner-yellow.PNG)
-
-
-## Configurações Adicionais!
-
-##### 1) Vamos acessar o arquivo de configuração abaixo e inserir a unidade de medida para informar as paginas impressas com os valores reais.
-
-##### com o comando vim vamos editar o arquivo.
-##### # vim /usr/share/zabbix/include/func.inc.php
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-editar-frontend.PNG)
-
-
-##### 2) Vamos seguir ate a linha 618 e inserir na blackList a unidade de medida para postar as informações desejadas.
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-editar-frontend-unidade.PNG)
-
 
 ##
 ## Contatos:
