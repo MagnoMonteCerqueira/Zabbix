@@ -41,6 +41,14 @@
 ####### Imagens utilizada com resolucao 1440 x 1024.
 
 ##
+##### Dica!
+
+####### Caso queira que a imagem nao repita e fique automatizada preenchendo toda a tela do zabbix.
+
+
+
+
+##
 ## Contatos:
 
 
