@@ -43,7 +43,7 @@
 ##
 ##### Dica & Truques Zabbix!
 
-####### Caso desejar que a imagem nao fique repitindo e fique automatizada preenchendo toda a tela do Zabbix.
+####### Caso desejar que a imagem nao fique automatizada preenchendo toda a tela do Zabbix.
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Background/Dicas&TruquesTema.PNG)
 
