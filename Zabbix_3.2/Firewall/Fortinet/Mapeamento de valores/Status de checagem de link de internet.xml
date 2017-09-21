@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>3.2</version>
+    <date>2017-09-21T10:47:07Z</date>
+    <value_maps>
+        <value_map>
+            <name>Status de checagem de link de internet</name>
+            <mappings>
+                <mapping>
+                    <value>0</value>
+                    <newvalue>Link Funcionando</newvalue>
+                </mapping>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Link Caiu deu Merda Corre!</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>
