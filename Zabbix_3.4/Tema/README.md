@@ -41,11 +41,11 @@
 ####### Imagens utilizada com resolucao 1440 x 1024.
 
 ##
-##### Dica!
+##### Dica & Truques Zabbix!
 
-####### Caso queira que a imagem nao repita e fique automatizada preenchendo toda a tela do zabbix.
+####### Caso desejar que a imagem nao fique repitindo e fique automatizada preenchendo toda a tela do Zabbix.
 
-
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Background/Dicas&TruquesTema.PNG)
 
 
 ##
