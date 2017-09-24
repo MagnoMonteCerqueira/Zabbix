@@ -31,7 +31,7 @@
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Agente/selecao.PNG)
 
 ##
-##### 5) Clieque em install !
+##### 5) Clique em install !
 
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Agente/install.PNG)
