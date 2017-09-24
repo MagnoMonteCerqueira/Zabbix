@@ -7,10 +7,12 @@
 ##
 ##### 1) Vamos baixar e disponibilizar o Zabbix Agente no Windows desejado e executar:
 
+
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Agente/benvindo.PNG)
 
 ##
 ##### 2) Apos baixar e executar o Zabbix Agente, vamos aceitar os termos de uso!
+
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Agente/termos.PNG)
 
@@ -19,15 +21,18 @@
 
 ##### (Eu recomendo criar 2 DNS para configurar os Agentes, 1 DNS para Producao e 1 DNS para Homologação)
 
+
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Agente/configuracao.PNG)
 
 ##
-##### 4) Vamos selecionar os arquivos de instalação , vamos manter o padrao.
+##### 4) Vamos selecionar os arquivos de instalação , vamos manter o padrão, Caso desejar pode mudar o caminho de instalação.
+
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Agente/selecao.PNG)
 
 ##
 ##### 5) Clieque em install !
+
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Agente/install.PNG)
 
