@@ -107,17 +107,17 @@
 ##
 * 14 Nivel do Cyan 
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Printes/tonercyan.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Printes/tonnercyan.PNG)
 
 ##
 * 15 Nivel do Magenta
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Printes/tonermagenta.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Printes/tonnermagenta.PNG)
 
 ##
 * 16 Nivel do Yellow
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Printes/toneryellow.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Printes/tonneryellow.PNG)
 
 
 ## Configurações Adicionais!
