@@ -29,12 +29,12 @@
 ##
 ##### 1) Dados Coletados:
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Printes/disponibilidade.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Printes/dadoscoletados.PNG)
 
 ##
 ##### 2) Em LLD:
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Printes/latencia.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Printes/dadoscoletadosemlld.PNG)
 
 ##
 ##### 3) Em Graficos:
