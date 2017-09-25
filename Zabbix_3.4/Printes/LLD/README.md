@@ -11,9 +11,8 @@
 ##### Fabricante Samsung:
 ##### Modelos: Samsung K-7400LX, Samsung CLX-8640, Samsung X-4220RX, Samsung M-5370LX, Samsung CLX-6260, Samsung M4510.
 
-
 ##### Fabricante HP:
-##### Modelos: HP LaserJet 1212nf, HP LaserJet P2055dn, HP LaserJet HP3525dn.
+##### Modelos: HP LaserJet 1212nf, HP LaserJet P2055dn, HP LaserJet HP3525dn, HP Officejet Pro 8610.
 
 ##### Fabricante Canon:
 ##### Modelos: Canon IR C1335.
@@ -23,6 +22,18 @@
 
 ##### Fabricante Sharp:
 ##### Modelos: MX-2010U.
+
+##### Fabricante Xerox:
+##### Modelos: Xerox WorkCentre Pro 123, Xerox WorkCentre 5335, Xerox - Phaser 7500.
+
+##### Fabricante Bizhub:
+##### Modelos: KONICA MINOLTA - Model Name:bizhub 283, KONICA MINOLTA - Model Name:bizhub 363, KONICA MINOLTA - Name:bizhub 367, KONICA MINOLTA 215.
+
+##### Fabricante Brother:
+##### Modelos: Brother - MFC 9980DW.
+
+##### Fabricante Ricoh:
+##### Modelos: RICOH - SP 4510SF, RICOH - Aficio SP 3510DN, RICOH - Aficio MP C3002.
 
 ##### O que acompanha o template!
 
