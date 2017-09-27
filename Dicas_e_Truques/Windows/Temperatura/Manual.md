@@ -9,7 +9,9 @@
 
 #### 1- [Zabbix Agente Instalado](https://github.com/MagnoMonteCerqueira/Zabbix/tree/master/Zabbix_3.4/Agents).
 
+##
 #### Ferramentas Necessárias:
+##
 
 #### 1- [Real Temp](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/Windows/Temperatura/Arquivos/RealTemp_370.zip).
 
