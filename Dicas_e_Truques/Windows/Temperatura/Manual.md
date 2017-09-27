@@ -17,6 +17,9 @@
 
 #### 2- [Tail.exe e Gawk.exe](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/Windows/Temperatura/Arquivos/UnxUtils.zip).
 
+
+## Instalacao e Configuracao do RealTemp.
+
 ##
 ##### 1) Vamos baixar e descompactar o Real temp e disponibilizar o programa no C:\.
 
@@ -39,14 +42,25 @@
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/realtemplogcol.PNG)
 
 ##
-##### 5) Nesta Etapa , vamos descompactar a segunda ferramenta necessaria e inserir no System32.(tail.exe e Gawk.exe)!
+##### 5) Apos verificar o RealtempLog.txt , vamos configurar o RealTemp clicando em Settings e marcando as opcoes abaixo!
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/configuracaorealtemp.PNG)
+
+
+
+## Instalacao e Configuracao do Tail.exe e Gawk.exe!
+
+##
+##### 1) Nesta Etapa , vamos descompactar a segunda ferramenta necessaria e inserir no System32.(tail.exe e Gawk.exe)!
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/tail_gawk.PNG)
 
 ##
-##### 6) nesta Etapa , vamos descompactar a segunda ferramenta necessaria e inserir no System32.(tail.exe e Gawk.exe)!
+##### 2) Vamos efetuar um teste para validacao do ambiente ate aqui!
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/tail_gawk.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/testes.PNG)
+
+
 
 
 ##
