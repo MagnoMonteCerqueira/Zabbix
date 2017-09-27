@@ -9,6 +9,13 @@
 
 #### 1- [Zabbix Agente Instalado](https://github.com/MagnoMonteCerqueira/Zabbix/tree/master/Zabbix_3.4/Agents).
 
+#### Ferramentas Necessárias:
+
+#### 1- [Real Temp](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/Windows/Temperatura/Arquivos/RealTemp_370.zip).
+
+#### 2- [Tail.exe e Gawk.exe](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/Windows/Temperatura/Arquivos/UnxUtils.zip).
+
+
 ##
 ##### 1) Vamos baixar e disponibilizar o Zabbix Agente no Windows desejado e executar:
 
