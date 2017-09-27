@@ -5,8 +5,12 @@
 
 ##### A ideia e instalar e configurar de forma simples o Zabbix Agente em Sistemas Operacionais Windows e Monitorar a temperatura do Servidor.
 
-#### pré requisito
-#### 1- Zabbix Agente Instalado
+#### Pré requisito!
+
+#### 1- Zabbix Agente Instalado 
+
+https://github.com/MagnoMonteCerqueira/Zabbix/tree/master/Zabbix_3.4/Agents
+
 
 ##
 ##### 1) Vamos baixar e disponibilizar o Zabbix Agente no Windows desejado e executar:
