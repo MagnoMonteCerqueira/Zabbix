@@ -67,7 +67,7 @@
 ##                                      Configurando o Zabbix Agente!
 
 ##
-##### 2) Vamos efetuar a configuracao do Zabbix Agente, apos este reniciar o servico do Zabbix Agente!
+##### 2) Vamos efetuar a configuracao do Zabbix Agente, Reiniciar o servico do Zabbix Agente!
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/configuracaodoagentezabbix.PNG)
 
