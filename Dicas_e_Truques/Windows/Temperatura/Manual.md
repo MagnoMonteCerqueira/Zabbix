@@ -71,24 +71,32 @@
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/configuracaodoagentezabbix.PNG)
 
-
+##
 ##### Data da Coleta
 UserParameter=data.coleta.servidor,tail -1 c:\realtemp\Realtemplog.txt | gawk "{print $1}"
 
+##
 ##### Hora da Coleta
 UserParameter=hora.coleta.servidor,tail -1 c:\realtemp\Realtemplog.txt | gawk "{print $2}"
 
+##
 ##### MHZ
 UserParameter=mhz.cpu.servidor,tail -1 c:\realtemp\Realtemplog.txt | gawk "{print $3}"
 
+##
 ##### Temperatura Processador 0
 UserParameter=temperatura.servidor.core0,tail -1 c:\realtemp\Realtemplog.txt | gawk "{print $4}"
 
+##
 ##### Temperatura Processador 1
 UserParameter=temperatura.servidor.core1,tail -1 c:\realtemp\Realtemplog.txt | gawk "{print $5}"
 
+##
 ##### Utilizacao CPU
 UserParameter=temperatura.cpu.servidor.load,tail -1 c:\realtemp\Realtemplog.txt | gawk "{print $6}"
+
+##
+
 
 
 
