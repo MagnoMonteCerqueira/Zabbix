@@ -1,9 +1,9 @@
 
 
-##                                      Monitoramento de temperatura de Servidores Windows com Zabbix Agente!
+##                                      Monitoramento de Temperatura de Servidores Windows com Zabbix Agente!
 
 
-##### A ideia e Monitorar de forma simples a temperatura do Servidor Windows com Zabbix Agente.
+##### A ideia e monitorar de forma simples a temperatura do Servidor Windows com Zabbix Agente.
 
 #### Pré requisito!
 
@@ -28,6 +28,15 @@
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/executar_realtemp.PNG)
 
+##
+##### 3) Com o programa iniciado, vamos verificar o arquivo RealTempLog.txt e suas informacoes!
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/realtemplog.PNG)
+
+##
+##### 5) Apos analisar o RealtempLog.txt , vamos verificar os campos que vamos utilizar!
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/realtemplogcolunas.PNG)
 
 
 
