@@ -1,11 +1,9 @@
 
 
 ##                                      Monitoramento de temperatura de Servidores Windows com Zabbix Agente!
-#
-#
 
 
-##### A ideia e instalar e configurar de forma simples o Zabbix Agente em Sistemas Operacionais Windows e Monitorar a temperatura do Servidor.
+##### A ideia e Monitorar de forma simples a temperatura do Servidor Windows com Zabbix Agente.
 
 #### Pré requisito!
 
@@ -19,38 +17,18 @@
 
 #### 2- [Tail.exe e Gawk.exe](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/Windows/Temperatura/Arquivos/UnxUtils.zip).
 
+##
+##### 1) Vamos baixar e descompactar o Real temp e disponibilizar o programa no C:\.
+
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/realtemp.PNG)
 
 ##
-##### 1) Vamos baixar e disponibilizar o Zabbix Agente no Windows desejado e executar:
+##### 2) Apos inserir o Real Temp no local desejado, vamos executalo!
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/executar_realtemp.PNG)
 
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Agente/benvindo.PNG)
-
-##
-##### 2) Apos baixar e executar o Zabbix Agente, vamos aceitar os termos de uso!
-
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Agente/termos.PNG)
-
-##
-##### 3) Nesta etapa! Vamos inserir as informacoes do Zabbix Server!
-
-##### (Eu recomendo criar 2 DNS para configurar os Agentes, 1 DNS para Producao e 1 DNS para Homologação)
-
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Agente/configuracao.PNG)
-
-##
-##### 4) Vamos selecionar os arquivos de instalação , vamos manter o padrão, Caso desejar pode mudar o caminho de instalação.
-
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Agente/selecao.PNG)
-
-##
-##### 5) Clique em install !
-
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Agente/install.PNG)
 
 
 ##
