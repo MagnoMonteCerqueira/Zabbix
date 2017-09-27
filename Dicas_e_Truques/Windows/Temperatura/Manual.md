@@ -33,16 +33,21 @@
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/realtemplog.PNG)
 
-
+##
 ##### 4) Apos analisar o RealtempLog.txt , vamos verificar os campos que vamos utilizar (Coluna 4, 5 e 6)!
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/realtemplogcol.PNG)
 
+##
+##### 5) nesta Etapa , vamos descompactar a segunda ferramenta necessaria e inserir no System32.(tail.exe e Gawk.exe)!
 
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/tail_gawk.PNG)
 
-##### 5) Apos analisar o RealtempLog.txt , vamos verificar os campos que vamos utilizar (Coluna 4, 5 e 6)!
+##
+##### 6) nesta Etapa , vamos descompactar a segunda ferramenta necessaria e inserir no System32.(tail.exe e Gawk.exe)!
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/realtemplogcol.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/tail_gawk.PNG)
+
 
 ##
 ## Contatos:
