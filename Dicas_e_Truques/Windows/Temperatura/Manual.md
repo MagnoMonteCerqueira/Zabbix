@@ -1,6 +1,8 @@
 
 
 ##                                      Monitoramento de temperatura de Servidores Windows com Zabbix Agente!
+#
+#
 
 
 ##### A ideia e instalar e configurar de forma simples o Zabbix Agente em Sistemas Operacionais Windows e Monitorar a temperatura do Servidor.
