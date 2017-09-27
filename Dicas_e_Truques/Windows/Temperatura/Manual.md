@@ -97,17 +97,46 @@ UserParameter=temperatura.cpu.servidor.load,tail -1 c:\realtemp\Realtemplog.txt 
 
 ##
 
+##                                      Criando Template Para Zabbix Agente!
 
+##
+##### Vamos criar o template para coleta dos dados!
 
+##### 1) Data da Coleta
 
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/datadacoleta.PNG)
 
+##
 
+##### 2) Frequencia da CPU
 
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/frequenciadacpu.PNG)
 
+##
 
+##### 3) Hora da Coleta
 
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/horadacoleta.PNG)
 
+##
 
+##### 4) Temperatura da CPU 0
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/Temperaturacpu0.PNG)
+
+##
+
+##### 5) Temperatura da CPU 1
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/Temperaturacpu1.PNG)
+
+##
+
+##### 6) Utilizacao da CPU
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/utilizacaocpu.PNG)
+
+##
 
 
 ##
