@@ -7,9 +7,7 @@
 
 #### Pré requisito!
 
-#### 1- Zabbix Agente Instalado.
-
-[Zabbix Agente](https://github.com/MagnoMonteCerqueira/Zabbix/tree/master/Zabbix_3.4/Agents)
+#### 1- [Zabbix Agente Instalado](https://github.com/MagnoMonteCerqueira/Zabbix/tree/master/Zabbix_3.4/Agents).
 
 ##
 ##### 1) Vamos baixar e disponibilizar o Zabbix Agente no Windows desejado e executar:
