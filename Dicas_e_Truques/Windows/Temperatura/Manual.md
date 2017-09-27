@@ -39,7 +39,7 @@
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/realtemplogcol.PNG)
 
 ##
-##### 5) nesta Etapa , vamos descompactar a segunda ferramenta necessaria e inserir no System32.(tail.exe e Gawk.exe)!
+##### 5) Nesta Etapa , vamos descompactar a segunda ferramenta necessaria e inserir no System32.(tail.exe e Gawk.exe)!
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/tail_gawk.PNG)
 
