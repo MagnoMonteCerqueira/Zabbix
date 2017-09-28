@@ -71,6 +71,7 @@
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/configuracaodoagentezabbix.PNG)
 
+```sh
 ##
 ##### Data da Coleta
 UserParameter=data.coleta.servidor,tail -1 c:\realtemp\Realtemplog.txt | gawk "{print $1}"
@@ -94,7 +95,7 @@ UserParameter=temperatura.servidor.core1,tail -1 c:\realtemp\Realtemplog.txt | g
 ##
 ##### Utilizacao CPU
 UserParameter=temperatura.cpu.servidor.load,tail -1 c:\realtemp\Realtemplog.txt | gawk "{print $6}"
-
+```
 ##
 
 ##                                      Criando Template Para Zabbix Agente!
