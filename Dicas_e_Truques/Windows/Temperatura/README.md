@@ -38,7 +38,7 @@
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/realtemplog.PNG)
 
 ##
-##### 4) Apos analisar o RealtempLog.txt , vamos verificar os campos que vamos utilizar (Coluna 4, 5 e 6)!
+##### 4) Apos analisar o RealtempLog.txt , vamos verificar os campos que vamos utilizar!
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/realtemplogcol.PNG)
 
