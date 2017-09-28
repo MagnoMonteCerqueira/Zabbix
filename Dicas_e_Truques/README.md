@@ -3,7 +3,7 @@
 ## Discas e truques para Zabbix! 
 
 ##
-* Area destinada a dicas, truques, novidades implementadas, informações gerais e Tutoriais!
+* Area destinada a dicas, truques, novidades implementadas, informações gerais, Tutoriais e gambiarra das coisas com zabbix!
 ##
 
 ### Em caso de dúvida, sugestão ou dificuldade junte-se a nós no Grupo do Telegram!
