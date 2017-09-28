@@ -138,6 +138,12 @@ UserParameter=temperatura.cpu.servidor.load,tail -1 c:\realtemp\Realtemplog.txt 
 
 ##
 
+##### 7) Resultado das Coletas!
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/Resultadocoletas.PNG)
+
+##
+
 
 ##
 ## Contatos:
