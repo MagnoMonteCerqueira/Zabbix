@@ -4,7 +4,7 @@
 
 ##### Este template foi criado sobre a versao do Zabbix Server 3.4.0
 
-### O template da suporte para as seguintes nobreak APC/UPS:
+### O template da suporte para os seguintes nobreak APC/UPS:
 
 ##### Fabricante Schneider:
 ##### Modelos: Smart-UPS RT 6000 XL.
