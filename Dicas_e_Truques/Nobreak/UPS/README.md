@@ -48,7 +48,7 @@
 ##
 * 05- Carga da bateria.
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/UPS/cargadabateria.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/UPS/cargadebateria.PNG)
 
 ##
 * 06- Tempo Estimado de uso em Bateria.
