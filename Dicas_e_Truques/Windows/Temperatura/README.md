@@ -144,8 +144,6 @@ UserParameter=temperatura.cpu.servidor.load,tail -1 c:\realtemp\Realtemplog.txt 
 
 ##
 
-
-##
 ## Contatos:
 
 
