@@ -75,10 +75,8 @@
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/UPS/informacoesdebypass.PNG)
 
-##
-* .
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/UPS/informacoesdebypass.PNG)
+## [Template UPS](https://github.com/MagnoMonteCerqueira/Zabbix/tree/master/Zabbix_3.2/Nobreak/UPS)
 
 
 
