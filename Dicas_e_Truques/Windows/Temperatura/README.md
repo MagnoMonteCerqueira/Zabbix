@@ -18,7 +18,7 @@
 #### 2- [Tail.exe e Gawk.exe](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/Windows/Temperatura/Arquivos/UnxUtils.zip).
 
 
-##                                      Instalacao e Configuracao do RealTemp.
+##                                      Instalação e Configuração do RealTemp.
 
 
 ##
@@ -28,37 +28,37 @@
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/realtemp.PNG)
 
 ##
-##### 2) Apos inserir o Real Temp no local desejado, vamos executalo!
+##### 2) Após inserir o Real Temp no local desejado, vamos executalo!
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/executar_realtemp.PNG)
 
 ##
-##### 3) Com o programa iniciado, vamos verificar o arquivo RealTempLog.txt e suas informacoes!
+##### 3) Com o programa iniciado, vamos verificar o arquivo RealTempLog.txt e suas informações!
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/realtemplog.PNG)
 
 ##
-##### 4) Apos analisar o RealtempLog.txt , vamos verificar os campos que vamos utilizar!
+##### 4) Após analisar o RealtempLog.txt , vamos verificar os campos que vamos utilizar!
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/realtemplogcol.PNG)
 
 ##
-##### 5) Apos verificar o RealtempLog.txt , vamos configurar o RealTemp clicando em Settings e marcando as opcoes abaixo!
+##### 5) Verificando o RealtempLog.txt , vamos configurar o RealTemp clicando em Settings e marcando as opções abaixo!
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/configuracaorealtemp.PNG)
 
 
 
-##                                      Instalacao e Configuracao do Tail.exe e Gawk.exe!
+##                                      Instalação e Configuração do Tail.exe e Gawk.exe!
 
 
 ##
-##### 1) Nesta Etapa , vamos descompactar a segunda ferramenta necessaria e inserir no System32.(tail.exe e Gawk.exe)!
+##### 1) Nesta Etapa , vamos descompactar a segunda ferramenta necessária e inserir no System32.(tail.exe e Gawk.exe)!
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/tail_gawk.PNG)
 
 ##
-##### 2) Vamos efetuar um teste para validacao do ambiente ate aqui!
+##### 2) Vamos efetuar um teste para validação do ambiente ate aqui!
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/testes.PNG)
 
@@ -67,7 +67,7 @@
 ##                                      Configurando o Zabbix Agente!
 
 ##
-##### 2) Vamos efetuar a configuracao do Zabbix Agente, Reiniciar o servico do Zabbix Agente!
+##### 2) Vamos efetuar a configuração do Zabbix Agente, Reiniciar o serviço do Zabbix Agente!
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/configuracaodoagentezabbix.PNG)
 
@@ -109,7 +109,7 @@ UserParameter=temperatura.cpu.servidor.load,tail -1 c:\realtemp\Realtemplog.txt 
 
 ##
 
-##### 2) Frequencia da CPU
+##### 2) Frequência da CPU
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/frequenciadacpu.PNG)
 
