@@ -1,4 +1,4 @@
-##                                      Template SNMP em LLD Zabbix Para Nobreak!
+##                                      Template SNMP em LLD Para Nobreak!
 
 ##### A ideia desse template e facilitar a vida em poder utilizar um template para monitoramento de nobreak.
 
