@@ -2,6 +2,10 @@
 
 ## Discas e truques para Zabbix! 
 
+##
+* Area destinada a dicas, truques, novidades implementadas, informações gerais e Tutoriais!
+##
+
 ### Em caso de dúvida, sugestão ou dificuldade junte-se a nós no Grupo do Telegram!
 
 * Grupo: https://t.me/ZabbixBrasil 
