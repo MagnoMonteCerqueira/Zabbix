@@ -37,6 +37,9 @@
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Agente/install.PNG)
 
+##
+
+ [Zabbix Agente MSI ](https://github.com/MagnoMonteCerqueira/Zabbix/tree/master/Zabbix_3.2/Agents).
 
 ##
 ## Contatos:
