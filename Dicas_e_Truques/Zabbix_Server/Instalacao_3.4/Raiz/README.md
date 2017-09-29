@@ -6,8 +6,17 @@
 
 ##### Introdução.
 
-Zabbix é uma ferramenta moderna, Open Source e multiplataforma, livre de custos de licenciamento. Tem apenas uma versão que é considerada de classe Enterprise, sendo utilizada para monitorar a disponibilidade e o desempenho de aplicações, ativos e serviços de rede por todo o mundo.
-O Zabbix é um software que monitora vários parâmetros da rede, dos servidores e da saúde dos serviços. Utiliza-se de um mecanismo flexível de notificação que permite configurar alertas por e-mail entre outros como Telegram, para praticamente qualquer evento. As notificações permitem que se reaja rapidamente à problemas no ambiente. O Zabbix oferece excelentes recursos de relatórios e visualização de dados armazenados. Isso faz com que o Zabbix seja a ferramenta ideal para planejamento de capacidade.
+Zabbix é um software que monitora diversos parâmetros de uma rede como a integridade e desempenho dos servidores. Oferece excelentes relatórios e visualização de dados de recursos com base nos dados armazenados, e usa um mecanismo de notificação flexível que permite aos usuários configurar e-mail com alertas para qualquer evento, o que permite uma reação rápida para os problemas do servidor.
+Zabbix e Open Source e multiplataforma, livre de custos de licenciamento, sendo utilizada para monitorar a disponibilidade e o desempenho de aplicações, ativos e serviços de rede por todo o mundo.
+
+Na lista abaixo temos algumas vantagens de se utilizar o Zabbix:
+
+* Solução Open Source;
+* Suporte para SNMP (v1, v2 e v3);
+* Monitoramento distribuído com administração centralizada na web;
+* Agentes de alta performance (software de cliente para Linux, Solaris, HP-UX, AIX, FreeBSD, OpenBSD, OS X, Tru64/OSF1, , Windows Server Windows Desktop);
+* Permissões flexíveis de usuário;
+* Interface baseada na web.
 
 
 ##### A ideia e monitorar de forma simples a temperatura do Servidor Windows com Zabbix Agente.
