@@ -19,7 +19,9 @@ Na lista abaixo temos algumas vantagens de se utilizar o Zabbix:
 * Interface baseada na web.
 
 
-##### A ideia e monitorar de forma simples a temperatura do Servidor Windows com Zabbix Agente.
+#### Requisitos:
+
+Servidor Debian 9, Servidor web Apache2, PHP 7.0, MariaDB, PHPMyAdmin.
 
 #### Pré requisito!
 
