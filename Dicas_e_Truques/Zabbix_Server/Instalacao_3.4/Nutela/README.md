@@ -78,8 +78,33 @@ $ chmod +x instalador-zabbix.sh && ./instalador-zabbix.sh
 
 ## Configuração Zabbix Server.
 
+###### 1) Acessando via web o IP do Zabbix Server, clique em Next step.
 ##
-###### 1)  Acessando o servidor Zabbix Server via web, vamos configurar o servidor:
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela1conf01.png)
+Clique em Next step:
 ##
-
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/instalacao01.PNG)
+##
+Clique em Next step:
+##
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/instalacao02.PNG)
+##
+Insira a senha criada para usuario Zabbix, Clique em Next step:
+##
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/instalacao03.PNG)
+##
+Em Name Coloque o nome que desejar, Clique em Next step:
+##
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/instalacao04.PNG)
+##
+Em Pre-Instalação veja o resumo das configurações, Clique em Next step:
+##
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/instalacao05.PNG)
+##
+Em Install, Clique em Next step:
+##
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/instalacao06.PNG)
+##
+Na tela de username e password (tela inicial do Zabbix Server) coloque no primeiro acesso o usuário e senha padrões são: Admin/zabbix:
+##
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/instalacao07.PNG)
+##
