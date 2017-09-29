@@ -30,12 +30,16 @@ Servidor Debian 9, Servidor web Apache2, PHP 7.0, MariaDB, PHPMyAdmin.
 ###### 1)  vamos acessar o servidor via ssh ou interface grafica e atualizar o repositório como root:
 
 ```sh
-$ apt update && apt upgrade
+$ apt update && apt upgrade 
 ```
 ##
-###### 2)  vamos acessar o servidor via ssh ou interface grafica e atualizar o repositório como root:
+###### 2)  Para a instalação do Zabbix 3.4 é necessário incluir no repositório as informações atualizadas do Zabbix:
 
 ```sh
+$ cd /tmp
+$ wget https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Server/Instalacao_3.4/Raiz/Arquivos/zabbix-release_3.4-1%2Bstretch_all.deb
+$ apt update && apt upgrade
+$ apt update && apt upgrade
 $ apt update && apt upgrade
 ```
 ##
