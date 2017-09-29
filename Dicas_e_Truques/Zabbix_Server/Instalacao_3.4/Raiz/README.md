@@ -38,9 +38,9 @@ $ apt update && apt upgrade
 ```sh
 $ cd /tmp
 $ wget https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Server/Instalacao_3.4/Raiz/Arquivos/zabbix-release_3.4-1%2Bstretch_all.deb
-$ apt update && apt upgrade
-$ apt update && apt upgrade
-$ apt update && apt upgrade
+# dpkg -i zabbix-release_3.4-1+stretch_all.deb
+# apt update
+# apt install zabbix-server-mysql zabbix-frontend-php zabbix-agent
 ```
 ##
 
