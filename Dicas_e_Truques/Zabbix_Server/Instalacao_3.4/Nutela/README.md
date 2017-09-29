@@ -108,3 +108,20 @@ Na tela de username e password (tela inicial do Zabbix Server) coloque no primei
 ##
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/instalacao07.PNG)
 ##
+
+
+Material de Referencia:
+
+Site: http://verdanatech.com
+Material: http://verdanatech.com/integrando-zabbix-glpi-e-telegram/
+
+##
+
+## Contatos:
+
+
+* Telegram: @Magnopeem
+* Skype: magnopeem_rj@hotmail.com
+* E-mail: magnopeem@gmail.com
+* Linkedin: https://br.linkedin.com/in/magno-monte-cerqueira-976b1587
+
