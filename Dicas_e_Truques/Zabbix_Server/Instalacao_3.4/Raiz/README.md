@@ -134,16 +134,22 @@ Zabbix Agent
 ###### 8.1) Acessando via web o IP do Zabbix Server, clique em Next step.
 ##
 Clique em Next step:
+##
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/instalacao01.PNG)
 ##
 Clique em Next step:
+##
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/instalacao02.PNG)
 ##
 Insira a senha criada para usuario Zabbix, Clique em Next step:
+##
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/instalacao03.PNG)
 ##
-Em Name Coloquie o nome que desejar, Clique em Next step:
+Em Name Coloque o nome que desejar, Clique em Next step:
+##
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/instalacao04.PNG)
+##
+Em Pre-Instalação veja o resumo da configurações, Clique em Next step:
 ##
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/instalacao05.PNG)
 ##
