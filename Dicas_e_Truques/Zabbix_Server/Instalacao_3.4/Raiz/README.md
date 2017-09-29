@@ -39,7 +39,7 @@ $ apt update && apt upgrade
 # cd /tmp
 # wget https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Server/Instalacao_3.4/Raiz/Arquivos/zabbix-release_3.4-1%2Bstretch_all.deb
 # dpkg -i zabbix-release_3.4-1+stretch_all.deb
-# apt update && apt install zabbix-server-mysql zabbix-frontend-php zabbix-agent vim -y
+# apt update && apt install zabbix-server-mysql zabbix-frontend-php zabbix-agent vim php7.0-bcmath php7.0-mbstring php-sabre-xml -y
 ```
 
 ##
@@ -108,12 +108,27 @@ No meu caso:
 #  php_value date.timezone America/Sao_Paulo
 ```
 ##
-###### 7)  Vamos editar o arquivo de configuração do Zabbix Server dentro do Apache e inserir as informações abaixo:
 
+
+
+###### 7)  Vamos Reiniciar o servidor Apache e iniciar os servicos do Zabbix Server e Zabbix Agent:
+##
+Apache:
 ```sh
-# vim /etc/apache2/conf-enabled/zabbix.conf
+# /etc/init.d/apache2 restart
+```
+##
+Zabbix Server
+```sh
+# systemctl enable zabbix-server
+```
+##
+Zabbix Agent
+```sh
+# systemctl enable zabbix-agent
 ```
 
+###### 8)  A interface web do Zabbix estará disponível em http://SEU-IP/zabbix através do seu navegador, vamos configurar o Zabbix Server via web:
 
 
 
