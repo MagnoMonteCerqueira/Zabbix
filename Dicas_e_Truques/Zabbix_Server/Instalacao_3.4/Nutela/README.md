@@ -69,9 +69,13 @@ $ chmod +x instalador-zabbix.sh && ./instalador-zabbix.sh
 
 ##
 ###### 9)  Selecione o estado, clique em OK:
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela09.png)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela9.png)
 
 ##
 ###### 10)  No final da instalação sera informado um resumo de todas as informações de acesso, clique em OK:
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela10.png)
 
+
+##
+###### 10)  No final da instalação sera informado um resumo de todas as informações de acesso, clique em OK:
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela11.png)
