@@ -149,11 +149,15 @@ Em Name Coloque o nome que desejar, Clique em Next step:
 ##
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/instalacao04.PNG)
 ##
-Em Pre-Instalação veja o resumo da configurações, Clique em Next step:
+Em Pre-Instalação veja o resumo das configurações, Clique em Next step:
 ##
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/instalacao05.PNG)
 ##
+Em Install, Clique em Next step:
+##
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/instalacao06.PNG)
+##
+Na tela de username e password (tela nicial do Zabbix Server) coloque o no primeiro acesso o usuário e senha padrões são: Admin/zabbix:
 ##
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/instalacao07.PNG)
 ##
