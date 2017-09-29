@@ -113,7 +113,6 @@ Na tela de username e password (tela inicial do Zabbix Server) coloque no primei
 Material de Referencia:
 
 Site: http://verdanatech.com
-##
 Material: http://verdanatech.com/integrando-zabbix-glpi-e-telegram/
 
 ##
