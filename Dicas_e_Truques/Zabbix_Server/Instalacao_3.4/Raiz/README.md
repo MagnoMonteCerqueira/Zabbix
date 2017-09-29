@@ -56,15 +56,38 @@ $ apt update && apt upgrade
 ```sh
 # grant all privileges on zabbix.* to zabbix@localhost identified by 'SENHA-USUARIO-ZABBIX';
 ```
-```
+
 ##
 ```sh
 # quit;
 ```
+##
+###### 4)  Apos banco de dados criado e usuario para acesso do Zabbix Server e hora de importar o esquema de tabelas e dados padrões do sistema:
 
+```sh
+# zcat /usr/share/doc/zabbix-server-mysql/create.sql.gz | mysql -uzabbix -p zabbix
+```
 
+Digite a senha do usuario zabbix criado anteriormente para importar as tabelas.
 
+##
+###### 5)  Vamos editar o arquivo de configuração do Zabbix Server e inserir as informações abaixo:
 
+```sh
+# vim /etc/zabbix/zabbix_server.conf
+```
+##
+```sh
+#...
+DBHost=localhost
+#...
+DBName=zabbix
+#...
+DBUser=zabbix
+#...
+DBPassword=SENHA-USUARIO-ZABBIX
+#...
+```
 
 
 
