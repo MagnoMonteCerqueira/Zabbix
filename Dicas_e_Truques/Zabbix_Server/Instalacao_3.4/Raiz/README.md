@@ -26,13 +26,19 @@ Servidor Debian 9, Servidor web Apache2, PHP 7.0, MariaDB, PHPMyAdmin.
 
 ## Instalação.
 
-
-###### 1)  vamos acessar o servidor via ssh ou interface grafica e atualizar o repositório:
+##
+###### 1)  vamos acessar o servidor via ssh ou interface grafica e atualizar o repositório como root:
 
 ```sh
 $ apt update && apt upgrade
 ```
+##
+###### 2)  vamos acessar o servidor via ssh ou interface grafica e atualizar o repositório como root:
 
+```sh
+$ apt update && apt upgrade
+```
+##
 
 
 ##
