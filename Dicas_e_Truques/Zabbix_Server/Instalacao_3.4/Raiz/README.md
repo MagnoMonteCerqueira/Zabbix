@@ -1,7 +1,7 @@
 
 
 
-##                                      Tutorial de instalação Raiz do Zabbix Server 3.4 com Debian 9 e Ubuntu 16 (x64)!
+##                                      Tutorial de instalação Raiz do Zabbix Server 3.4 no Debian 9 (x64) Stretch com banco de dados MariaBD!
 
 
 ##### Introdução.
