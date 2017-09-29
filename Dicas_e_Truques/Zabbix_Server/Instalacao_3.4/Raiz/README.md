@@ -39,7 +39,7 @@ $ apt update && apt upgrade
 # cd /tmp
 # wget https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Server/Instalacao_3.4/Raiz/Arquivos/zabbix-release_3.4-1%2Bstretch_all.deb
 # dpkg -i zabbix-release_3.4-1+stretch_all.deb
-# apt update && apt install zabbix-server-mysql zabbix-frontend-php zabbix-agent -y
+# apt update && apt install zabbix-server-mysql zabbix-frontend-php zabbix-agent vim -y
 ```
 
 ##
@@ -88,8 +88,31 @@ DBUser=zabbix
 DBPassword=SENHA-USUARIO-ZABBIX
 #...
 ```
+##
+###### 6)  Vamos editar o arquivo de configuração do Zabbix Server dentro do Apache e inserir as informações abaixo:
 
+```sh
+# vim /etc/apache2/conf-enabled/zabbix.conf
+```
+##
 
+Na Linha 19 e 28 remova o comentario (#) e coloque a data e hora de sua regiao.
+
+```sh
+#  php_value date.timezone Europe/Riga
+```
+##
+
+No meu caso:
+```sh
+#  php_value date.timezone America/Sao_Paulo
+```
+##
+###### 7)  Vamos editar o arquivo de configuração do Zabbix Server dentro do Apache e inserir as informações abaixo:
+
+```sh
+# vim /etc/apache2/conf-enabled/zabbix.conf
+```
 
 
 
