@@ -33,7 +33,7 @@ Servidor Debian 9.
 $ cd /tmp
 $ wget  https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Server/Instalacao_3.4/Nutela/Arquivos/instalador-zabbix.sh
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela01.png)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela01.PNG)
 
 ##
 ###### 2)  Vamos executar o comando abaixo para iniciar a instalação:
@@ -41,24 +41,35 @@ $ wget  https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dica
 ```sh
 $ chmod +x instalador-zabbix.sh && ./instalador-zabbix.sh 
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela02.png)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela02.PNG)
 
 ##
 ###### 3)  Vamos Selecionar a instalação do Zabbix Server:
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela03.png)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela03.PNG)
 
 ##
 ###### 4)  Sera informado a versao do Debian, cliquei em OK:
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela04.png)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela04.PNG)
 
 ##
 ###### 5)  Aguarde a instalação:
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela05.png)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela05.PNG)
 
 ##
-###### 6)  Sera solicitado uma senha para o banco de dados do Zabbix Server:
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela06.png)
+###### 6)  Vamos inserir uma senha para o banco de dados do Zabbix Server:
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela06.PNG)
 
 ##
-###### 7)  Sera solicitado senha para o banco de dados do Zabbix Server:
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela06.png)
+###### 7)  Sera solicitado para configurar Timezone da sua regiao clique em OK:
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela07.PNG)
+
+##
+###### 8)  No final da instalação sera informado os dados de acesso ao Zabbix Server, clique em OK:
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela08.PNG)
+
+##
+###### 9)  No final da instalação sera informado os dados de acesso ao Zabbix Server, clique em OK:
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela08.png)
+
+
+
