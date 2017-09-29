@@ -1,5 +1,5 @@
 
-
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/banner_instalacao_zabbix_3.4.png)
 
 ##                                      Tutorial de instalação Raiz do Zabbix Server 3.4 no Debian 9 (x64) Stretch com banco de dados MariaBD!
 
