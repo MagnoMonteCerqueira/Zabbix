@@ -36,13 +36,39 @@ $ apt update && apt upgrade
 ###### 2)  Para a instalação do Zabbix 3.4 é necessário incluir no repositório as informações atualizadas do Zabbix:
 
 ```sh
-$ cd /tmp
+# cd /tmp
 # wget https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Server/Instalacao_3.4/Raiz/Arquivos/zabbix-release_3.4-1%2Bstretch_all.deb
 # dpkg -i zabbix-release_3.4-1+stretch_all.deb
-# apt update
-# apt install zabbix-server-mysql zabbix-frontend-php zabbix-agent
+# apt update && apt install zabbix-server-mysql zabbix-frontend-php zabbix-agent -y
 ```
+
 ##
+###### 3)  Para a instalação do Zabbix 3.4 é necessário incluir no repositório as informações atualizadas do Zabbix:
+
+```sh
+# cd /tmp
+# wget https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Server/Instalacao_3.4/Raiz/Arquivos/zabbix-release_3.4-1%2Bstretch_all.deb
+# dpkg -i zabbix-release_3.4-1+stretch_all.deb
+# apt update && apt install zabbix-server-mysql zabbix-frontend-php zabbix-agent -y
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ##
