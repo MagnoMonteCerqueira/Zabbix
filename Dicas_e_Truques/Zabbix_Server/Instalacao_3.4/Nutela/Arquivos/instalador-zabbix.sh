@@ -738,7 +738,7 @@ MAIN_MENU ()
 {
  
 	menu01Option=$(whiptail --title "${TITULO}" --backtitle "${BANNER}" --menu "Select a option!" --fb 15 50 6 \
-	"1" "Zabbix + Verdanatech iGZ" \
+	"1" "Zabbix Server 3.4.2 + Verdanatech iGZ" \
 	"2" "About" \
 	"3" "Exit" 3>&1 1>&2 2>&3)
  
@@ -2058,7 +2058,7 @@ MAIN_MENU ()
 {
  
 	menu01Option=$(whiptail --title "${TITULO}" --backtitle "${BANNER}" --menu "Select a option!" --fb 15 50 6 \
-	"1" "Zabbix + Verdanatech iGZ" \
+	"1" "Zabbix Server 3.4.2 + Verdanatech iGZ" \
 	"2" "About" \
 	"3" "Exit" 3>&1 1>&2 2>&3)
  
