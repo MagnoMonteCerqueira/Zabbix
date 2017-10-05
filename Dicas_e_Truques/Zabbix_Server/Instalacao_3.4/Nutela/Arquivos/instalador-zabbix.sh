@@ -37,7 +37,7 @@ source /etc/os-release
 
 serverAddress=$(hostname -I | cut -d' ' -f1)
 
-zabbixVersion="Zabbix 3.4.2"
+zabbixVersion="Zabbix Server 3.4.2"
 
 verdanatechGIT="https://github.com/verdanatech/igz"
 
