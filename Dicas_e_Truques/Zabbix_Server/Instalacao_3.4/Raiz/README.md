@@ -1,7 +1,7 @@
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/banner_instalacao_zabbix_3.4.png)
 
-##                                      Tutorial de instalação Raiz do Zabbix Server 3.4 no Debian 9 (x64) Stretch com banco de dados MariaBD!
+##                                      Tutorial de instalação Raiz do Zabbix Proxy 3.4 no Debian 9 (x64) Stretch com banco de dados MariaBD!
 
 
 ## Introdução.
@@ -33,7 +33,7 @@ Servidor Debian 9, Servidor web Apache2, PHP 7.0, MariaDB, PHPMyAdmin.
 $ apt update && apt upgrade 
 ```
 ##
-###### 2)  Para a instalação do Zabbix 3.4 é necessário incluir no repositório as informações atualizadas do Zabbix:
+###### 2)  Para a instalação do Zabbix Proxy 3.4 é necessário incluir no repositório as informações atualizadas do Zabbix:
 
 ```sh
 # cd /tmp
