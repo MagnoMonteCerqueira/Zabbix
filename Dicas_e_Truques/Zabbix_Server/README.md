@@ -2,7 +2,7 @@
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/zabbix.jpg)
 
-## Instalação do Zabbix Server!
+## Instalação do Zabbix Server 3.4 Raiz x Nutela d:D !
 
 ## Quer contribuir com a Comunidade Zabbix? 
 
