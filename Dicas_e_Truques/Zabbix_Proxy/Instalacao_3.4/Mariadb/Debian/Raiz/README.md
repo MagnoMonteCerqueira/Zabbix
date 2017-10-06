@@ -89,7 +89,7 @@ DBPassword=zabbix
 ```
 
 ##
-###### 8) Reniciando o Zabbix Proxy:
+###### 8) Reiniciando o Zabbix Proxy:
 
 ```sh
 #  systemctl restart zabbix-proxy.service
@@ -105,7 +105,12 @@ ou
 # /etc/init.d/zabbix-proxy status
 ```
 
+##
+###### 10) Configurando o Zabbix Proxy no Zabbix Server:
 
+```sh
+
+```
 
 ##
 
