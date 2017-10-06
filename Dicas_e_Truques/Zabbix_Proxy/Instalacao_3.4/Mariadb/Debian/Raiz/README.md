@@ -28,22 +28,36 @@ Servidor Debian 9, MariaDB, PHPMyAdmin.
 ## Instalação.
 
 ##
-###### 1)  vamos acessar o servidor via ssh ou interface grafica e atualizar o repositório como root:
+###### 1) Vamos acessar o servidor via ssh ou interface grafica e atualizar o repositório e atualizar o sistema como root:
 
 ```sh
 $ apt update && apt upgrade 
 ```
 ##
-###### 2)  Para a instalação do Zabbix Proxy 3.4 é necessário incluir no repositório as informações atualizadas do Zabbix:
+###### 2) Para a instalação do Zabbix Proxy 3.4 é necessário incluir no repositório as informações atualizadas do Zabbix:
 
 ```sh
 # cd /tmp
 # wget https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Server/Instalacao_3.4/Raiz/Arquivos/zabbix-release_3.4-1%2Bstretch_all.deb
 # dpkg -i zabbix-release_3.4-1+stretch_all.deb
-# apt update && apt install zabbix-server-mysql zabbix-frontend-php zabbix-agent vim php7.0-bcmath php7.0-mbstring php-sabre-xml -y
+# apt-get update
+```
+##
+###### 3) Vamos instalar as dependencias necessarias para instalação do Zabbix Proxy:
+
+```sh
+# apt update && apt install zabbix-proxy-mysql zabbix-agent vim build-essential snmp vim libssh2-1-dev libssh2-1 libopenipmi-dev libsnmp-dev wget libcurl4-gnutls-dev fping curl libcurl3-gnutls libcurl3-gnutls-dev libiksemel-dev libiksemel-utils libiksemel3 sudo libevent-dev libpcre3-dev 
+ 
 ```
 
+##
+###### 4) Vamos acessar o banco de dados mariadb e criar o o banco de dados para o Zabbix Proxy:
 
+```sh
+# mariadb 
+# create database zabbix character set utf8;
+#  GRANT ALL PRIVILEGES ON *.* TO zabbix@localhost IDENTIFIED BY 'SUA_SENHA' WITH GRANT OPTION;
+```
 
 
 ##
