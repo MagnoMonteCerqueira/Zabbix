@@ -70,7 +70,7 @@ $ apt update && apt upgrade
 ###### 6) Criando o Schema do Zabbix Proxy no banco de dados:
 
 ```sh
-# zcat /usr/share/doc/zabbix-proxy-mysql/schema.sql.gz | mysql -uzabbix -p zabbix
+# zcat /usr/share/zabbix-proxy-mysql/schema.sql.gz | mysql -uzabbix -p zabbix
 ```
 
 ##
