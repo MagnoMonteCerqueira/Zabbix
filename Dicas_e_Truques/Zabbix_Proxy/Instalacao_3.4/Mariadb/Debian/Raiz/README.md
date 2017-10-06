@@ -70,8 +70,41 @@ $ apt update && apt upgrade
 ###### 6) Criando o Schema do Zabbix Proxy no banco de dados:
 
 ```sh
-# zcat /usr/share/doc/zabbix-proxy-mysql/schema.sql.gz | mysql -uzabbix zabbix
+# zcat /usr/share/doc/zabbix-proxy-mysql/schema.sql.gz | mysql -uzabbix -p zabbix
 ```
+
+##
+###### 7) Configurando o Zabbix Proxy para conexao ao banco de dados:
+
+```sh
+#...
+DBHost=localhost
+#...
+DBName=zabbix
+#...
+DBUser=zabbix
+#...
+DBPassword=zabbix
+#..
+```
+
+##
+###### 8) Reniciando o Zabbix Proxy:
+
+```sh
+#  systemctl restart zabbix-proxy.service
+ou
+# /etc/init.d/zabbix-proxy restart
+```
+##
+###### 9) Verificando o funcionamento do Zabbix Proxy:
+
+```sh
+#  systemctl status zabbix-proxy.service
+ou
+# /etc/init.d/zabbix-proxy status
+```
+
 
 
 ##
