@@ -2,8 +2,8 @@
 # -------------------------------------------------------------------------
 # @Programa 
 # 	@name: integraGZ.sh
-#	@versao: 2.2.1
-#	@Data 08 de Setembro de 2017
+#	@versao: 0.0.1
+#	@Data 06 de Novembro de 2017
 #	@Copyright: Verdanatech Soluções em TI, 2016 - 2017
 #	@Copyright: Pillares Consulting, 2016
 # --------------------------------------------------------------------------
@@ -26,8 +26,8 @@
 # Variables Declaration
 #
 
-versionDate="September 08, 2017"
-TITULO="Verdanatech iGZ - v.2.2.1"
+versionDate="November 06, 2017"
+TITULO="Verdanatech iGZ - v.0.0.1"
 BANNER="http://www.verdanatech.com"
 
 devMail="halexsandro.sales@verdanatech.com"
@@ -38,8 +38,6 @@ source /etc/os-release
 serverAddress=$(hostname -I | cut -d' ' -f1)
 
 zabbixVersion="Zabbix Server 3.4.2"
-
-verdanatechGIT="https://github.com/verdanatech/igz"
 
 # Control
 zabbixInstallTag=0
@@ -57,7 +55,7 @@ clear
 
 cd /tmp
 
-echo -e " ------------------------------------------------ _   _   _ \n ----------------------------------------------- / \\ / \\ / \\ \n ---------------------------------------------- ( i | G | Z ) \n ----------------------------------------------- \\_/ \\_/ \\_/ \n| __      __          _                   _            _\n| \\ \\    / /         | |                 | |          | | \n|  \\ \\  / ___ _ __ __| | __ _ _ __   __ _| |_ ___  ___| |__ \n|   \\ \\/ / _ | '__/ _\` |/ _\` | '_ \\ / _\` | __/ _ \\/ __| '_ \\ \n|    \\  |  __| | | (_| | (_| | | | | (_| | ||  __| (__| | | | \n|     \\/ \\___|_|  \\__,_|\\__,_|_| |_|\\__,_|\\__\\___|\\___|_| |_| \n| \n|                    consulting, training and implamentation \n|                                  comercial@verdanatech.com \n|                                        www.verdanatech.com \n|                                          +55 81 3091 42 52 \n ------------------------------------------------------------ \n| integraGZ.sh  - $glpiVersion and a lot plugins + $zabbixVersion | \n ------------------------------------------------------------ \n
+echo -e " ------------------------------------------------ _   _   _ \n ----------------------------------------------- / \\ / \\ / \\ \n ---------------------------------------------- ( i | G | Z ) \n ----------------------------------------------- \\_/ \\_/ \\_/ \n| __      __          _                   _            _\n| \\ \\    / /         | |                 | |          | | \n|  \\ \\  / ___ _ __ __| | __ _ _ __   __ _| |_ ___  ___| |__ \n|   \\ \\/ / _ | '__/ _\` |/ _\` | '_ \\ / _\` | __/ _ \\/ __| '_ \\ \n|    \\  |  __| | | (_| | (_| | | | | (_| | ||  __| (__| | | | \n|     \\/ \\___|_|  \\__,_|\\__,_|_| |_|\\__,_|\\__\\___|\\___|_| |_| \n| \n|                    consulting, training and implamentation \n|                                  comercial@verdanatech.com \n|                                        www.verdanatech.com \n|                                          +55 81 3091 42 52 \n ------------------------------------------------------------ \n| integraGZ.sh  + $zabbixVersion | \n ------------------------------------------------------------ \n
 "
 sleep 5
 
