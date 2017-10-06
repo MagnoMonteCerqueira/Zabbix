@@ -2,8 +2,8 @@
 # -------------------------------------------------------------------------
 # @Programa 
 # 	@name: integraGZ.sh
-#	@versao: 2.2.1
-#	@Data 08 de Setembro de 2017
+#	@versao: 2=0.0.1
+#	@Data 06 de Novembro de 2017
 #	@Copyright: Verdanatech Soluções em TI, 2016 - 2017
 #	@Copyright: Pillares Consulting, 2016
 # --------------------------------------------------------------------------
@@ -26,7 +26,7 @@
 # Variables Declaration
 #
 
-versionDate="September 05, 2017"
+versionDate="November 06, 2017"
 TITULO="Verdanatech iGZ + Zabbix Proxy 3.4 - v.0.1"
 BANNER="http://www.verdanatech.com"
 
