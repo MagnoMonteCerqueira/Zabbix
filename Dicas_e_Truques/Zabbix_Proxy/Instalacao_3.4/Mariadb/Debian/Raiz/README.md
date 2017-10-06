@@ -46,17 +46,31 @@ $ apt update && apt upgrade
 ###### 3) Vamos instalar as dependencias necessarias para instalação do Zabbix Proxy:
 
 ```sh
-# apt update && apt install zabbix-proxy-mysql zabbix-agent vim build-essential snmp vim libssh2-1-dev libssh2-1 libopenipmi-dev libsnmp-dev wget libcurl4-gnutls-dev fping curl libcurl3-gnutls libcurl3-gnutls-dev libiksemel-dev libiksemel-utils libiksemel3 sudo libevent-dev libpcre3-dev 
+# apt update && apt install vim build-essential snmp vim libssh2-1-dev libssh2-1 libopenipmi-dev libsnmp-dev wget libcurl4-gnutls-dev fping curl libcurl3-gnutls libcurl3-gnutls-dev libiksemel-dev libiksemel-utils libiksemel3 sudo libevent-dev libpcre3-dev 
  
 ```
 
 ##
-###### 4) Vamos acessar o banco de dados mariadb e criar o o banco de dados para o Zabbix Proxy:
+###### 4) Instalando o Zabbix Proxy x Zabbix Agent:
 
+```sh
+# apt install zabbix-proxy-mysql zabbix-agent
+```
+
+##
+###### 5) Vamos acessar o banco de dados Mariadb, criar o o banco de dados para o Zabbix Proxy e criar o usuario para acesso ao banco:
+###### OBS: vamos inserir a senha zabbix no usuario para acesso.
 ```sh
 # mariadb 
 # create database zabbix character set utf8;
-#  GRANT ALL PRIVILEGES ON *.* TO zabbix@localhost IDENTIFIED BY 'SUA_SENHA' WITH GRANT OPTION;
+# GRANT ALL PRIVILEGES ON *.* TO zabbix@localhost IDENTIFIED BY 'zabbix' WITH GRANT OPTION;
+# exit;
+```
+##
+###### 6) Criando o Schema do Zabbix Proxy no banco de dados:
+
+```sh
+# zcat /usr/share/doc/zabbix-proxy-mysql/schema.sql.gz | mysql -uzabbix zabbix
 ```
 
 
