@@ -1,6 +1,4 @@
 
-
-
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/banner_instalacao_zabbix_3.4.png)
 
 ##                                      Tutorial de instalação Nutela do Zabbix Proxy 3.4 no Debian 9 (x64) Stretch com banco de dados MariaBD!
@@ -23,17 +21,77 @@ Na lista abaixo temos algumas vantagens de se utilizar o Zabbix:
 
 ## Requisitos:
 
-Servidor Debian 9, MariaDB, PHPMyAdmin.
+Servidor Debian 9.
 
 
 ## Instalação.
 
 ##
-###### 1) Vamos acessar o servidor via ssh ou interface grafica e atualizar o repositório e atualizar o sistema como root:
+###### 1)  Vamos acessar o servidor via ssh ou interface grafica e baixar o script de instalação:
 
 ```sh
-$ apt update && apt upgrade 
+$ cd /tmp
+$ wget  https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/Zabbix_Proxy/Instalacao_3.4/Mariadb/Debian/Nutela/Arquivos/install-zabbix-proxy-3.4.sh
 ```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela01-old.PNG)
+
+##
+###### 2)  Vamos executar o comando abaixo para iniciar a instalação:
+
+```sh
+$ chmod +x install-zabbix-proxy-3.4.sh && ./install-zabbix-proxy-3.4.sh 
+```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela01-old.PNG)
+
+##
+###### 3)  Vamos Selecionar a instalação do Zabbix Server:
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela01-old.PNG)
+
+##
+###### 4)  Sera informado a versao do Debian, cliquei em OK:
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela01-old.PNG)
+
+##
+###### 5)  Aguarde a instalação:
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela01-old.PNG)
+
+##
+###### 6)  Vamos inserir uma senha para o banco de dados do Zabbix Server:
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela01-old.PNG)
+
+##
+###### 7)  Sera solicitado para configurar Timezone da sua regiao clique em OK:
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela01-old.PNG)
+
+##
+###### 8) Selecione o pais, Clique em OK:
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela01-old.PNG)
+
+##
+###### 9)  Selecione o estado, clique em OK:
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela01-old.PNG)
+
+##
+###### 10)  No final da instalação sera informado um resumo de todas as informações de instalação, clique em OK:
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela01-old.PNG)
+##
+
+## Configuração Zabbix Proxy no Zabbix Server.
+
+###### 1) Acessando via web o IP do Zabbix Server, entre com usuario e senha.
+##
+Clique em Next step:
+##
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela01-old.PNG)
+##
+
+
+
+Material de Referencia:
+
+Site: http://verdanatech.com
+
+Material: http://verdanatech.com/integrando-zabbix-glpi-e-telegram/
 
 ##
 
@@ -44,3 +102,4 @@ $ apt update && apt upgrade
 * Skype: magnopeem_rj@hotmail.com
 * E-mail: magnopeem@gmail.com
 * Linkedin: https://br.linkedin.com/in/magno-monte-cerqueira-976b1587
+
