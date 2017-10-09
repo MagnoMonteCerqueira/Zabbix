@@ -7,9 +7,9 @@
 
 ##### Links sobre as RFCs.
 
-[RFC1759](https://www.ietf.org/rfc/rfc1759.txt)
+[RFC1759 Printer MIB v1](https://www.ietf.org/rfc/rfc1759.txt)
 
-[RFC3805](https://tools.ietf.org/html/rfc3805)
+[RFC3805 Printer MIB v2](https://tools.ietf.org/html/rfc3805)
 
 
 ### O template da suporte para as seguintes impressoras:
