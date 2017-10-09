@@ -5,6 +5,13 @@
 
 ##### Este template foi criado sobre a versao do Zabbix Server 3.2, seguindo a RFC1759 e RFC3805 (Printer-MIB).
 
+##### Links sobre as RFCs.
+
+![RFC1759](https://www.ietf.org/rfc/rfc1759.txt)
+
+![RFC3805](https://tools.ietf.org/html/rfc3805)
+
+
 ### O template da suporte para as seguintes impressoras:
 
 ##### Fabricante Samsung:
