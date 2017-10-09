@@ -140,6 +140,11 @@
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-editar-frontend-unidade.PNG)
 
+##
+
+Template.
+
+[Template SNMP LLD Printer](https://github.com/MagnoMonteCerqueira/Zabbix/tree/master/Zabbix_3.2/Printers/LLD)
 
 ##
 ## Contatos:
