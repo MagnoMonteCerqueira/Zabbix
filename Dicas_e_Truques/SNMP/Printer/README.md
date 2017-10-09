@@ -3,7 +3,7 @@
 
 ##### A ideia desse template e facilitar a vida em poder utilizar um template unico para as impressoras do ambiente ganhando tempo valioso ao invés de ter um template para cada host.
 
-##### Este template foi criado sobre a versao do Zabbix Server 3.2.5
+##### Este template foi criado sobre a versao do Zabbix Server 3.2, seguindo a RFC1759 e RFC3805 (Printer-MIB).
 
 ### O template da suporte para as seguintes impressoras:
 
