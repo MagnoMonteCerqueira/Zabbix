@@ -35,7 +35,7 @@ cd /
 # pfZP3.4.amd64.tgz
 # pfZP3.4.i386.tgz
 
-https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/Zabbix_Proxy/Instalacao_3.4/FreeBSD/Arquivos/pfZP3.4.$(uname -m).tgz
+fetch http://www.verdanatech.com/scripts/pkg/pfZP3.4.$(uname -m).tgz
 
 if [ $? -ne 0 ]
 then
