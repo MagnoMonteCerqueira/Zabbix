@@ -31,7 +31,7 @@ Servidor Pfsense 2.3.
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-proxy-3.4-pfsense-01.PNG)
 
 ##
-###### 2)  Apos acessar o servidor PFSense via ssh e iniciar a instalação do Zabbix Proxy 3.4:
+###### 2)  Apos acessar o servidor PFSense via ssh vamos iniciar a instalação do Zabbix Proxy 3.4:
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-proxy-3.4-pfsense-02.PNG)
 ##
