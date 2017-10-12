@@ -34,12 +34,12 @@ Servidor Pfsense 2.3.
 ###### 2)  Apos acessar o servidor PFSense via ssh e iniciar a instalação do Zabbix Proxy 3.4:
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-proxy-3.4-pfsense-02.PNG)
-
+##
 
 Selecione a opçao 8 para iniciar o shell.
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-proxy-3.4-pfsense-03.PNG)
-
+##
 
 Digite o comando abaixo para acessar a diretorio temporario:
 
@@ -47,18 +47,24 @@ Digite o comando abaixo para acessar a diretorio temporario:
 $ cd /tmp
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-proxy-3.4-pfsense-04.PNG)
+##
+
 
 Vamos baixar o script de instalação do Zabbix proxy 3.4 com o comando abaixo:
 ```sh
 $ fetch  https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Proxy/Instalacao_3.4/FreeBSD/Arquivos/zabbix-proxy-3.4-pfsense.sh
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-proxy-3.4-pfsense-05.PNG)
+##
+
 
 Vamos configurar o script de instalação para ser executado:
 ```sh
 $ chmod +x zabbix-proxy-3.4-pfsense.sh
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-proxy-3.4-pfsense-06.PNG)
+##
+
 
 
 Nesta etapa vamos executar o instalador:
@@ -66,17 +72,17 @@ Nesta etapa vamos executar o instalador:
 $ ./zabbix-proxy-3.4-pfsense.sh
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-proxy-3.4-pfsense-07.PNG)
-
+##
 
 Sera iniciado a instalação do Zabbix proxy 3.4:
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-proxy-3.4-pfsense-08.PNG)
-
+##
 
 Apos a execução do script, vai ser instalado de forma simples o Zabbix proxy 3.4 
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-proxy-3.4-pfsense-09.PNG)
-
+##
 
 
 ## Verificação.
@@ -91,6 +97,7 @@ $ http://PFSense via web => Serviços => Zabbix Proxy LTS
 ```
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-proxy-3.4-pfsense-10.PNG)
+##
 
 Status serviços:
 
@@ -99,6 +106,7 @@ $ http://PFSense via web => Status => Servicos:
 ```
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-proxy-3.4-pfsense-11.PNG)
+##
 
 
 
