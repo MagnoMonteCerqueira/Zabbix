@@ -26,13 +26,51 @@ Servidor Pfsense 2.3 (x63).
 ## Instalação.
 
 ##
-###### 1)  Vamos acessar o servidor via ssh baixar o script de instalação:
+###### 1)  Vamos acessar o servidor via web e verificar os pacotes disponibilizados para instalação:
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-proxy-3.4-pfsense-01.PNG)
+
+##
+###### 2)  Apos acessar o servidor PFSense via ssh e iniciar a instalação do Zabbix Proxy 3.4:
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-proxy-3.4-pfsense-02.PNG)
+
+
+Selecione a opçao 8 para iniciar o shell.
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-proxy-3.4-pfsense-03.PNG)
+
+
+Digite o comando abaixo para acessar a diretorio temporario:
 
 ```sh
 $ cd /tmp
-$ wget  https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/Zabbix_Proxy/Instalacao_3.4/Mariadb/Debian/Nutela/Arquivos/install-zabbix-proxy-3.4.sh
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela01-old.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-proxy-3.4-pfsense-04.PNG)
+
+Vamos baixar o script de instalação do Zabbix proxy 3.4 com o comando abaixo:
+```sh
+$ fetch  https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/Zabbix_Proxy/Instalacao_3.4/FreeBSD/Arquivos/zabbix-proxy-3.4-pfsense.sh
+```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-proxy-3.4-pfsense-05.PNG)
+
+Vamos configurar o script de instalação para ser executado:
+```sh
+$ chmod +x zabbix-proxy-3.4-pfsense.sh
+```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-proxy-3.4-pfsense-06.PNG)
+
+
+Nesta etapa vamos executar o instalador:
+```sh
+$ ./zabbix-proxy-3.4-pfsense.sh
+```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-proxy-3.4-pfsense-07.PNG)
+
+
+Sera iniciado a instalação do Zabbix proxy 3.4:
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-proxy-3.4-pfsense-08.PNG)
 
 
 
