@@ -53,23 +53,23 @@ $ chmod +x install-zabbix-proxy-3.4.sh && ./install-zabbix-proxy-3.4.sh
 
 ##
 ###### 5)  Aguarde a instalação:
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela01-old.PNG)
-
-##
-###### 6)  Vamos inserir uma senha para o banco de dados do Zabbix Proxy:
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela04.PNG)
-
-##
-###### 7)  Sera solicitado para configurar Timezone da sua regiao clique em OK:
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela05.PNG)
 
 ##
-###### 8) Selecione o pais, Clique em OK:
+###### 6)  Vamos inserir uma senha para o banco de dados do Zabbix Proxy:
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela06.PNG)
 
 ##
-###### 9)  Selecione o estado, clique em OK:
+###### 7)  Sera solicitado para configurar Timezone da sua regiao clique em OK:
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela07.PNG)
+
+##
+###### 8) Selecione o pais, Clique em OK:
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela08.PNG)
+
+##
+###### 9)  Selecione o estado, clique em OK:
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela09.PNG)
 
 ##
 ###### 10)  No final da instalação sera informado um resumo de todas as informações de instalação, clique em OK:
