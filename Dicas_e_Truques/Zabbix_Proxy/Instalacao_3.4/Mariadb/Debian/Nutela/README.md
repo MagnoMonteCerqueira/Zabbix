@@ -73,7 +73,7 @@ $ chmod +x install-zabbix-proxy-3.4.sh && ./install-zabbix-proxy-3.4.sh
 
 ##
 ###### 10)  No final da instalação sera informado um resumo de todas as informações de instalação, clique em OK:
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela08.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela10.PNG)
 ##
 
 ## Configuração Zabbix Proxy no Zabbix Server.
@@ -82,7 +82,7 @@ $ chmod +x install-zabbix-proxy-3.4.sh && ./install-zabbix-proxy-3.4.sh
 ##
 Clique em Next step:
 ##
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela09.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela11.PNG)
 ##
 
 
