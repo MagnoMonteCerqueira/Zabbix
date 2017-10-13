@@ -31,7 +31,7 @@ Servidor Debian 9.
 
 ```sh
 $ cd /tmp
-$ wget  https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/Zabbix_Proxy/Instalacao_3.4/Mariadb/Debian/Nutela/Arquivos/install-zabbix-proxy-3.4.sh
+$ wget  https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Proxy/Instalacao_3.4/Mariadb/Debian/Nutela/Arquivos/install-zabbix-proxy-3.4.sh
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela01.PNG)
 
