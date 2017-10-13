@@ -78,20 +78,34 @@ $ chmod +x install-zabbix-proxy-3.4.sh && ./install-zabbix-proxy-3.4.sh
 
 ## Configuração Zabbix Proxy no Zabbix Server.
 
-###### 1) Acessando via web o IP do Zabbix Server, entre com usuario e senha.
+###### 1) Acessando via web o Zabbix Server, entre com usuario e senha.
 ##
 Clique em Next step:
 ##
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela11.PNG)
 ##
 
+Vamos em Administração => Proxies:
+##
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela12.PNG)
+##
+
+Clique em Criar Proxy, coloquei o nome do seu servidor Proxy , Apos clique em adicionar:
+##
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela13.PNG)
+##
+
+Vamos Aguardar a comunicação do Zabbix proxy com o Zabbix Server:
+##
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela14.PNG)
+##
+
+
 
 
 Material de Referencia:
 
 Site: http://verdanatech.com
-
-Material: http://verdanatech.com/integrando-zabbix-glpi-e-telegram/
 
 ##
 
