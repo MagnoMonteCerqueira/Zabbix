@@ -80,7 +80,7 @@ $ chmod +x install-zabbix-proxy-3.4.sh && ./install-zabbix-proxy-3.4.sh
 
 ###### 1) Acessando via web o Zabbix Server, entre com usuario e senha.
 ##
-Clique em Next step:
+Clique em Sign in:
 ##
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela11.PNG)
 ##
