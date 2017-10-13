@@ -92,7 +92,7 @@ Vamos em Administração => Proxies:
 
 Clique em Criar Proxy, coloquei o nome do seu servidor Proxy , Apos clique em adicionar:
 ##
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela13.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela113.PNG)
 ##
 
 Vamos Aguardar a comunicação do Zabbix proxy com o Zabbix Server:
