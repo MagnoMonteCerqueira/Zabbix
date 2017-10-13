@@ -109,13 +109,22 @@ Na tela de username e password (tela inicial do Zabbix Server) coloque no primei
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/instalacao07.PNG)
 ##
 ## Bônus!
-Clique em Administração => Verdanatech iGZ
+Clique em Administração => Verdanatech iGZ para integração com GLPI e Telegram:
 ##
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/integra-verdanatech.PNG)
 ##
 
 
 Material de Referencia:
+
+License
+-------
+
+GPLv3
+
+
+Author Information
+------------------
 
 Site: http://verdanatech.com
 
