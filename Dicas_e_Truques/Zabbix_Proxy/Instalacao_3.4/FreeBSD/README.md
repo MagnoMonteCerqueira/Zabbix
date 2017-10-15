@@ -112,7 +112,7 @@ $ http://PFSense via web => Status => Servicos:
 Verificando a versão do Zabbix Proxy:
 
 ```sh
-$ /usr/local/sbin/zabbix_proxy --version:
+$ /usr/local/sbin/zabbix_proxy --version
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-proxy-3.4-pfsense-13.PNG)
 ##
