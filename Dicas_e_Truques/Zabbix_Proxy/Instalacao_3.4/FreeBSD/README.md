@@ -107,14 +107,14 @@ $ http://PFSense via web => Status => Servicos:
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-proxy-3.4-pfsense-11.PNG)
 ##
-
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-proxy-3.4-pfsense-12.PNG)
+##
 Verificando a versão do Zabbix Proxy:
 
 ```sh
 $ /usr/local/sbin/zabbix_proxy --version:
 ```
-
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-proxy-3.4-pfsense-12.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-proxy-3.4-pfsense-13.PNG)
 ##
 
 
