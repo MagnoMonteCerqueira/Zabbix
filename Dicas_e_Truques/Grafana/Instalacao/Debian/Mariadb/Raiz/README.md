@@ -141,6 +141,13 @@ $ GRANT ALL PRIVILEGES ON `grafana`.* to 'grafana'@'%' with grant option;
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz14.PNG)
 
+##
+Criando as tabelas do banco do Grafana: 
+```sh
+$ use grafana;
+$ create table `session` (`key`   char(16) not null,`data`  blob,`expiry` int(11) unsigned not null,primary key (`key`) )  ENGINE=MyISAM default charset=utf8;
+```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz14-1.PNG)
 
 ##
 ###### 4)  Atualizando as tabelas do servidor Mariadb:
