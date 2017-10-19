@@ -27,22 +27,22 @@ Servidor Debian 9, Zabbix Server 3.4, Mariadb.
 ## Instalação.
 
 ##
-###### 1)  Vamos acessar o servidor via ssh ou interface grafica e baixar o script de instalação:
+###### 1)  Vamos acessar o servidor via ssh baixar o pacote de instalação:
 
 ```sh
 $ cd /tmp
-$ wget  https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Server/Instalacao_3.4/Nutela/Arquivos/instalador-zabbix.sh
+$ wget  wget https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_4.5.2_amd64.deb
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela01.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz01.PNG)
 
 ##
 ###### 2)  Vamos executar o comando abaixo para iniciar a instalação:
 
 ```sh
-$ chmod +x instalador-zabbix.sh && ./instalador-zabbix.sh 
+$ dpkg -i grafana_4.5.2_amd64.deb
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela02.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz02.PNG)
 
 ##
 ###### 3)  Vamos Selecionar a instalação do Zabbix Server:
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela03.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz03.PNG)
