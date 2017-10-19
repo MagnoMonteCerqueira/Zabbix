@@ -163,6 +163,10 @@ $ host = 127.0.0.1:3306
 $ name = grafana
 $ user = grafana
 $ password =bancografana
+$ [session]
+$ provider = mysql
+$ provider_config = `grafana:grafanamysqluserpasswd@tcp(127.0.0.1:3306)/grafana` 
+$ provider = mysql
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz16.PNG)
 
