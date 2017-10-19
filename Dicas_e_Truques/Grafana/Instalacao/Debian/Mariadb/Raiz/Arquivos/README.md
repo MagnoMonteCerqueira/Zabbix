@@ -115,5 +115,90 @@ $ vi /etc/grafana/grafana.ini
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz11.PNG)
 
 
+## Configurando banco de dados Mariadb.
+
+###### 1)  Etapas detalhadas de configurações do banco de dados para o servidor do Grafana:
+No Servidor do Mariadb, vamos criar o banco de dados para uso do Grafana: 
+```sh
+$ create database grafana;
+```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz12.PNG)
+
+##
+###### 2)  Criando o usuario do banco de dados para o servidor do Grafana:
+Criando o usuario para uso do banco do Grafana: 
+```sh
+$ GRANT USAGE ON `grafana`.* to 'grafana'@'%' identified by 'bancografana';
+```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz13.PNG)
+
+##
+###### 3)  Dando privilegios para o usuario do banco de dados para o servidor do Grafana:
+Dando privilegios para o usuario para uso do banco do Grafana: 
+```sh
+$ GRANT ALL PRIVILEGES ON `grafana`.* to 'grafana'@'%' with grant option;
+```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz14.PNG)
 
 
+##
+###### 4)  Atualizando as tabelas do servidor Mariadb:
+Atualizando as tabelas: 
+```sh
+$ flush privileges;
+```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz15.PNG)
+
+## Configurando o Grafana para conexao com Mariadb:
+
+##
+###### 1)  Configurando o servidor do Grafana para acesso ao banco Mariadb:
+Atualizando as tabelas: 
+[database]
+```sh
+$ # Either "mysql", "postgres" or "sqlite3", it's your choice
+$ type = mysql
+$ host = 127.0.0.1:3306
+$ name = grafana
+$ user = grafana
+$ password =bancografana
+```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz16.PNG)
+
+##
+###### 2)  Configurando o servidor do Grafana para acesso ao banco Mariadb:
+Reniciando o Grafana: 
+[database]
+```sh
+$  systemctl restart grafana-server
+```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz17.PNG)
+
+
+##
+###### 2)  Configurando o servidor do Grafana para acesso ao banco Mariadb:
+Reniciando o Grafana: 
+[database]
+```sh
+$  systemctl restart grafana-server
+```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz18.PNG)
+
+
+## Acessando o Grafana via web:
+
+##
+###### 1)  Acessar o servidor Grafana via web:
+para acessar o servidor grafana via web , vamos inserir as informações abaixo em seu navegador:
+
+```sh
+$  http://IP-SERVIDOR:3000
+```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz19.PNG)
+
+
+```sh
+$ Usuario: admin
+$ Senha: admin
+```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz20.PNG)
