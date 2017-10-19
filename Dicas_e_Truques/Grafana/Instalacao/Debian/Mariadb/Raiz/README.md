@@ -32,7 +32,7 @@ Servidor Debian 9, Zabbix Server 3.4, Mariadb.
 
 ```sh
 $ cd /tmp
-$ wget  wget https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_4.5.2_amd64.deb
+$ wget https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_4.5.2_amd64.deb
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz01.PNG)
 
