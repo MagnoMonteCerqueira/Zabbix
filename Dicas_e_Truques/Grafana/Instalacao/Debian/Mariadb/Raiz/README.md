@@ -76,7 +76,7 @@ $ systemctl daemon-reload
 $ systemctl start grafana-server
 $ systemctl start grafana-server
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz06.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz6.PNG)
 
 Iniciando o Grafana no boot do sistema.
 ```sh
