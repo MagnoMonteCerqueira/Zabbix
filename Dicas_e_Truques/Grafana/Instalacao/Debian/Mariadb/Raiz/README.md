@@ -161,8 +161,11 @@ $ flush privileges;
 
 ##
 ###### 1)  Configurando o servidor do Grafana para acesso ao banco Mariadb:
-Atualizando as tabelas: 
+Configurando acesso ao Mariadb: 
 
+```sh
+$ vi /etc/grafana/grafana.ini
+```
 ```sh
 $ [database]
 $ # Either "mysql", "postgres" or "sqlite3", it's your choice
@@ -171,12 +174,17 @@ $ host = 127.0.0.1:3306
 $ name = grafana
 $ user = grafana
 $ password =bancografana
+```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz16.PNG)
+##
+
+```sh
 $ [session]
 $ provider = mysql
 $ provider_config = `grafana:grafanamysqluserpasswd@tcp(127.0.0.1:3306)/grafana` 
 $ provider = mysql
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz16.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz16-1.PNG)
 
 ##
 ###### 2)  Configurando o servidor do Grafana para acesso ao banco Mariadb:
