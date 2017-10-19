@@ -168,7 +168,7 @@ $ password =bancografana
 ##
 ###### 2)  Configurando o servidor do Grafana para acesso ao banco Mariadb:
 Reniciando o Grafana: 
-[database]
+
 ```sh
 $  systemctl restart grafana-server
 ```
@@ -178,7 +178,7 @@ $  systemctl restart grafana-server
 ##
 ###### 2)  Configurando o servidor do Grafana para acesso ao banco Mariadb:
 Reniciando o Grafana: 
-[database]
+
 ```sh
 $  systemctl restart grafana-server
 ```
@@ -196,7 +196,7 @@ $  http://IP-SERVIDOR:3000
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz19.PNG)
 
-
+##
 ```sh
 $ Usuario: admin
 $ Senha: admin
