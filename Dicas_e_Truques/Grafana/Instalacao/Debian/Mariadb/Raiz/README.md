@@ -155,8 +155,9 @@ $ flush privileges;
 ##
 ###### 1)  Configurando o servidor do Grafana para acesso ao banco Mariadb:
 Atualizando as tabelas: 
-[database]
+
 ```sh
+$ [database]
 $ # Either "mysql", "postgres" or "sqlite3", it's your choice
 $ type = mysql
 $ host = 127.0.0.1:3306
