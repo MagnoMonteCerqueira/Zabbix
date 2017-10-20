@@ -30,6 +30,9 @@
 ##### Fabricante Sharp:
 ##### Modelos: MX-2010U.
 
+##### Fabricante Lexmark:
+##### Modelos: Lexmark_X656de.
+
 ##### O que acompanha o template!
 
 ##
