@@ -223,3 +223,15 @@ $ Usuario: admin
 $ Senha: admin
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz20.PNG)
+
+
+##
+
+## Contatos:
+
+
+* Telegram: @Magnopeem
+* Skype: magnopeem_rj@hotmail.com
+* E-mail: magnopeem@gmail.com
+* Linkedin: https://br.linkedin.com/in/magno-monte-cerqueira-976b1587
+
