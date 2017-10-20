@@ -141,7 +141,7 @@
 
 ##### 2) Vamos seguir ate a linha 618 e inserir na blackList a unidade de medida para postar as informações desejadas.
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-editar-frontend-unidade.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/impressora-lld-dados-editar-frontend-unidade-medida.PNG)
 
 ##
 
