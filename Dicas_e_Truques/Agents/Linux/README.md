@@ -78,15 +78,28 @@ Debian 9, Ubuntu 16
 ##
 ##### 6) Apos a coleta de todos os dados, e so inserir as informações de trafego de entrada e saida da placa de rede no grafico.
 
-* Criar grafico 8- Trafego da interface
+* Criar grafico 09- Trafego da interface
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Agente/Linux/linux_lld_13.PNG)
 
 ##### 7) Apos a coleta de todos os dados, e so inserir as informações de disco no grafico.
 
-* Criar grafico 9- com as informações desejadas do disco.
+* Criar grafico 10- com as informações desejadas do disco.
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Agente/Linux/linux_lld_14.PNG)
+
+
+### Em caso de dúvida, sugestão ou dificuldade junte-se a nós no Grupo do Telegram!
+
+* Grupo: https://t.me/ZabbixBrasil 
+
+## Contatos:
+
+
+* Telegram: @Magnopeem
+* Skype: magnopeem_rj@hotmail.com
+* E-mail: magnopeem@gmail.com
+* Linkedin: https://br.linkedin.com/in/magno-monte-cerqueira-976b1587
 
 
 
