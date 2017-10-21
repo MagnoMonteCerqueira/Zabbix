@@ -89,6 +89,11 @@ Debian 9, Ubuntu 16
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Agente/Linux/linux_lld_14.PNG)
 
 
+##### 8) Template Pronto!
+
+[Template_AGENTE_LINUX_LLD_VERSAO-1.0](https://github.com/magnopeem/Templates_zabbix_3.2/tree/master/Linux)
+
+##
 ### Em caso de dúvida, sugestão ou dificuldade junte-se a nós no Grupo do Telegram!
 
 * Grupo: https://t.me/ZabbixBrasil 
