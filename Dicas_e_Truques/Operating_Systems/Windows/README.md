@@ -1,6 +1,6 @@
 
 
-##                                      Simples Template Zabbix Para Windows.
+##                                     Template Agente Zabbix em LLD Para Windows!
 
 ##### A ideia desse template e facilitar a vida em unificar todos os hosts windows em um template unico.
 
