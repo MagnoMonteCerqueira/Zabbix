@@ -64,25 +64,29 @@ Debian 9, Ubuntu 16
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Agente/Linux/linux_lld_09.PNG)
 
-* Processador
+* Memoria Swap
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Agente/Linux/linux_lld_10.PNG)
 
-* I/O de Disco
+* Processador
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Agente/Linux/linux_lld_11.PNG)
 
+*  I/O de Disco
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Agente/Linux/linux_lld_12.PNG)
+##
 ##### 6) Apos a coleta de todos os dados, e so inserir as informações de trafego de entrada e saida da placa de rede no grafico.
 
 * Criar grafico 8- Trafego da interface
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Agente/Linux/linux_lld_12.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Agente/Linux/linux_lld_13.PNG)
 
 ##### 7) Apos a coleta de todos os dados, e so inserir as informações de disco no grafico.
 
 * Criar grafico 9- com as informações desejadas do disco.
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Agente/Linux/linux_lld_13.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Agente/Linux/linux_lld_14.PNG)
 
 
 
