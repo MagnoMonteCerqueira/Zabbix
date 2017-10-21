@@ -2,7 +2,7 @@
 
 ## Discas e truques para Zabbix! 
 
-##
+
 * Area destinada a dicas, truques, novidades implementadas, informações gerais, Tutoriais e gambiarra das coisas com zabbix!
 ##
 
