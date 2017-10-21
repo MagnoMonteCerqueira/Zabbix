@@ -2,6 +2,7 @@
 ##                                      Template Agente Zabbix em LLD Para Linux!.
 
 ##### A ideia desse template e facilitar a vida em unificar todos os hosts Linux em um template unico.
+##### Este template foi utilizado na versao do Zabbix Server 3.2
 
 ### Homologado em Linux Debian:
 
