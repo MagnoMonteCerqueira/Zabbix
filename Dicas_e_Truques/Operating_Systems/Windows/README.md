@@ -82,7 +82,22 @@
 ![Alt Text](https://github.com/magnopeem/Templates_zabbix_3.2/blob/master/src/img/windows_lld_13.PNG)
 
 
+##### 8) Template Pronto!
 
+[Template_Agente_Windows_LLD_Versao-1.0](https://github.com/MagnoMonteCerqueira/Zabbix/tree/master/Zabbix_3.2/Windows)
+
+##
+### Em caso de dúvida, sugestão ou dificuldade junte-se a nós no Grupo do Telegram!
+
+* Grupo: https://t.me/ZabbixBrasil 
+
+## Contatos:
+
+
+* Telegram: @Magnopeem
+* Skype: magnopeem_rj@hotmail.com
+* E-mail: magnopeem@gmail.com
+* Linkedin: https://br.linkedin.com/in/magno-monte-cerqueira-976b1587
 
 
 
