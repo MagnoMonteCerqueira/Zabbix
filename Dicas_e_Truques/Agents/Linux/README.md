@@ -1,9 +1,13 @@
 
 ##                                      Simples Template Zabbix Para Linux.
 
-##### A ideia desse template e facilitar a vida em unificar todos os hosts windows em um template unico.
+##### A ideia desse template e facilitar a vida em unificar todos os hosts Linux em um template unico.
 
-##### O Template_AGENTE_WINDOWS_LLD_VERSAO-1.0 , Ja vai configurado com as opções abaixo e suas respectivas informações de como utilizar.
+### Homologado em Linux Debian:
+
+Debian 9, Ubuntu 16
+
+##### O Template_AGENTE_LINUX_LLD_VERSAO-1.0 , Ja vai configurado com as opções abaixo e suas respectivas informações de como utilizar.
 
 
 ##### O que acompanha o template!
