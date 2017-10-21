@@ -32,7 +32,7 @@ Servidor Debian 9.
 
 ```sh
 $ cd /tmp
-$ wget  https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Server/Instalacao_3.4/Nutela/Arquivos/instalador-zabbix.sh
+$ wget  https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Server/Instalacao_3.4/Debian/Nutela/Arquivos/instalador-zabbix-server-3.4.sh
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela01.PNG)
 
@@ -40,7 +40,7 @@ $ wget  https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dica
 ###### 2)  Vamos executar o comando abaixo para iniciar a instalação:
 
 ```sh
-$ chmod +x instalador-zabbix.sh && ./instalador-zabbix.sh 
+$ chmod +x instalador-zabbix-server-3.4.sh && ./instalador-zabbix-server-3.4.sh 
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela02.PNG)
 
