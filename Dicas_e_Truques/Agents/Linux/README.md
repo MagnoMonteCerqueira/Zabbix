@@ -1,5 +1,5 @@
 
-##                                      Simples Template Zabbix Para Linux.
+##                                      Template Agente Zabbix em LLD Para Linux!.
 
 ##### A ideia desse template e facilitar a vida em unificar todos os hosts Linux em um template unico.
 
