@@ -91,7 +91,7 @@ Debian 9, Ubuntu 16
 
 ##### 8) Template Pronto!
 
-[Template_AGENTE_LINUX_LLD_VERSAO-1.0](https://github.com/magnopeem/Templates_zabbix_3.2/tree/master/Linux)
+[Template_Agente_Linux_LLD_Versao-1.0](https://github.com/magnopeem/Templates_zabbix_3.2/tree/master/Linux)
 
 ##
 ### Em caso de dúvida, sugestão ou dificuldade junte-se a nós no Grupo do Telegram!
