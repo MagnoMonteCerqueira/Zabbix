@@ -186,23 +186,13 @@ $ provider = mysql
 
 ##
 ###### 2)  Configurando o servidor do Grafana para acesso ao banco Mariadb:
-Reniciando o Grafana: 
+Reiniciando o Grafana: 
 
 ```sh
 $  systemctl restart grafana-server
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz17.PNG)
-
-
 ##
-###### 2)  Configurando o servidor do Grafana para acesso ao banco Mariadb:
-Reniciando o Grafana: 
-
-```sh
-$  systemctl restart grafana-server
-```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz18.PNG)
-
 
 ## Acessando o Grafana via web:
 
