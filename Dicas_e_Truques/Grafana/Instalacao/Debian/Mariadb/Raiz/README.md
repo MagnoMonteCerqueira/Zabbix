@@ -212,7 +212,7 @@ $ Senha: admin
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz19.PNG)
 
 ##
-## Plugin de integracao Zabbix Server x Grafana:
+## Plugin de integracao Grafana x Zabbix Server:
 
 ###### 1)  Acessar o servidor Grafana via ssh:
 Após a instalação do Grafana, devemos instalar o Plugin do Zabbix via Grafana CLI:
