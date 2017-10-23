@@ -158,7 +158,7 @@ $ flush privileges;
 
 ## Configurando o Grafana para conexao com Mariadb:
 ###### 1)  Configurando o servidor do Grafana para acesso ao banco Mariadb:
-Configurando acesso ao Mariadb: 
+Configurando acesso ao Mariadb, Vamos editar o arquivo grafana.ini: 
 
 ```sh
 $ vi /etc/grafana/grafana.ini
@@ -166,6 +166,7 @@ $ vi /etc/grafana/grafana.ini
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz15-1.PNG)
 ##
 
+Vamos inserir os dados de conexão com o banco:
 ```sh
 $ [database]
 $ # Either "mysql", "postgres" or "sqlite3", it's your choice
@@ -178,6 +179,7 @@ $ password =bancografana
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz16.PNG)
 ##
 
+Configurando a sessão de conexão:
 ```sh
 $ [session]
 $ provider = mysql
