@@ -257,7 +257,28 @@ Após clicar em Data Sources, clicar em +Add data source:
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz25.PNG)
 
 ##
-Agora vamos realizar a conexão entre Zabbix e Grafana: => 
+Agora vamos realizar a conexão entre Zabbix e Grafana:
+Clique em Add data source e vamos Preencher os dados de conexao;
+Edit data source:
+```sh
+$ Name:
+$ Type:
+```
+Http settings:
+```sh
+$ Url:
+$ Accesss:
+```
+Http Auth:
+```sh
+$ basic Auth:
+```
+Zabbix API details:
+```sh
+$ Username:
+$ Password:
+```
+
 ##
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz26.PNG)
 ##
