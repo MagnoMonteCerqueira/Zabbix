@@ -208,7 +208,6 @@ $  systemctl restart grafana-server
 
 ## Acessando o Grafana via web:
 
-##
 ###### 1)  Acessar o servidor Grafana via web:
 para acessar o servidor grafana via web , vamos inserir as informações abaixo em seu navegador:
 
@@ -252,9 +251,19 @@ Acessar o grafana via web (http://IP-DO-SERVIDOR-GRAFANA:3000) => plugins => App
 ##
 
 ###### 4)  Vamos Ativar o plugin instalado no Grafana:
-Clique em Enable no Plugin do Zabbix
+Vamos habilitar o Plugin do Zabbix, clicando em Enable:
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz24.PNG)
+##
+
+###### 5)  Após o Plugin do Grafana habilitado, Vamos configurar o Data Source, Responsavel pela conexao do Grafana ao Zabbix Server Data Sources =>
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz25PNG)
+##
+Cique em Data Sources =>
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz24.PNG)
+
 ##
 
 
