@@ -163,6 +163,9 @@ Configurando acesso ao Mariadb:
 ```sh
 $ vi /etc/grafana/grafana.ini
 ```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz15-1.PNG)
+##
+
 ```sh
 $ [database]
 $ # Either "mysql", "postgres" or "sqlite3", it's your choice
