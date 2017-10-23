@@ -288,7 +288,7 @@ Dica: Crie um usuario dedicado para acesso via api do Zabbix Server!
 
 
 ## Tudo Pronto! temos a conexão do Grafana com o Zabbix Server, vamos agora verificar as possibilidades do Dashboard:
-Clique em Data Sources =>
+Clique em Dashboard => New
 ##
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz27.PNG)
 
