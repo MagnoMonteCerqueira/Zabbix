@@ -158,8 +158,6 @@ $ flush privileges;
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz15.PNG)
 
 ## Configurando o Grafana para conexao com Mariadb:
-
-##
 ###### 1)  Configurando o servidor do Grafana para acesso ao banco Mariadb:
 Configurando acesso ao Mariadb: 
 
@@ -245,20 +243,23 @@ $  /etc/init.d/grafana-server restart
 ##
 
 ###### 3)  Vamos configurar o plugin instalado no Grafana:
+##
 Acessar o grafana via web (http://IP-DO-SERVIDOR-GRAFANA:3000) => plugins => App, Clique no Plugin do Zabbix
-
+##
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz23.PNG)
 ##
 
 ###### 4)  Vamos Ativar o plugin instalado no Grafana:
+##
 Vamos habilitar o Plugin do Zabbix, clicando em Enable:
-
+##
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz24.PNG)
 ##
 
 ###### 5)  Após o Plugin do Grafana habilitado, Vamos configurar o Data Source, Responsavel pela conexao do Grafana ao Zabbix Server 
+##
 Clique em Data Sources =>
-
+##
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz25PNG)
 ##
 Após clicar em Data Sources, clicar em +Add data source: 
@@ -266,6 +267,7 @@ Após clicar em Data Sources, clicar em +Add data source:
 
 ##
 Agora vamos realizar a conexão entre Zabbix e Grafana: => 
+##
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz27.PNG)
 ##
 
