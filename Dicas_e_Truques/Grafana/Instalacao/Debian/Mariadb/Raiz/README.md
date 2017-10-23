@@ -253,7 +253,8 @@ Clique em Data Sources =>
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz25.PNG)
 ##
 Após clicar em Data Sources, clicar em +Add data source: 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz26.PNG)
+##
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz25-1.PNG)
 
 ##
 Agora vamos realizar a conexão entre Zabbix e Grafana: => 
