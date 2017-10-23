@@ -27,7 +27,6 @@ Servidor Debian 9, Zabbix Server 3.4, Mariadb.
 
 ## Instalação.
 
-##
 ###### 1)  Vamos acessar o servidor via ssh baixar o pacote de instalação:
 
 ```sh
@@ -69,7 +68,7 @@ Inicie o servidor (serviço init.d).
 $ service grafana-server start 
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz05.PNG)
-
+##
 Inicie o servidor (via systemd).
 ```sh
 $ systemctl daemon-reload
@@ -77,13 +76,13 @@ $ systemctl start grafana-server
 $ systemctl start grafana-server
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz6.PNG)
-
+##
 Iniciando o Grafana no boot do sistema.
 ```sh
 $ update-rc.d grafana-server defaults
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz07.PNG)
-
+##
 Ative o serviço do sistema para que o Grafana comece no início.
 ```sh
 $ systemctl enable grafana-server.service
@@ -114,7 +113,7 @@ O arquivo de configuração está localizado em:
 $ vi /etc/grafana/grafana.ini
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz11.PNG)
-
+##
 
 ## Configurando banco de dados Mariadb.
 
@@ -142,7 +141,7 @@ $ GRANT ALL PRIVILEGES ON `grafana`.* to 'grafana'@'%' with grant option;
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz14.PNG)
 
 ##
-Criando as tabelas do banco do Grafana: 
+###### 4) Criando as tabelas do banco do Grafana: 
 ```sh
 $ use grafana;
 $ create table `session` (`key`   char(16) not null,`data`  blob,`expiry` int(11) unsigned not null,primary key (`key`) )  ENGINE=MyISAM default charset=utf8;
@@ -150,7 +149,7 @@ $ create table `session` (`key`   char(16) not null,`data`  blob,`expiry` int(11
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz14-1.PNG)
 
 ##
-###### 4)  Atualizando as tabelas do servidor Mariadb:
+###### 5)  Atualizando as tabelas do servidor Mariadb:
 Atualizando as tabelas: 
 ```sh
 $ flush privileges;
