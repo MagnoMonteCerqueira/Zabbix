@@ -43,7 +43,7 @@ $ wget https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_4.5.2
 $ dpkg -i grafana_4.5.2_amd64.deb
 $ apt-get install -y adduser libfontconfig apt-transport-https
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz02.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz02.PNG)
 
 ##
 ###### 3) Edite o arquivo /etc/apt/sources.list e inserir o repositorio abaixo:
@@ -51,7 +51,7 @@ $ apt-get install -y adduser libfontconfig apt-transport-https
 ```sh
 $ deb  https://packagecloud.io/grafana/stable/debian stretch main 
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz03.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz03.PNG)
 
 ##
 ###### 4)  Instalando o Grafana, vamos efetuar o update dos pacotes e iniciar a instalação:
@@ -59,7 +59,7 @@ $ deb  https://packagecloud.io/grafana/stable/debian stretch main
 ```sh
 $ apt-get update && apt-get install grafana
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz04.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz04.PNG)
 
 ##
 ###### 5)  Iniciando o servidor Grafana, execute os comandos abaixo:
@@ -68,7 +68,7 @@ Inicie o servidor (serviço init.d).
 ```sh
 $ service grafana-server start 
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz05.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz05.PNG)
 
 Inicie o servidor (via systemd).
 ```sh
@@ -76,19 +76,19 @@ $ systemctl daemon-reload
 $ systemctl start grafana-server
 $ systemctl start grafana-server
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz6.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz6.PNG)
 
 Iniciando o Grafana no boot do sistema.
 ```sh
 $ update-rc.d grafana-server defaults
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz07.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz07.PNG)
 
 Ative o serviço do sistema para que o Grafana comece no início.
 ```sh
 $ systemctl enable grafana-server.service
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz08.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz08.PNG)
 
 ##
 ###### 6)  Verificando logs do servidor Grafana, execute os comandos abaixo:
@@ -96,7 +96,7 @@ Por padrão, Grafana irá gerar logs em:
 ```sh
 $ tail -f /var/log/grafana/grafana.log
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz09.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz09.PNG)
 
 ##
 ###### 7)  Verificando base de dados do servidor Grafana:
@@ -105,7 +105,7 @@ A configuração padrão especifica um banco de dados sqlite3 localizado em:
 $ cd /var/lib/grafana/
 $ ls
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz10.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz10.PNG)
 
 ##
 ###### 8)  Configurações do servidor Grafana:
@@ -113,7 +113,7 @@ O arquivo de configuração está localizado em:
 ```sh
 $ vi /etc/grafana/grafana.ini
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz11.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz11.PNG)
 
 
 ## Configurando banco de dados Mariadb.
@@ -123,7 +123,7 @@ No Servidor do Mariadb, vamos criar o banco de dados para uso do Grafana:
 ```sh
 $ create database grafana;
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz12.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz12.PNG)
 
 ##
 ###### 2)  Criando o usuario do banco de dados para o servidor do Grafana:
@@ -131,7 +131,7 @@ Criando o usuario para uso do banco do Grafana:
 ```sh
 $ GRANT USAGE ON `grafana`.* to 'grafana'@'%' identified by 'bancografana';
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz13.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz13.PNG)
 
 ##
 ###### 3)  Dando privilegios para o usuario do banco de dados para o servidor do Grafana:
@@ -139,7 +139,7 @@ Dando privilegios para o usuario para uso do banco do Grafana:
 ```sh
 $ GRANT ALL PRIVILEGES ON `grafana`.* to 'grafana'@'%' with grant option;
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz14.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz14.PNG)
 
 ##
 Criando as tabelas do banco do Grafana: 
@@ -147,7 +147,7 @@ Criando as tabelas do banco do Grafana:
 $ use grafana;
 $ create table `session` (`key`   char(16) not null,`data`  blob,`expiry` int(11) unsigned not null,primary key (`key`) )  ENGINE=MyISAM default charset=utf8;
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz14-1.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz14-1.PNG)
 
 ##
 ###### 4)  Atualizando as tabelas do servidor Mariadb:
@@ -155,7 +155,7 @@ Atualizando as tabelas:
 ```sh
 $ flush privileges;
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz15.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz15.PNG)
 
 ## Configurando o Grafana para conexao com Mariadb:
 ###### 1)  Configurando o servidor do Grafana para acesso ao banco Mariadb:
@@ -173,7 +173,7 @@ $ name = grafana
 $ user = grafana
 $ password =bancografana
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz16.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz16.PNG)
 ##
 
 ```sh
@@ -182,7 +182,7 @@ $ provider = mysql
 $ provider_config = `grafana:grafanamysqluserpasswd@tcp(127.0.0.1:3306)/grafana` 
 $ provider = mysql
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz16-1.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz16-1.PNG)
 
 ##
 ###### 2)  Configurando o servidor do Grafana para acesso ao banco Mariadb:
@@ -191,7 +191,7 @@ Reiniciando o Grafana:
 ```sh
 $  systemctl restart grafana-server
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz17.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz17.PNG)
 ##
 
 ## Acessando o Grafana via web:
@@ -202,14 +202,14 @@ para acessar o servidor grafana via web , vamos inserir as informações abaixo 
 ```sh
 $  http://IP-SERVIDOR:3000
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz19.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz19.PNG)
 
 ##
 ```sh
 $ Usuario: admin
 $ Senha: admin
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz20.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz20.PNG)
 
 ##
 ## Plugin de integracao Zabbix Server x Grafana:
@@ -220,7 +220,7 @@ Após a instalação do Grafana, devemos instalar o Plugin do Zabbix via Grafana
 ```sh
 $  grafana-cli plugins install alexanderzobnin-zabbix-app
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz21.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz21.PNG)
 ##
 
 ###### 2)  Vamos reiniciar o serviço do Grafana:
@@ -229,37 +229,37 @@ Após a instalação do Plugin, devemos reiniciar o Grafana:
 ```sh
 $  /etc/init.d/grafana-server restart
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz22.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz22.PNG)
 ##
 
 ###### 3)  Vamos configurar o plugin instalado no Grafana:
 ##
 Acessar o grafana via web (http://IP-DO-SERVIDOR-GRAFANA:3000) => plugins => App, Clique no Plugin do Zabbix
 ##
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz23.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz23.PNG)
 ##
 
 ###### 4)  Vamos Ativar o plugin instalado no Grafana:
 ##
 Vamos habilitar o Plugin do Zabbix, clicando em Enable:
 ##
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz24.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz24.PNG)
 ##
 
 ###### 5)  Após o Plugin do Grafana habilitado, Vamos configurar o Data Source, Responsavel pela conexao do Grafana ao Zabbix Server 
 ##
 Clique em Data Sources =>
 ##
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz25.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz25.PNG)
 ##
 Após clicar em Data Sources, clicar em +Add data source: 
 ##
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz25-1.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz25-1.PNG)
 
 ##
 Agora vamos realizar a conexão entre Zabbix e Grafana: => 
 ##
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz27.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz27.PNG)
 ##
 
 ## Contatos:
