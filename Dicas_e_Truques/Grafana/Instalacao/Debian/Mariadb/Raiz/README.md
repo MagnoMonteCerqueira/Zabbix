@@ -34,7 +34,7 @@ Servidor Debian 9, Zabbix Server 3.4, Mariadb.
 $ cd /tmp
 $ wget https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_4.5.2_amd64.deb
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/tree/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz01.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz01.PNG)
 
 ##
 ###### 2)  Execute o comando abaixo para iniciar a instalação:
