@@ -279,7 +279,9 @@ $ basic Auth:
 $ Username: (Usuario para acesso a api)
 $ Password: (Senha do usuario criado)
 ```
+Dica: Crie um usuario dedicado para acesso via api do Zabbix Server!
 
+Preenchidas as informações , podemos testar a conexao no botao Add, sera informado a conexão.
 ##
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz26.PNG)
 ##
