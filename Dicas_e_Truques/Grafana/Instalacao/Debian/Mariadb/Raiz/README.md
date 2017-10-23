@@ -250,7 +250,7 @@ Vamos habilitar o Plugin do Zabbix, clicando em Enable:
 ##
 Clique em Data Sources =>
 ##
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz25PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz25.PNG)
 ##
 Após clicar em Data Sources, clicar em +Add data source: 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Grafana/grafanaraiz26.PNG)
