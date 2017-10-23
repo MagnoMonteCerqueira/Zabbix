@@ -202,14 +202,14 @@ para acessar o servidor grafana via web , vamos inserir as informações abaixo 
 ```sh
 $  http://IP-SERVIDOR:3000
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz19.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz18.PNG)
 
 ##
 ```sh
 $ Usuario: admin
 $ Senha: admin
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz20.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz19.PNG)
 
 ##
 ## Plugin de integracao Zabbix Server x Grafana:
@@ -220,7 +220,7 @@ Após a instalação do Grafana, devemos instalar o Plugin do Zabbix via Grafana
 ```sh
 $  grafana-cli plugins install alexanderzobnin-zabbix-app
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz21.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz20.PNG)
 ##
 
 ###### 2)  Vamos reiniciar o serviço do Grafana:
@@ -229,37 +229,37 @@ Após a instalação do Plugin, devemos reiniciar o Grafana:
 ```sh
 $  /etc/init.d/grafana-server restart
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz22.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz21.PNG)
 ##
 
 ###### 3)  Vamos configurar o plugin instalado no Grafana:
 ##
 Acessar o grafana via web (http://IP-DO-SERVIDOR-GRAFANA:3000) => plugins => App, Clique no Plugin do Zabbix
 ##
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz23.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz22.PNG)
 ##
 
 ###### 4)  Vamos Ativar o plugin instalado no Grafana:
 ##
 Vamos habilitar o Plugin do Zabbix, clicando em Enable:
 ##
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz24.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz23.PNG)
 ##
 
 ###### 5)  Após o Plugin do Grafana habilitado, Vamos configurar o Data Source, Responsavel pela conexao do Grafana ao Zabbix Server 
 ##
 Clique em Data Sources =>
 ##
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz25.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz24.PNG)
 ##
 Após clicar em Data Sources, clicar em +Add data source: 
 ##
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz25-1.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz25.PNG)
 
 ##
 Agora vamos realizar a conexão entre Zabbix e Grafana: => 
 ##
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz27.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafanaraiz26.PNG)
 ##
 
 ## Contatos:
