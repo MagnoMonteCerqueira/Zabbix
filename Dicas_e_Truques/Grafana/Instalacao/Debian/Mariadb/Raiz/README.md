@@ -259,24 +259,25 @@ Após clicar em Data Sources, clicar em +Add data source:
 ##
 Agora vamos realizar a conexão entre Zabbix e Grafana:
 Clique em Add data source e vamos Preencher os dados de conexao;
-Edit data source:
+
+## Edit data source:
 ```sh
-$ Name:
-$ Type:
+$ Name: ( Nome que desejar)
+$ Type: Zabbix
 ```
-Http settings:
+## Http settings:
 ```sh
-$ Url:
-$ Accesss:
+$ Url: http://(IP-DO-SERVIDOR-ZABBIX)/zabbix/api_jsonrpc.php
+$ Accesss: direct
 ```
-Http Auth:
+## Http Auth:
 ```sh
 $ basic Auth:
 ```
-Zabbix API details:
+## Zabbix API details:
 ```sh
-$ Username:
-$ Password:
+$ Username: (Usuario para acesso a api)
+$ Password: (Senha do usuario criado)
 ```
 
 ##
