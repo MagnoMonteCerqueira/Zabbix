@@ -146,6 +146,8 @@ UserParameter=temperatura.cpu.servidor.load,tail -1 c:\realtemp\Realtemplog.txt 
 ## Bônus!
 Vamos criar o item com a media da temperatura!
 
+OBS: Vamos somar os itens dos cores e dividir pela quantidade!
+
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/Resultadocoletasmedia.PNG)
 
 ##### 8) Template Pronto!
