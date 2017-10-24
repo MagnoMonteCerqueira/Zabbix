@@ -143,6 +143,11 @@ UserParameter=temperatura.cpu.servidor.load,tail -1 c:\realtemp\Realtemplog.txt 
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/Resultadocoletas.PNG)
 
+## Bônus!
+Vamos criar o item com a media da temperatura!
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Temperatura/Resultadocoletasmedia.PNG)
+
 ##### 8) Template Pronto!
 
 [Template Temperatura](https://github.com/MagnoMonteCerqueira/Zabbix/tree/master/Zabbix_3.4/Windows/Temperatura)
