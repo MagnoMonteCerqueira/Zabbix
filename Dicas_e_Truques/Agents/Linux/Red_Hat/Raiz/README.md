@@ -33,7 +33,7 @@ $  rpm -Uvh http://repo.zabbix.com/zabbix/3.4/rhel/5/x86_64/zabbix-agent-3.4.0-1
 Depois de instalar os pacotes do repositório. Agora vamos instalar o zabbix-agent no seu sistema Linux.
 
 ```sh
-$  yum install zabbix zabbix-agent
+$  yum install zabbix-agent zabbix-get
 ```
 
 ![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Agents/Linux/Red_Hat/redhat02.PNG)
