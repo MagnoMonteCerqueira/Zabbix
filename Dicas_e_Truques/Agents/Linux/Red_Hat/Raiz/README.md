@@ -5,7 +5,7 @@
 
 
 ##
-##### 1) Vamos baixar e adicionar o repositório necessário para a verso desejada:
+##### 1) Vamos baixar e adicionar o repositório necessário para a versão desejada:
 
 CentOS/RHEL 7:
 
@@ -29,8 +29,8 @@ $  rpm -Uvh http://repo.zabbix.com/zabbix/3.4/rhel/5/x86_64/zabbix-agent-3.4.0-1
 
 
 ##
-##### 2) Instale o zabbix-agent:
-Depois de instalar os pacotes do repositório yum em nosso ambiente. Agora vamos instalar o zabbix-agent no seu sistema Linux.
+##### 2) Instale o zabbix-agent no Linux:
+Depois de instalar os pacotes do repositório. Agora vamos instalar o zabbix-agent no seu sistema Linux.
 
 ```sh
 $  yum install zabbix zabbix-agent
@@ -39,12 +39,28 @@ $  yum install zabbix zabbix-agent
 ![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Agents/Linux/Red_Hat/redhat02.PNG)
 
 ##
-##### 3) Configuração do zabbix-agent:
-Depois de instalar os pacotes do repositório yum em nosso ambiente. Agora vamos instalar o zabbix-agent no seu sistema Linux.
+##### 3) Configuração do zabbix-agent.conf:
+Apos o zabbix-agent instalado, vamos fazer as devidas configurações necessarias.
 
 ```sh
-$  yum install zabbix zabbix-agent
+$  Server=XXX.XXX.XXX.XXX
+$ ServerActive=XXX.XXX.XXX.XXX
+$ Hostname=Nome deste servidor
 ```
 
 ![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Agents/Linux/Red_Hat/redhat03.PNG)
+
+
+##
+##### 4) Nesta etapa , Vamos reniciar o agente apos as devidas configurações:
+Reinicialização  necessaria.
+
+```sh
+$  /etc/init.d/zabbix-agent restart
+ou
+$ service zabbix-agent restart
+```
+
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Agents/Linux/Red_Hat/redhat03.PNG)
+
 
