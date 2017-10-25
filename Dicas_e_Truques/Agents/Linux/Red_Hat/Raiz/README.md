@@ -34,7 +34,7 @@ Depois de instalar os pacotes do repositório yum em nosso ambiente. Agora vamos
 
 ```sh
 $  yum install zabbix zabbix-agent
-##```
+```
 
 ![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Agents/Linux/Red_Hat/redhat02.PNG)
 
@@ -44,7 +44,7 @@ Depois de instalar os pacotes do repositório yum em nosso ambiente. Agora vamos
 
 ```sh
 $  yum install zabbix zabbix-agent
-##```
+```
 
 ![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Agents/Linux/Red_Hat/redhat03.PNG)
 
