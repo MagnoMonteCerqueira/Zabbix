@@ -19,6 +19,17 @@ $ apt update && apt-get install snmp snmpd snmp-mibs-downloader && download-mibs
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/SNMP/snmp01.PNG)
 
+###### 1.1) Instalação manual do snmp-mibs-downloader:
+```sh
+$ wget https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Server/Configuracao/3.4/SNMP/Arquivos/snmp-mibs-downloader_1.1_all.deb
+$ dpkg -i snmp-mibs-downloader_1.1_all.deb && apt -f install
+```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/SNMP/snmp01.1.PNG)
+
+
+https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Server/Configuracao/3.4/SNMP/Arquivos/snmp-mibs-downloader_1.1_all.deb
+
+
 ##
 ###### 2) Configurando o snmp:
 vamos editar o arquivo snmp.conf com editor se sua preferencia e inserir os seguintes dados:
