@@ -1,9 +1,3 @@
-
-
-
-
-#![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/banner_instalacao_zabbix_3.4.png)
-
 ##                                      Tutorial de Configuração Raiz do SNMP no Debian 9 (x64) Stretch!
 
 
@@ -20,14 +14,27 @@ Servidor Debian 9.
 ## Instalação.
 
 ##
-###### 1) Vamos acessar o servidor via ssh e instalar o snmp:
 
+###### 1) Vamos acessar o servidor via ssh e instalar o snmp:
 ```sh
 $ apt update && apt-get install snmp snmpd snmp-mibs-downloader && download-mibs
 ```
-
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/SNMP/snmp01.PNG)
 
 ##
+###### 2) Configurando o snmp:
+vamos editar o arquivo snmp.conf com editor se sua preferencia e inserir os seguintes dados:
+```sh
+$ vi /etc/snmp/snmp.conf
+```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/SNMP/snmp02.PNG)
+
+##
+```sh
+$ mibs +ALL
+```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/SNMP/snmp03.PNG)
+
 
 ## Contatos:
 
