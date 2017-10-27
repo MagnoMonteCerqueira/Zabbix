@@ -49,7 +49,7 @@ TMP_DIR=/tmp
 
 
 # Zabbix link
-zabbixDownloadLink="https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Server/Instalacao_3.4/Debian/Nutela/Arquivos/zabbix-3.4.2.tar.gz"
+zabbixDownloadLink="https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/Zabbix_Server/Instalacao/3.4/Debian/Nutela/Arquivos/zabbix-3.4.2.tar.gz"
 
 clear
 
