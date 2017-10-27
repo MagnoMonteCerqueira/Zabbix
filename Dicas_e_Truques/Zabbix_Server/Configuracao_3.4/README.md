@@ -35,7 +35,7 @@ $ mibs +ALL
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/SNMP/snmp03.PNG)
 
 ##
-###### 3) Reniciar o snmp:
+###### 3) Reiniciar o snmp:
 ```sh
 $ /etc/init.d/snmpd restart
 ```
