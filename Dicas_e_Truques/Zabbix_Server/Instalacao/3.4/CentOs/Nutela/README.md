@@ -32,7 +32,7 @@ Servidor CentOs 7.
 $ cd /tmp
 $ wget  https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Server/Instalacao/3.4/Debian/Nutela/Arquivos/instalador-zabbix-server-3.4.sh
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/centos-nutela01.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Nutela/centos-nutela01.PNG)
 
 ##
 ###### 2)  Vamos executar o comando abaixo para iniciar a instalação:
