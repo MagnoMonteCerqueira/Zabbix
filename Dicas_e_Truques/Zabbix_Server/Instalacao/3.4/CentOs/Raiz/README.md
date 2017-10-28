@@ -37,7 +37,7 @@ Servidor CentOs 7,Apache2, MariaDB, PHPMyAdmin.
 
 ###### 1.1) Execute o comando abaixo para instalar as dependencias:
 ```sh
-# yum -y install php-cli php-common php-devel php-pear php-gd php-mbstring php-mysql php-xml vim php7.0-bcmath php7.0-mbstring php-sabre-xml
+# yum -y install php-cli php-common php-devel php-pear php-gd php-mbstring php-mysql php-xml vim php7.0-bcmath php7.0-mbstring php-sabre-xml mariadb-server  mariadb
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz01-1.PNG)
 ##
