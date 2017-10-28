@@ -36,8 +36,10 @@ Servidor CentOs 7,Apache2, MariaDB, PHPMyAdmin.
 
 ```sh
 # cd /tmp
+
 # rpm -ivh ttps://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/Arquivos/zabbix-release-3.4-1.el7.centos.noarch.rpm
-# yum update && yum install zabbix-server-mysql zabbix-frontend-php zabbix-agent vim php7.0-bcmath php7.0-mbstring php-sabre-xml -y
+
+# yum update && yum install zabbix-server-mysql zabbix-frontend-php zabbix-agent -y
 ```
 
 ##
