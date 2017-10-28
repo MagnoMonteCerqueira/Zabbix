@@ -26,7 +26,7 @@ Servidor CentOs 7,Apache2, MariaDB, PHPMyAdmin.
 ## Instalação.
 
 ##
-###### 1)  vamos acessar o servidor via ssh ou interface grafica e atualizar o repositório como root:
+###### 1) Vamos acessar o servidor via ssh ou interface grafica e atualizar o repositório como root:
 
 ```sh
 # yum update && yum upgrade
@@ -35,6 +35,7 @@ Servidor CentOs 7,Apache2, MariaDB, PHPMyAdmin.
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz01.PNG)
 ##
 
+###### 1.1) Execute o comando abaixo para instalar as dependencias:
 ```sh
 # yum -y install php-cli php-common php-devel php-pear php-gd php-mbstring php-mysql php-xml vim php7.0-bcmath php7.0-mbstring php-sabre-xml
 ```
@@ -51,6 +52,7 @@ Servidor CentOs 7,Apache2, MariaDB, PHPMyAdmin.
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz02.PNG)
 ##
 
+###### 2.2) Vamos atualizar o repositorio e Instalar o Zabbix Server 3.4:
 ```sh
 # yum update && yum install zabbix-server-mysql zabbix-frontend-php zabbix-agent -y
 ```
