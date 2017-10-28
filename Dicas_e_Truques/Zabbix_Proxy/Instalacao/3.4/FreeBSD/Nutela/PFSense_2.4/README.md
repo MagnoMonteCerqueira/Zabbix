@@ -1,7 +1,7 @@
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/PFsense/zabbix-3.4-pfsense.png)
 
-##                                      Tutorial de instalação Nutela do Zabbix Proxy 3.4 no PFSense 2.3 com banco de dados Sqlite3!
+##                                      Tutorial de instalação Nutela do Zabbix Proxy 3.4 no PFSense 2.4 com banco de dados Sqlite3!
 
 
 ## Introdução.
