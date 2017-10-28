@@ -125,6 +125,9 @@ OBS: Digite a senha do usuario zabbix criado anteriormente para importar as tabe
 ```sh
 # vim /etc/zabbix/zabbix_server.conf
 ```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz05.PNG)
+
+
 ##
 ```sh
 #...
@@ -137,12 +140,19 @@ DBUser=zabbix
 DBPassword=SENHA-USUARIO-ZABBIX
 #...
 ```
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz06.PNG)
+
+
 ##
 ###### 6)  Vamos editar o arquivo de configuração do Zabbix Server dentro do Apache e inserir as informações abaixo:
 
 ```sh
 # vim /etc/httpd/conf.d/zabbix.conf
 ```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz07.PNG)
+
+
 ##
 
 Na Linha 19 e 28 remova o comentario (#) e coloque a data e hora de sua regiao.
