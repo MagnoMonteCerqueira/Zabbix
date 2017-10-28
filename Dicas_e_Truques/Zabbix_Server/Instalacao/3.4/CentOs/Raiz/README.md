@@ -29,20 +29,34 @@ Servidor CentOs 7,Apache2, MariaDB, PHPMyAdmin.
 ###### 1)  vamos acessar o servidor via ssh ou interface grafica e atualizar o repositório como root:
 
 ```sh
-# yum update && yum upgrade && yum -y install php-cli php-common php-devel php-pear php-gd php-mbstring php-mysql php-xml vim php7.0-bcmath php7.0-mbstring php-sabre-xml
+# yum update && yum upgrade
 ```
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz01.PNG)
 ##
+
+```sh
+# yum -y install php-cli php-common php-devel php-pear php-gd php-mbstring php-mysql php-xml vim php7.0-bcmath php7.0-mbstring php-sabre-xml
+```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz01-1.PNG)
+##
+
 ###### 2)  Para a instalação do Zabbix Server 3.4 é necessário incluir no repositório as informações atualizadas do Zabbix:
 
 ```sh
 # cd /tmp
 
 # rpm -ivh ttps://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/Arquivos/zabbix-release-3.4-1.el7.centos.noarch.rpm
+```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz02.PNG)
+##
 
+```sh
 # yum update && yum install zabbix-server-mysql zabbix-frontend-php zabbix-agent -y
 ```
-
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz03.PNG)
 ##
+
 ###### 3)  Após todos os passos anteriores, vamos acessar a mariadb e criar banco de dados e usuario para utilização do Zabbix Server:
 
 ```sh
