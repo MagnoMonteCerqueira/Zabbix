@@ -141,7 +141,7 @@ DBPassword=SENHA-USUARIO-ZABBIX
 ###### 6)  Vamos editar o arquivo de configuração do Zabbix Server dentro do Apache e inserir as informações abaixo:
 
 ```sh
-# vim /etc/apache2/conf-enabled/zabbix.conf
+# vim /etc/httpd/conf.d/zabbix.conf
 ```
 ##
 
