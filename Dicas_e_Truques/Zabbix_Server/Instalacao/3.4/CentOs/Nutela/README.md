@@ -56,23 +56,23 @@ $ chmod +x instalador-zabbix-server-3.4.sh && ./instalador-zabbix-server-3.4.sh
 
 ##
 ###### 6)  Vamos inserir uma senha para o banco de dados do Zabbix Server:
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela06.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Nutela/centos-nutela06.PNG)
 
 ##
 ###### 7)  Sera solicitado para configurar Timezone da sua regiao clique em OK:
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela07.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Nutela/centos-nutela07.PNG)
 
 ##
 ###### 8) Selecione o pais, Clique em OK:
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela08.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Nutela/centos-nutela08.PNG)
 
 ##
 ###### 9)  Selecione o estado, clique em OK:
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela9.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Nutela/centos-nutela09.PNG)
 
 ##
 ###### 10)  No final da instalação sera informado um resumo de todas as informações de acesso, clique em OK:
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela10.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Nutela/centos-nutela10.PNG)
 ##
 
 ## Configuração Zabbix Server.
