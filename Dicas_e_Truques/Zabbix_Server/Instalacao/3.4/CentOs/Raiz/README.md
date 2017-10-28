@@ -37,7 +37,7 @@ Servidor CentOs 7,Apache2, MariaDB, PHPMyAdmin.
 
 ###### 1.1) Execute o comando abaixo para instalar as dependencias:
 ```sh
-# yum -y install php-cli php-common php-devel php-pear php-gd php-mbstring php-mysql php-xml vim php7.0-bcmath php7.0-mbstring php-sabre-xml mariadb-server  mariadb
+# yum -y install php-cli php-common php-devel php-pear php-gd php-mbstring php-mysql php-xml vim php7.0-bcmath php7.0-mbstring php-sabre-xml mariadb-server  mariadb && systemctl start mariadb
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz01-1.PNG)
 ##
@@ -59,12 +59,48 @@ Servidor CentOs 7,Apache2, MariaDB, PHPMyAdmin.
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz03.PNG)
 ##
 
-###### 3)  Após todos os passos anteriores, vamos acessar a mariadb e criar banco de dados e usuario para utilização do Zabbix Server:
+###### 3)  Após todos os passos anteriores, vamos acessar a mariadb e criar banco de dados e usuario para utilização do Zabbix Server, mais antes vamos instalar o banco de dados:
 
+```sh
+# yum install mariadb-server
+```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz-mariadb-01.PNG)
+
+##
+```sh
+# systemctl enable mariadb
+```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz-mariadb-02.PNG)
+##
+
+iniciando o banco de dados
+```sh
+#  systemctl start mariadb
+```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz-mariadb-03.PNG)
+##
+
+Vamos Acessar o banco de dados:
+```sh
+#  mysql -u root
+```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz-mariadb-04.PNG)
+
+##
 ```sh
 # mariadb
 ```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz-mariadb-05.PNG)
+
+
+
+
 ##
+
+
+
+
+
 ```sh
 # create database zabbix character set utf8 collate utf8_bin;
 ```
