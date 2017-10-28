@@ -45,9 +45,13 @@
 
 ##
  [Zabbix Agente MSI 3.2 ](https://github.com/MagnoMonteCerqueira/Zabbix/tree/master/Zabbix_3.2/Agents).
+ 
+  [Templates Agent Windows LLD 3.2 ](https://github.com/MagnoMonteCerqueira/Zabbix/tree/master/Zabbix_3.2/Windows).
 
 ##
  [Zabbix Agente MSI 3.4 ](https://github.com/MagnoMonteCerqueira/Zabbix/tree/master/Zabbix_3.4/Agents).
+ 
+ [Templates Agent Windows LLD 3.4 ](https://github.com/MagnoMonteCerqueira/Zabbix/tree/master/Zabbix_3.4/Windows/Agent).
 
 ##
 ## Contatos:
