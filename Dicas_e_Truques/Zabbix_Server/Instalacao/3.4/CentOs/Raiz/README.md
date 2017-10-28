@@ -89,24 +89,28 @@ Vamos Acessar o banco de dados:
 
 ###### 4)  Apos banco de dados instalado vamos preparar o banco de dados para o Zabbix Server:
 
+Criar o banco de dados para o Zabbix:
 ```sh
 # create database zabbix character set utf8 collate utf8_bin;
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz-mariadb-05.PNG)
 
 ##
+Criar usuairo para o Zabbix Server e seu privilegio de acesso:
 ```sh
 # grant all privileges on zabbix.* to zabbix@localhost identified by 'SENHA-USUARIO-ZABBIX';
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz-mariadb-06.PNG)
 
 ##
+Vamos sair do banco de dados:
 ```sh
 # quit;
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz-mariadb-07.PNG)
 
 ##
+Importando as tabelas para uso do zbabix server para o banco de dados criado:
 ```sh
 # zcat /usr/share/doc/zabbix-server-mysql-3.4.3/create.sql.gz | mysql -uzabbix -p zabbix
 ```
