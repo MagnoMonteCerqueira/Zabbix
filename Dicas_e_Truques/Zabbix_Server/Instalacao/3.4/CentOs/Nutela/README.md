@@ -32,7 +32,7 @@ Servidor CentOs 7.
 $ cd /tmp
 $ wget  https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Server/Instalacao/3.4/Debian/Nutela/Arquivos/instalador-zabbix-server-3.4.sh
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela01.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/centos-nutela01.PNG)
 
 ##
 ###### 2)  Vamos executar o comando abaixo para iniciar a instalação:
@@ -40,11 +40,11 @@ $ wget  https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dica
 ```sh
 $ chmod +x instalador-zabbix-server-3.4.sh && ./instalador-zabbix-server-3.4.sh 
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela02.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/centos-nutela02.PNG)
 
 ##
 ###### 3)  Vamos Selecionar a instalação do Zabbix Server:
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela03.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/centos-nutela03.PNG)
 
 ##
 ###### 4)  Sera informado a versao do CentOs, cliquei em OK:
