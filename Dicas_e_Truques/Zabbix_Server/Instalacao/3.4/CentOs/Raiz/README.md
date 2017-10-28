@@ -1,6 +1,6 @@
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/zabbix.jpg)
 
-##                                      Tutorial de instalação Raiz do Zabbix Server 3.4 no CentOs (x64) com banco de dados MariaBD!
+##                                      Tutorial de instalação Raiz do Zabbix Server 3.4 no CentOs 7 (x64) com banco de dados MariaBD!
 
 
 ## Introdução.
@@ -20,7 +20,7 @@ Na lista abaixo temos algumas vantagens de se utilizar o Zabbix:
 
 ## Requisitos:
 
-Servidor CentOs 7,Apache2, MariaDB, PHPMyAdmin.
+Servidor CentOs 7,Apache2, MariaDB.
 
 
 ## Instalação.
