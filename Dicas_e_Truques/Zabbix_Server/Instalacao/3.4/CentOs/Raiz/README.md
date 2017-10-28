@@ -54,7 +54,7 @@ Servidor CentOs 7,Apache2, MariaDB, PHPMyAdmin.
 
 ###### 2.2) Vamos atualizar o repositorio e Instalar o Zabbix Server 3.4:
 ```sh
-# yum update && yum install zabbix-server-mysql zabbix-frontend-php zabbix-agent -y
+# yum update && yum install zabbix-server-mysql zabbix-frontend-php zabbix-agent zabbix-web-mysql -y 
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz03.PNG)
 ##
@@ -92,23 +92,28 @@ Vamos Acessar o banco de dados:
 ```sh
 # create database zabbix character set utf8 collate utf8_bin;
 ```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz-mariadb-05.PNG)
+
 ##
 ```sh
 # grant all privileges on zabbix.* to zabbix@localhost identified by 'SENHA-USUARIO-ZABBIX';
 ```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz-mariadb-06.PNG)
 
 ##
 ```sh
 # quit;
 ```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz-mariadb-07.PNG)
+
 ##
-
-
 ```sh
-# zcat /usr/share/doc/zabbix-server-mysql/create.sql.gz | mysql -uzabbix -p zabbix
+# zcat /usr/share/doc/zabbix-server-mysql-3.4.3/create.sql.gz | mysql -uzabbix -p zabbix
 ```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz-mariadb-08.PNG)
 
-Digite a senha do usuario zabbix criado anteriormente para importar as tabelas.
+OBS: Digite a senha do usuario zabbix criado anteriormente para importar as tabelas.
+
 
 ##
 ###### 5)  Vamos editar o arquivo de configuração do Zabbix Server e inserir as informações abaixo:
