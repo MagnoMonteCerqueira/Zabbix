@@ -48,11 +48,11 @@ $ chmod +x instalador-zabbix-server-3.4.sh && ./instalador-zabbix-server-3.4.sh
 
 ##
 ###### 4)  Sera informado a versao do CentOs, cliquei em OK:
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela04.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/centos-nutela04.PNG)
 
 ##
 ###### 5)  Aguarde a instalação:
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_server/nutela05.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/centos-nutela05.PNG)
 
 ##
 ###### 6)  Vamos inserir uma senha para o banco de dados do Zabbix Server:
