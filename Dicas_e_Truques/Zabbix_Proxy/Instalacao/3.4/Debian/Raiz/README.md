@@ -105,12 +105,30 @@ ou
 # /etc/init.d/zabbix-proxy status
 ```
 
+
+## Configuração Zabbix Proxy no Zabbix Server.
+
+###### 1) Acessando via web o Zabbix Server, entre com usuario e senha.
 ##
-###### 10) Configurando o Zabbix Proxy no Zabbix Server:
+Clique em Sign in:
+##
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela11.PNG)
+##
 
-```sh
+Vamos em Administração => Proxies:
+##
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela12.PNG)
+##
 
-```
+Clique em Criar Proxy, coloquei o nome do seu servidor Proxy , Apos clique em adicionar:
+##
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela113.PNG)
+##
+
+Vamos Aguardar a comunicação do Zabbix proxy com o Zabbix Server:
+##
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Zabbix_proxy/nutela14.PNG)
+##
 
 ##
 
