@@ -48,7 +48,7 @@ zabbixInstallTag=0
 TMP_DIR=/tmp
 
 # Zabbix link
-zabbixDownloadLink="https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Server/Instalacao_3.4/Raiz/Arquivos/zabbix-release_3.4-1%2Bstretch_all.deb"
+zabbixDownloadLink="https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Proxy/Instalacao/3.4/Debian/Raiz/Arquivos/zabbix-release_3.4-1%2Bstretch_all.deb"
 
 ###
 clear
