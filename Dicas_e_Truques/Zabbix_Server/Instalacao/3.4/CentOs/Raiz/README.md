@@ -47,7 +47,7 @@ Servidor CentOs 7,Apache2, MariaDB.
 ```sh
 # cd /tmp
 
-# rpm -ivh ttps://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/Arquivos/zabbix-release-3.4-1.el7.centos.noarch.rpm
+# rpm -ivh https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/Arquivos/zabbix-release-3.4-1.el7.centos.noarch.rpm
 ```
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Instalacao/3.4/CentOs/Raiz/centos-raiz02.PNG)
 ##
