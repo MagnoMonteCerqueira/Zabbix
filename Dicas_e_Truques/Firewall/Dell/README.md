@@ -3,30 +3,27 @@
 
 ![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-banner.jpg)
 
-##                                      Tutorial de instalação Raiz do Zabbix Proxy 3.4 no Debian 9 (x64) Stretch com banco de dados MariaBD!
+##                                      Template para monitoramento Firewall Sonicwall!
 
 
 ## Introdução.
 
-Zabbix é um software que monitora diversos parâmetros de uma rede como a integridade e desempenho dos servidores. Oferece excelentes relatórios e visualização de dados de recursos com base nos dados armazenados, e usa um mecanismo de notificação flexível que permite aos usuários configurar e-mail com alertas para qualquer evento, o que permite uma reação rápida para os problemas do servidor.
-Zabbix e Open Source e multiplataforma, livre de custos de licenciamento, sendo utilizada para monitorar a disponibilidade e o desempenho de aplicações, ativos e serviços de rede por todo o mundo.
-
-Na lista abaixo temos algumas vantagens de se utilizar o Zabbix:
-
-* Solução Open Source;
-* Suporte para SNMP (v1, v2 e v3);
-* Monitoramento distribuído com administração centralizada na web;
-* Agentes de alta performance (software de cliente para Linux, Solaris, HP-UX, AIX, FreeBSD, OpenBSD, OS X, Tru64/OSF1, , Windows Server Windows Desktop);
-* Permissões flexíveis de usuário;
-* Interface baseada na web.
-
+Década de 1990: no final da década de 1990, a empresa lançou um produto de segurança inicialmente chamado "Interpol" e mais tarde denominado "SonicWALL", um dispositivo de hardware dedicado com firewall e software VPN destinado ao mercado de pequenas empresas. À medida que as vendas para os dispositivos de segurança aceleravam rapidamente, a empresa saiu do negócio de rede add-on da Apple e reorientou-se exclusivamente como uma empresa de segurança de rede
 
 ## Requisitos:
 
-Servidor Debian 9, MariaDB, PHPMyAdmin.
+Firewall Sonicwall
 
+## Template para monitoramento.
 
-## Instalação.
+A ideia desse template e facilitar a vida em poder utilizar um template unico para Firewall Sonicwall do ambiente ganhando tempo valioso ao invés de ter um template para cada host.
+
+## O template da suporte para as seguintes Modelos:
+
+1 => TZ 105
+2 => TZ 215
+3 => NSA 220
+4 => NSA 3600
 
 ##
 ###### 1) Vamos acessar o servidor via ssh ou interface grafica e atualizar o repositório e atualizar o sistema como root:
