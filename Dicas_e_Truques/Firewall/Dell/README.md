@@ -37,54 +37,74 @@ A ideia desse template e facilitar a vida em poder utilizar um template unico pa
 ##
 ###### 3) Em Graficos:
 ##
-* 01- Disponibilidade
+* 01- Disponibilidade:
+
 ![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-03.JPG)
 
 ###
-* 02- Latencia
+* 02- Latencia:
 
 ![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-04.JPG)
 
 ##
-* 03- Perda de Pacotes
+* 03- Perda de Pacotes:
 
 ![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-05.JPG)
 
 ##
-* 04- Tempo Ligado
+* 04- Tempo Ligado:
 
 ![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-06.JPG)
 
+##
+* 05- Processador:
 
-
-![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-07.jpg)
-
-![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-08.jpg)
-
-![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-09.jpg)
-
-![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-10.jpg)
-
-![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-11.jpg)
-
-![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-12.jpg)
-
-![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-13.jpg)
-
-![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-14.jpg)
-
-![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-15.jpg)
-
-![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-16.jpg)
-
-
-
-
-
-
-
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-07.JPG)
 
 ##
+* 06- Memoria:
+
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-08.JPG)
+
+##
+* 07- Conexoes:
+
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-09.JPG)
+
+##
+* 08- Servicos:
+
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-10.JPG)
+
+##
+* 09- Trafego de rede X0:
+
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-11.JPG)
+
+##
+* 10- Trafego de rede X1:
+
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-12.JPG)
+
+##
+* 11- Trafego de rede X2:
+
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-13.JPG)
+
+##
+* 12- Trafego de rede X3:
+
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-14.JPG)
+
+##
+* 13- Trafego de rede X4:
+
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-15.JPG)
+
+##
+* 14- Trafego de rede U0:
+
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-16.JPG)
 
 ##
 
