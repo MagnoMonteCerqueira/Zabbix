@@ -27,7 +27,7 @@ A ideia desse template e facilitar a vida em poder utilizar um template unico pa
 
 ##
 ###### 1) Dados Coletados:
-![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-01.jpg)
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-01.JPG)
 
 ##
 ###### 2) Em LLD:
