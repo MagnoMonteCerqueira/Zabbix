@@ -26,23 +26,85 @@ A ideia desse template e facilitar a vida em poder utilizar um template unico pa
 ##### 4 => NSA 3600
 
 ##
-###### 1) :
+###### 1) Dados Coletados:
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-01.jpg)
 
-```sh
-$  
-```
 ##
-###### 2) :
+###### 2) Em LLD:
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-02.jpg)
 
-```sh
-
-```
 ##
-###### 3) :
+###### 3) Em Graficos:
+##
+* 01- Disponibilidade
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-03.jpg)
 
-```sh
- 
-```
+###
+* 02- Latencia
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-04.jpg)
+
+##
+* 03- Perda de Pacotes
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-05.jpg)
+
+##
+* 04- Tempo Ligado
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-06.jpg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-02.jpg)
+
+##
+###### 3) Em Graficos:
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-02.jpg)
+
+##
+###### 3) Em Graficos:
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-02.jpg)
+
+##
+###### 3) Em Graficos:
+##
+* 01- Disponibilidade
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-02.jpg)
+
+##
+###### 3) Em Graficos:
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-02.jpg)
+
+##
+###### 3) Em Graficos:
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-02.jpg)
+
+##
+###### 3) Em Graficos:
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-02.jpg)
+
+##
+###### 3) Em Graficos:
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-02.jpg)
+
+##
+###### 3) Em Graficos:
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-02.jpg)
+
+##
+
 
 
 ## Contatos:
