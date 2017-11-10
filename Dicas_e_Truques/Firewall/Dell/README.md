@@ -26,25 +26,21 @@ A ideia desse template e facilitar a vida em poder utilizar um template unico pa
 ##### 4 => NSA 3600
 
 ##
-###### 1) Vamos acessar o servidor via ssh ou interface grafica e atualizar o repositório e atualizar o sistema como root:
+###### 1) :
 
 ```sh
-$ apt update && apt upgrade 
+$  
 ```
 ##
-###### 2) Para a instalação do Zabbix Proxy 3.4 é necessário incluir no repositório as informações atualizadas do Zabbix:
+###### 2) :
 
 ```sh
-# cd /tmp
-# wget https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Proxy/Instalacao/3.4/Debian/Raiz/Arquivos/zabbix-release_3.4-1%2Bstretch_all.deb
-# dpkg -i zabbix-release_3.4-1+stretch_all.deb
-# apt-get update
+
 ```
 ##
-###### 3) Vamos instalar as dependencias necessarias para instalação do Zabbix Proxy:
+###### 3) :
 
 ```sh
-# apt update && apt install vim build-essential snmp vim libssh2-1-dev libssh2-1 libopenipmi-dev libsnmp-dev wget libcurl4-gnutls-dev fping curl libcurl3-gnutls libcurl3-gnutls-dev libiksemel-dev libiksemel-utils libiksemel3 sudo libevent-dev libpcre3-dev 
  
 ```
 
