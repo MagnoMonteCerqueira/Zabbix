@@ -18,12 +18,12 @@ Firewall Sonicwall
 
 A ideia desse template e facilitar a vida em poder utilizar um template unico para Firewall Sonicwall do ambiente ganhando tempo valioso ao invés de ter um template para cada host.
 
-## O template da suporte para as seguintes Modelos:
+## O template foi homologado e da suporte para as seguintes Modelos:
 
-1 => TZ 105
-2 => TZ 215
-3 => NSA 220
-4 => NSA 3600
+##### 1 => TZ 105
+##### 2 => TZ 215
+##### 3 => NSA 220
+##### 4 => NSA 3600
 
 ##
 ###### 1) Vamos acessar o servidor via ssh ou interface grafica e atualizar o repositório e atualizar o sistema como root:
