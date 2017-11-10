@@ -107,6 +107,9 @@ A ideia desse template e facilitar a vida em poder utilizar um template unico pa
 ![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Firewall/Sonicwall/sonicwall-16.JPG)
 
 ##
+Template.
+
+[Template SNMP LLD SonicWall](https://github.com/MagnoMonteCerqueira/Zabbix/tree/master/Zabbix_3.4/Firewall/Dell)
 
 ## Contatos:
 
