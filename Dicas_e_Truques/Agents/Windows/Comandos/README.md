@@ -9,9 +9,16 @@
 ##
 ##### 1) Vamos utilizar os comandos abaixo:
 
+Versão:
 ```sh
 zabbix_get -V 
 ```
+##
+Exemplos:
+```sh
+zabbix_get -h
+```
+
 ![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Agents/Windows/Comandos-agente01.PNG)
 
 ##
