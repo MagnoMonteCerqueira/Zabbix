@@ -13,13 +13,14 @@ Versão:
 ```sh
 zabbix_get -V 
 ```
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Agents/Windows/Comandos-agente-versao.PNG)
+
 ##
 Exemplos:
 ```sh
 zabbix_get -h
 ```
-
-![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Agents/Windows/Comandos-agente01.PNG)
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Agents/Windows/Comandos-agente-exemplos.PNG)
 
 ##
 ##### 2) Vamos utilizar o comando para verificar servicos:
@@ -27,13 +28,7 @@ zabbix_get -h
 ```sh
 zabbix_get -s (IP DO HOST) -p 10050 -k service.discovery | python -m json.tool
 ```
-
-![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Agents/Windows/Comandos-agente02.PNG)
-
-##
-
-
-
+![Alt Text](https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/src/img/Agents/Windows/Comandos-servicos.PNG)
 
 ##
 ## Contatos:
