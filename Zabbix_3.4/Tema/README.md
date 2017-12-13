@@ -18,6 +18,10 @@
 ##
 ##### 2) Apos baixar o Winscp, acessar a pasta de instalação do zabbix em img e inserir nosso plano de fundo, alterar os arquivos  login-zabbix.jpg, zabbix-inicial.fw.png, zabbix-interna.fw.png pelas imagens de sua escolha!
 
+OBS: baixar os arquivos no link abaixo:
+
+![Arquivos](https://github.com/MagnoMonteCerqueira/Zabbix/tree/master/Zabbix_3.4/Tema/Arquivos)
+
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Background/img.PNG)
 
 ##
