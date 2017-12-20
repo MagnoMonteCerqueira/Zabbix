@@ -47,11 +47,13 @@ OBS: baixar os arquivos (login-zabbix.jpg, zabbix-inicial.fw.png, zabbix-interna
 ##
 ##### Dica & Truques Zabbix!
 
-####### Caso desejar que a imagem fique automatizada (Centralizada) em toda a tela do Zabbix.
+####### Caso queira que a imagem fique automatizada (Centralizada) em toda a tela do Zabbix.
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Background/Dicas&TruquesTema.PNG)
 
-
+##
+####### Podemos tambem fazer manualmente a configuração.
+![Altex Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.4/src/img/Background/Dicas%26Truques-tema-manual.PNG)
 ##
 ## Contatos:
 
