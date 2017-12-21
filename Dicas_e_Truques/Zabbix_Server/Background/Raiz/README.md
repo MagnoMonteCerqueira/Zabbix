@@ -18,7 +18,6 @@ Conhecimento em Linux.
 
 ## Configuração.
 
-##
 ###### 1) Vamos acessar o servidor via ssh como root e acessar a pasta contendo os arquivos que vamos editar no Zabbix Server:
 OBS: esta pasta tem localização diferente dependendo da forma de instalação via pacote ou codigo fonte!
 
@@ -34,11 +33,12 @@ $ vi blue-theme.css
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Background/background-01.PNG)
 
+##
 Comentar linha:
 ```sh
 $ /* background-color: #ebeef0; */
 ```
-
+##
 Inserir imagem:
 
 ```sh
@@ -49,8 +49,6 @@ $ background:url("../img/login-zabbix.jpg")
 ###### 3) Vamos atualizar a pagina de login apos fazermos uma limpeza dados temporarios de navegação: 
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Background/background-02.PNG)
-
-
 
 ## Contatos:
 
