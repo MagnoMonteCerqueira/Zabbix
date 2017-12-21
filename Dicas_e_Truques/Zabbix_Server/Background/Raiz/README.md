@@ -46,7 +46,7 @@ $ background:url("../img/login-zabbix.jpg")
 ```
 
 ##
-###### 3) Vamos vamos atualizar a pagina de login apos fazermos uma limpeza dados temporarios de navegação: 
+###### 3) Vamos atualizar a pagina de login apos fazermos uma limpeza dados temporarios de navegação: 
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Background/background-02.PNG)
 
