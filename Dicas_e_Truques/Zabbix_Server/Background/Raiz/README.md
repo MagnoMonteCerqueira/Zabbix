@@ -19,12 +19,25 @@ Conhecimento em Linux.
 ## Configuração.
 
 ##
-###### 1) Vamos acessar o servidor via ssh como root e acessar a pasta contendo os arquivos de nstalação do Zabbix Server:
+###### 1) Vamos acessar o servidor via ssh como root e acessar a pasta contendo os arquivos que vamos editar no Zabbix Server:
 OBS: esta pasta tem localização diferente dependendo da forma de instalação via pacote ou codigo fonte!
 
 ```sh
-$ apt update && apt upgrade 
+$ cd /usr/share/zabbix/styles/
 ```
+##
+```sh
+$ vi blue-theme.css
+```
+##
+###### 2) Vamos acessar o servidor via ssh como root e acessar a pasta contendo os arquivos que vamos editar no Zabbix Server:
+OBS: esta pasta tem localização diferente dependendo da forma de instalação via pacote ou codigo fonte!
+
+```sh
+$ cd /usr/share/zabbix/styles/
+```
+
+
 
 ## Contatos:
 
