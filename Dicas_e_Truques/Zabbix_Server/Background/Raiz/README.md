@@ -16,7 +16,7 @@ Agora chega de delongas e vamos pôr a mão na massa!
 Conhecimento em Linux.
 
 
-## Configuração.
+## Configuração Background.
 
 ###### 1) Vamos acessar o servidor via ssh como root e navegar ate a pasta contendo os arquivos que vamos editar no Zabbix Server:
 OBS: esta pasta tem localização diferente dependendo da forma de instalação via pacote ou codigo fonte!
@@ -25,6 +25,7 @@ OBS: esta pasta tem localização diferente dependendo da forma de instalação 
 $ cd /usr/share/zabbix/styles/
 ```
 ##
+Editando o Arquivo css
 ```sh
 $ vi blue-theme.css
 ```
@@ -67,6 +68,20 @@ $ -o-background-size: cover;
 Resultado:
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Background/background-04.PNG)
+
+## Configuração tela de Login.
+
+###### 1) Vamos acessar o servidor via ssh como root e navegar ate a pasta contendo os arquivos que vamos editar no Zabbix Server:
+OBS: esta pasta tem localização diferente dependendo da forma de instalação via pacote ou codigo fonte!
+
+```sh
+$ cd /usr/share/zabbix/styles/
+```
+##
+Editando o Arquivo css
+```sh
+$ vi blue-theme.css
+```
 
 
 ## Contatos:
