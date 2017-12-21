@@ -30,7 +30,7 @@ Editando o Arquivo css
 $ vi blue-theme.css
 ```
 ##
-###### 2) Vamos navegar pelo arquivo ate a linha mencionada abaixo (linha 40), vamos comentar a linha background-color:, apos este vamos inserir a imagem desejada apontando para o local da hospedagem da imagem de sua escolha! 
+###### 2) Vamos navegar pelo arquivo ate a linha mencionada abaixo ( Proximo a Linha 40), vamos comentar a linha background-color:, apos este vamos inserir a imagem desejada apontando para o local da hospedagem da imagem de sua escolha! 
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Background/background-01.PNG)
 
@@ -83,6 +83,22 @@ Editando o Arquivo css
 $ vi blue-theme.css
 ```
 
+##
+###### 2) Vamos navegar pelo arquivo ate a linha mencionada abaixo (linha 40), vamos comentar a linha background-color:, apos este vamos inserir a imagem desejada apontando para o local da hospedagem da imagem de sua escolha! 
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Background/background-06.PNG)
+
+##
+Comentar linha:
+```sh
+$ /* background: url(../img/icon-sprite.svg) no-repeat 0 -864px; } */
+```
+##
+Inserir imagem:
+
+```sh
+$ background: url(../img/icon-sprite.svg) no-repeat 0 -864px; }
+```
 
 ## Contatos:
 
