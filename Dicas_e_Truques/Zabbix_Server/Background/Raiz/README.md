@@ -30,12 +30,25 @@ $ cd /usr/share/zabbix/styles/
 $ vi blue-theme.css
 ```
 ##
-###### 2) Vamos acessar o servidor via ssh como root e acessar a pasta contendo os arquivos que vamos editar no Zabbix Server:
-OBS: esta pasta tem localização diferente dependendo da forma de instalação via pacote ou codigo fonte!
+###### 2) Vamos navegar pelo arquivo ate a linha mencionada abaixo (linha 40), vamos comentar a linha background-color:, apos este vamos inserir a imagem desejada apontando para o local da hospedagem da imagem de sua escolha! 
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Background/background-01.PNG)
+
+Comentar linha:
+```sh
+$ /* background-color: #ebeef0; */
+```
+
+Inserir imagem:
 
 ```sh
-$ cd /usr/share/zabbix/styles/
+$ background:url("../img/login-zabbix.jpg")
 ```
+
+##
+###### 3) Vamos vamos atualizar a pagina de login apos fazermos uma limpeza dados temporarios de navegação: 
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Background/background-02.PNG)
 
 
 
