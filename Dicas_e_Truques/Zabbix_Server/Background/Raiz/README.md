@@ -84,7 +84,7 @@ $ vi blue-theme.css
 ```
 
 ##
-###### 2) Vamos navegar pelo arquivo ate a linha mencionada abaixo (linha 40), vamos comentar a linha background-color:, apos este vamos inserir a imagem desejada apontando para o local da hospedagem da imagem de sua escolha! 
+###### 2) Vamos navegar pelo arquivo ate a linha mencionada abaixo (linha 1811), vamos comentar a linha background-color:, apos este vamos inserir a imagem desejada apontando para o local da hospedagem da imagem de sua escolha! 
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Background/background-06.PNG)
 
@@ -97,8 +97,10 @@ $ /* background: url(../img/icon-sprite.svg) no-repeat 0 -864px; } */
 Inserir imagem:
 
 ```sh
-$ background: url(../img/icon-sprite.svg) no-repeat 0 -864px; }
+$ background: url(../img/logo-empresa.jpg) no-repeat 0 -864px; }
 ```
+
+OBS: a imagem deverar ter as dimensões 114x48
 
 ## Contatos:
 
