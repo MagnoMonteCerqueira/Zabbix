@@ -93,6 +93,8 @@ Comentar linha:
 ```sh
 $ /* background: url(../img/icon-sprite.svg) no-repeat 0 -864px; } */
 ```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Background/background-07.PNG)
+
 ##
 Inserir imagem:
 
