@@ -18,7 +18,7 @@ Conhecimento em Linux.
 
 ## Configuração.
 
-###### 1) Vamos acessar o servidor via ssh como root e acessar a pasta contendo os arquivos que vamos editar no Zabbix Server:
+###### 1) Vamos acessar o servidor via ssh como root e navegar ate a pasta contendo os arquivos que vamos editar no Zabbix Server:
 OBS: esta pasta tem localização diferente dependendo da forma de instalação via pacote ou codigo fonte!
 
 ```sh
