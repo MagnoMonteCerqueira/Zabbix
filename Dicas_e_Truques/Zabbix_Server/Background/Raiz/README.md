@@ -61,7 +61,7 @@ $ -webkit-background-size: cover;
 $ -moz-background-size: cover;
 $ -o-background-size: cover;
 ```
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Background/background-03.PNG)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Background/background-05.PNG)
 ##
 
 Resultado:
