@@ -101,6 +101,9 @@ Inserir imagem:
 ```sh
 $ background: url(../img/logo-empresa.jpg) no-repeat 0 -864px; }
 ```
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Background/background-08.PNG)
+
+##
 
 OBS: a imagem deverar ter as dimensões 114x48
 
