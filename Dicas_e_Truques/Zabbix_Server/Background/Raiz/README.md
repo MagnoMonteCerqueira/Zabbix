@@ -54,12 +54,19 @@ $ background:url("../img/login-zabbix.jpg");
 ###### 4) Centralizando a imagem:
 Em casos de alta resolução e commun o tamanho da imagem nao se adequar, vamos inserir o codigo abaixo para evitarmos esses problema:
 
+Configuração:
 ```sh
 $ background:url("../img/login-zabbix.jpg") no-repeat center center fixed;
+$ -webkit-background-size: cover;
+$ -moz-background-size: cover;
+$ -o-background-size: cover;
 ```
-
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Background/background-03.PNG)
+##
 
+Resultado:
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Background/background-04.PNG)
 
 
 ## Contatos:
