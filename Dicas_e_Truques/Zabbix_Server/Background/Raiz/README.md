@@ -42,13 +42,25 @@ $ /* background-color: #ebeef0; */
 Inserir imagem:
 
 ```sh
-$ background:url("../img/login-zabbix.jpg")
+$ background:url("../img/login-zabbix.jpg");
 ```
 
 ##
 ###### 3) Vamos atualizar a pagina de login apos fazermos uma limpeza dados temporarios de navegação: 
 
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Background/background-02.PNG)
+
+##
+###### 4) Centralizando a imagem:
+Em casos de alta resolução e commun o tamanho da imagem nao se adequar, vamos inserir o codigo abaixo para evitarmos esses problema:
+
+```sh
+$ background:url("../img/login-zabbix.jpg") no-repeat center center fixed;
+```
+
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Zabbix_Server/Background/background-03.PNG)
+
+
 
 ## Contatos:
 
