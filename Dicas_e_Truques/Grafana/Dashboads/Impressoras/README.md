@@ -6,6 +6,7 @@
 ### Em caso de dúvida, sugestão ou dificuldade junte-se a nós no Grupo do Telegram!
 
 * Grupo: https://t.me/ZabbixBrasil 
+* Grupo: https://t.me/grafanabr
 
 ## Contatos:
 
