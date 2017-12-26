@@ -1,5 +1,5 @@
 
-![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/zabbix.jpg)
+![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Dicas_e_Truques/src/img/Grafana/grafana-impressoras.PNG)
 
 ## Quer contribuir com a Comunidade Zabbix? 
 
