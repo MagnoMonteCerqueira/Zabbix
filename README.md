@@ -1,6 +1,6 @@
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/zabbix.jpg)
 
-## Ajude ao Dev contribuir para a Comunidade Zabbix? 
+## Doações ? 
 
 Bitcoin: 1GY9TRySMjNj7DMoi7e1whzBCQASMLBker
 
