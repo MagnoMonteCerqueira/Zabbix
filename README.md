@@ -1,5 +1,15 @@
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/zabbix.jpg)
 
+## Ajude ao Dev contribuir para a Comunidade Zabbix? 
+
+Bitcoin: 1GY9TRySMjNj7DMoi7e1whzBCQASMLBker
+
+Bitcoin cash: 1PT4X6bgBwH2NvJsngv3rNPDNAWMYvgZ9H
+
+Dash: Xww2Lh14GRHGasBGvC1s5Szzt3KuEPkkL8
+
+Ethereum: 0x619a63767932c7b0d5d920381139d1d15c95c851
+
 ## Quer contribuir com a Comunidade Zabbix? 
 
 ### Em caso de dúvida, sugestão ou dificuldade junte-se a nós no Grupo do Telegram!
