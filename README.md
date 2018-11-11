@@ -1,7 +1,7 @@
 ![Alt Text](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Zabbix_3.2/src/img/zabbix.jpg)
 
 
-Curso criando template para zabbix.
+### Curso criando template para Zabbix.
 
 https://www.udemy.com/zabbix-construindo-templates-personalizados/?couponCode=ZABBICAO
 
