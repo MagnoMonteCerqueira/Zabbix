@@ -41,6 +41,7 @@ $ apt update && apt upgrade
 # cd /tmp
 # wget https://raw.githubusercontent.com/MagnoMonteCerqueira/Zabbix/master/Dicas_e_Truques/Zabbix_Server/Instalacao/3.4/Debian/Raiz/Arquivos/zabbix-release_3.4-1%2Bstretch_all.deb
 # dpkg -i zabbix-release_3.4-1+stretch_all.deb
+# apt install  php-pear php-cgi php-common libapache2-mod-php php-mbstring php-net-socket php-gd php-xml-util php-mysql php-gettext php-bcmath 
 # apt update && apt install zabbix-server-mysql zabbix-frontend-php zabbix-agent vim php7.0-bcmath php7.0-mbstring php-sabre-xml -y
 ```
 
