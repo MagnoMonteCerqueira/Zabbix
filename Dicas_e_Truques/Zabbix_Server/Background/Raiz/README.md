@@ -107,6 +107,11 @@ $ background: url(../img/logo-empresa.jpg) no-repeat 0 -864px; }
 
 OBS: a imagem deverar ter as dimensões 114x48
 
+## Curso criando template para Zabbix.
+
+https://www.udemy.com/zabbix-construindo-templates-personalizados/?couponCode=ZABBICAO
+
+
 ## Contatos:
 
 
