@@ -1,0 +1,4588 @@
+{
+  "__inputs": [
+    {
+      "name": "DS_ZABBIXPROD3.0",
+      "label": "ZabbixProd3.0",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "alexanderzobnin-zabbix-datasource",
+      "pluginName": "Zabbix"
+    }
+  ],
+  "__requires": [
+    {
+      "type": "datasource",
+      "id": "alexanderzobnin-zabbix-datasource",
+      "name": "Zabbix",
+      "version": "1.0.0"
+    },
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "4.2.0"
+    },
+    {
+      "type": "panel",
+      "id": "graph",
+      "name": "Graph",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "singlestat",
+      "name": "Singlestat",
+      "version": ""
+    }
+  ],
+  "annotations": {
+    "list": []
+  },
+  "description": "Dashboard que mostra o desempenho atual do servidor, banco de dados e de seus 3 proxys. \r\n#PFV CRIEM NOVOS MODELOS! NÃO COPIEM OS EXISTENTES! VAMOS DESENVOLVER A CRIATIVIDADE!!!! thx",
+  "editable": true,
+  "gnetId": 1501,
+  "graphTooltip": 0,
+  "hideControls": true,
+  "id": null,
+  "links": [],
+  "refresh": "5s",
+  "rows": [
+    {
+      "collapse": false,
+      "height": 152,
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(40, 237, 89, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 25,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix agent"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAHERITE_ZBX-ANP-PROD"
+              },
+              "item": {
+                "filter": "Agent ping"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Server",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "50%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "UP",
+              "value": "1"
+            },
+            {
+              "op": "=",
+              "text": "DOWN",
+              "value": "0"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "gauge": {
+            "maxValue": 1000,
+            "minValue": 0,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 37,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix server"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAHERITE_ZBX-ANP-PROD"
+              },
+              "item": {
+                "filter": "Values processed by Zabbix server per second"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "VPS",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(17, 13, 11, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "gauge": {
+            "maxValue": 10000,
+            "minValue": 0,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 31,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": true
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix server"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAHERITE_ZBX-ANP-PROD"
+              },
+              "item": {
+                "filter": "Zabbix queue"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Queue",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "percent",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 35,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix server"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAHERITE_ZBX-ANP-PROD"
+              },
+              "item": {
+                "filter": "Zabbix busy icmp pinger processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Ping Pooller",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "percent",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 36,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix server"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAHERITE_ZBX-ANP-PROD"
+              },
+              "item": {
+                "filter": "Zabbix busy housekeeper processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Limpeza",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "percent",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 33,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix server"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAHERITE_ZBX-ANP-PROD"
+              },
+              "item": {
+                "filter": "Zabbix busy poller processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Coleta",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "percent",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 38,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix server"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAHERITE_ZBX-ANP-PROD"
+              },
+              "item": {
+                "filter": "Zabbix busy configuration syncer processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Sync BD",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {},
+          "id": 40,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": false,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "sort": null,
+            "sortDesc": null,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "alias": "Carga de sistema",
+              "yaxis": 2
+            },
+            {
+              "alias": "[Total] CPU %",
+              "yaxis": 2
+            }
+          ],
+          "span": 5,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "CPU"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAHERITE_ZBX-ANP-PROD"
+              },
+              "item": {
+                "filter": "Carga de sistema"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "application": {
+                "filter": "Processamento"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAHERITE_ZBX-ANP-PROD"
+              },
+              "item": {
+                "filter": "[Total] CPU %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B"
+            },
+            {
+              "application": {
+                "filter": "Memória"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAHERITE_ZBX-ANP-PROD"
+              },
+              "item": {
+                "filter": "Memória (pused)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "C"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Load do Server",
+          "tooltip": {
+            "msResolution": true,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "percent",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "percent",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "New row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 157,
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(40, 237, 89, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 1,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "minSpan": 1,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "repeat": null,
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Proxy Zabbix"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAHERITE_ZBX-ANP-PROD"
+              },
+              "item": {
+                "filter": "PROXY RIO_2 - DISPONIBILIDADE - 10051"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Proxy 1 RJ",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "50%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "UP",
+              "value": "1"
+            },
+            {
+              "op": "=",
+              "text": "DOWN",
+              "value": "0"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "gauge": {
+            "maxValue": 1000,
+            "minValue": 0,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 2,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Values processed by Zabbix proxy per second"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "VPS",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(17, 13, 11, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "gauge": {
+            "maxValue": 10000,
+            "minValue": 1,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 3,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": true
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Zabbix queue"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Queue",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "percent",
+          "gauge": {
+            "maxValue": 1000,
+            "minValue": 0,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 4,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Zabbix busy icmp pinger processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Ping Pooller",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "percent",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 1,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 5,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Zabbix busy housekeeper processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Limpeza",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "percent",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 6,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Zabbix busy poller processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Coleta",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "percent",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 41,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Zabbix busy history syncer processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Sync BD",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {},
+          "id": 8,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": false,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "sortDesc": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "alias": "[Total] CPU %",
+              "yaxis": 2
+            }
+          ],
+          "span": 5,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Processamento"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "[Total] CPU %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "application": {
+                "filter": "Memória"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Memória (pused)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B"
+            },
+            {
+              "application": {
+                "filter": "CPU"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix Proxy"
+              },
+              "host": {
+                "filter": "SAPProxy"
+              },
+              "item": {
+                "filter": "Processor load (5 min average per core)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "C"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Load do Proxy",
+          "tooltip": {
+            "msResolution": true,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "percent",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "percent",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 169,
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(40, 237, 56, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 9,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Proxy Zabbix"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAHERITE_ZBX-ANP-PROD"
+              },
+              "item": {
+                "filter": "PROXY RIO_2 - DISPONIBILIDADE - 10051"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Proxy 2 RJ",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "50%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "UP",
+              "value": "1"
+            },
+            {
+              "op": "=",
+              "text": "DOWN",
+              "value": "0"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(54, 245, 117, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "gauge": {
+            "maxValue": 1000,
+            "minValue": 0,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 10,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE2_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Values processed by Zabbix proxy per second"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "VPS",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "gauge": {
+            "maxValue": 10000,
+            "minValue": 1,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 11,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": true
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE2_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Zabbix queue"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Queue",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "percent",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 12,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE2_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Zabbix busy icmp pinger processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Ping Pooller",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "percent",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 1,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 13,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE2_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Zabbix busy housekeeper processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Limpeza",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "percent",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 14,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE2_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Zabbix busy poller processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Coleta",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "percent",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 42,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE2_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Zabbix busy history syncer processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Sync BD",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {},
+          "id": 16,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": false,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "alias": "[Total] CPU %",
+              "yaxis": 2
+            }
+          ],
+          "span": 5,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Processamento"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE2_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "[Total] CPU %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "application": {
+                "filter": "Memória"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE2_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Memória (pused)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B"
+            },
+            {
+              "application": {
+                "filter": "CPU"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix Proxy"
+              },
+              "host": {
+                "filter": "OSOProxy1"
+              },
+              "item": {
+                "filter": "Processor load (5 min average per core)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "C"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Load do Proxy",
+          "tooltip": {
+            "msResolution": true,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "percent",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "percent",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "New row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 168,
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(31, 186, 30, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 17,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Proxy Zabbix"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAHERITE_ZBX-ANP-PROD"
+              },
+              "item": {
+                "filter": "PROXY BSB - DISPONIBILIDADE - 10051"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Proxy BSB",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "50%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "UP",
+              "value": "1"
+            },
+            {
+              "op": "=",
+              "text": "DOWN",
+              "value": "0"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "gauge": {
+            "maxValue": 1000,
+            "minValue": 0,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 18,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAKHAROVITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Values processed by Zabbix proxy per second"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "VPS",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "gauge": {
+            "maxValue": 10000,
+            "minValue": 1,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 19,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": true
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAKHAROVITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Zabbix queue"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Queue",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "percent",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 20,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAKHAROVITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Zabbix busy icmp pinger processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Ping Pooller",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "percent",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 1,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 21,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAKHAROVITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Zabbix busy housekeeper processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Limpeza",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "percent",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 22,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAKHAROVITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Zabbix busy poller processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Coleta",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "percent",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 43,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAKHAROVITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Zabbix busy history syncer processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Sync BD",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {},
+          "id": 24,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": false,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "alias": "Memória (pused)",
+              "yaxis": 1
+            },
+            {
+              "alias": "[Total] CPU %",
+              "yaxis": 2
+            }
+          ],
+          "span": 5,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Processamento"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAKHAROVITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "[Total] CPU %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "application": {
+                "filter": "Memória"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAKHAROVITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Memória (pused)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B"
+            },
+            {
+              "application": {
+                "filter": "CPU"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix Proxy"
+              },
+              "host": {
+                "filter": "OSOProxy2"
+              },
+              "item": {
+                "filter": "Processor load (5 min average per core)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "C"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Load do Proxy",
+          "tooltip": {
+            "msResolution": true,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "percent",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "percent",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "New row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 314,
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(82, 237, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 10,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 47,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Serviço"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZANAZZIITE_ZBX_MYSQL"
+              },
+              "item": {
+                "filter": "Mysql Server [Serviço]"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Mysqld Run",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "50%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "Started",
+              "value": "1"
+            },
+            {
+              "op": "=",
+              "text": "Stopped",
+              "value": "0"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {},
+          "id": 52,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": true,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "alias": "Memória (pused)",
+              "yaxis": 2
+            },
+            {
+              "alias": "Memória (pavailable)",
+              "yaxis": 2
+            }
+          ],
+          "span": 5,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Processamento"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZANAZZIITE_ZBX_MYSQL"
+              },
+              "item": {
+                "filter": "[Total] CPU %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "application": {
+                "filter": "Memória"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZANAZZIITE_ZBX_MYSQL"
+              },
+              "item": {
+                "filter": "Memória (pused)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B"
+            },
+            {
+              "application": {
+                "filter": "Memória"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZANAZZIITE_ZBX_MYSQL"
+              },
+              "item": {
+                "filter": "Memória (pavailable)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "C"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Load Server Banco %",
+          "tooltip": {
+            "msResolution": true,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "percent",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "percent",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "fill": 2,
+          "id": 57,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "hideEmpty": false,
+            "max": false,
+            "min": true,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "alias": "ZANAZZIITE_ZBX_MYSQL: USO DE DISCO [/] LIVRE EM %",
+              "yaxis": 2
+            }
+          ],
+          "span": 6,
+          "stack": false,
+          "steppedLine": true,
+          "targets": [
+            {
+              "application": {
+                "filter": "Diretorios"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZANAZZIITE_ZBX_MYSQL"
+              },
+              "item": {
+                "filter": "/.*/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Disco Mysql",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 1,
+            "value_type": "individual"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": [
+              "current"
+            ]
+          },
+          "yaxes": [
+            {
+              "format": "bytes",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "percent",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 297,
+      "panels": [
+        {
+          "alert": {
+            "conditions": [
+              {
+                "evaluator": {
+                  "params": [
+                    15000
+                  ],
+                  "type": "gt"
+                },
+                "operator": {
+                  "type": "and"
+                },
+                "query": {
+                  "datasourceId": 12,
+                  "model": {
+                    "application": {
+                      "filter": "Zabbix server"
+                    },
+                    "functions": [],
+                    "group": {
+                      "filter": "ZABBIX_SERVER_PROXY"
+                    },
+                    "host": {
+                      "filter": "ZAHERITE_ZBX-ANP-PROD"
+                    },
+                    "item": {
+                      "filter": "Zabbix queue"
+                    },
+                    "mode": 0,
+                    "options": {
+                      "showDisabledItems": false
+                    },
+                    "refId": "A"
+                  },
+                  "params": [
+                    "A",
+                    "5m",
+                    "now"
+                  ]
+                },
+                "reducer": {
+                  "params": [],
+                  "type": "avg"
+                },
+                "type": "query"
+              }
+            ],
+            "executionErrorState": "alerting",
+            "frequency": "300s",
+            "handler": 1,
+            "name": "Queue alert",
+            "noDataState": "alerting",
+            "notifications": []
+          },
+          "aliasColors": {
+            "Values processed by Zabbix server per second": "#BF1B00",
+            "Zabbix queue": "#EAB839"
+          },
+          "bars": true,
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "id": 30,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": true,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "sortDesc": false,
+            "total": false,
+            "values": true
+          },
+          "lines": false,
+          "linewidth": 1,
+          "links": [],
+          "minSpan": 2,
+          "nullPointMode": "null as zero",
+          "percentage": false,
+          "pointradius": 1,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": true,
+          "steppedLine": true,
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix server"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAHERITE_ZBX-ANP-PROD"
+              },
+              "item": {
+                "filter": "Zabbix queue"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Zabbix queue"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "C"
+            },
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE2_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Zabbix queue"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "E"
+            },
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAKHAROVITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Zabbix queue"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "G"
+            }
+          ],
+          "thresholds": [
+            {
+              "colorMode": "critical",
+              "fill": true,
+              "line": true,
+              "op": "gt",
+              "value": 15000
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Queue",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 1,
+            "value_type": "individual"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": [
+              "current"
+            ]
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "none",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": false
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 261,
+      "panels": [
+        {
+          "aliasColors": {
+            "Zabbix busy configuration syncer processes, in %": "#F9BA8F",
+            "Zabbix busy housekeeper processes, in %": "#70DBED",
+            "Zabbix busy unreachable poller processes, in %": "#BF1B00"
+          },
+          "bars": false,
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "id": 44,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": false,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "alias": "Zabbix busy db watchdog processes, in %",
+              "yaxis": 1
+            },
+            {
+              "alias": "Zabbix busy housekeeper processes, in %",
+              "yaxis": 1
+            },
+            {
+              "alias": "Zabbix busy configuration syncer processes, in %",
+              "yaxis": 2
+            },
+            {
+              "alias": "Zabbix busy unreachable poller processes, in %",
+              "yaxis": 1
+            }
+          ],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix server"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAHERITE_ZBX-ANP-PROD"
+              },
+              "item": {
+                "filter": "Zabbix busy db watchdog processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "J"
+            },
+            {
+              "application": {
+                "filter": "Zabbix server"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAHERITE_ZBX-ANP-PROD"
+              },
+              "item": {
+                "filter": "Zabbix busy timer processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "application": {
+                "filter": "Zabbix server"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAHERITE_ZBX-ANP-PROD"
+              },
+              "item": {
+                "filter": "Zabbix busy unreachable poller processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "I"
+            },
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Zabbix busy unreachable poller processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "M"
+            },
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE2_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Zabbix busy unreachable poller processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "N"
+            },
+            {
+              "application": {
+                "filter": "Zabbix server"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAHERITE_ZBX-ANP-PROD"
+              },
+              "item": {
+                "filter": "Zabbix busy escalator processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B"
+            },
+            {
+              "application": {
+                "filter": "Zabbix server"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAHERITE_ZBX-ANP-PROD"
+              },
+              "item": {
+                "filter": "Zabbix busy alerter processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "C"
+            },
+            {
+              "application": {
+                "filter": "Zabbix server"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAHERITE_ZBX-ANP-PROD"
+              },
+              "item": {
+                "filter": "Zabbix busy configuration syncer processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "E"
+            },
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Zabbix busy configuration syncer processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "K"
+            },
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE2_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Zabbix busy configuration syncer processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "L"
+            },
+            {
+              "application": {
+                "filter": "Zabbix server"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAHERITE_ZBX-ANP-PROD"
+              },
+              "item": {
+                "filter": "Zabbix busy housekeeper processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "D"
+            },
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Zabbix busy housekeeper processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "F"
+            },
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE2_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Zabbix busy housekeeper processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "G"
+            },
+            {
+              "application": {
+                "filter": "Zabbix proxy"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAKHAROVITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Zabbix busy housekeeper processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "H"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Performance de Ambiente",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "percent",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "percent",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 328,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "id": 55,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": false,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Conectividade"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAHERITE_ZBX-ANP-PROD"
+              },
+              "item": {
+                "filter": "Eth0 ENTRADA"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "application": {
+                "filter": "Conectividade"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAHERITE_ZBX-ANP-PROD"
+              },
+              "item": {
+                "filter": "Eth0 SAIDA"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B"
+            },
+            {
+              "application": {
+                "filter": "Conectividade"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZANAZZIITE_ZBX_MYSQL"
+              },
+              "item": {
+                "filter": "Eth2 ENTRADA"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "E"
+            },
+            {
+              "application": {
+                "filter": "Conectividade"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZANAZZIITE_ZBX_MYSQL"
+              },
+              "item": {
+                "filter": "Eth2 SAIDA"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "F"
+            },
+            {
+              "application": {
+                "filter": "Conectividade"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Eth2 ENTRADA"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "C"
+            },
+            {
+              "application": {
+                "filter": "Conectividade"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Eth2 SAIDA"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "D"
+            },
+            {
+              "application": {
+                "filter": "Conectividade"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE2_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Eth0 ENTRADA"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "G"
+            },
+            {
+              "application": {
+                "filter": "Conectividade"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAPPINITE2_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Eth0 SAIDA"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "H"
+            },
+            {
+              "application": {
+                "filter": "Conectividade"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAKHAROVITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Eth0 ENTRADA"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "I"
+            },
+            {
+              "application": {
+                "filter": "Conectividade"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAKHAROVITE_ZBX_PROXY"
+              },
+              "item": {
+                "filter": "Eth0 SAIDA"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "J"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Trafego Interfaces | CORE | BANCO | PROXY1 | PROXY2 | PROXY3",
+          "tooltip": {
+            "msResolution": false,
+            "shared": false,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": [
+              "current"
+            ]
+          },
+          "yaxes": [
+            {
+              "format": "Bps",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "${DS_ZABBIXPROD3.0}",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "id": 56,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": false,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix server"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ZABBIX_SERVER_PROXY"
+              },
+              "host": {
+                "filter": "ZAHERITE_ZBX-ANP-PROD"
+              },
+              "item": {
+                "filter": "Zabbix busy proxy poller processes, in %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Proxys Pooller Process %",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "percent",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    }
+  ],
+  "schemaVersion": 14,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-3h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      ""
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "timezone": "browser",
+  "title": "ZABBIX - CONTROLE v2.2",
+  "version": 208
+}

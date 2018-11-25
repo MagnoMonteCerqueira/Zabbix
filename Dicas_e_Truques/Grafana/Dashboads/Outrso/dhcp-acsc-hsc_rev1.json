@@ -1,0 +1,877 @@
+{
+  "__inputs": [
+    {
+      "name": "DS_ZABBIX",
+      "label": "ZABBIX",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "alexanderzobnin-zabbix-datasource",
+      "pluginName": "Zabbix"
+    }
+  ],
+  "__requires": [
+    {
+      "type": "datasource",
+      "id": "alexanderzobnin-zabbix-datasource",
+      "name": "Zabbix",
+      "version": "1.0.0"
+    },
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "4.3.2"
+    },
+    {
+      "type": "panel",
+      "id": "grafana-piechart-panel",
+      "name": "Pie Chart",
+      "version": "1.1.5"
+    },
+    {
+      "type": "panel",
+      "id": "singlestat",
+      "name": "Singlestat",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "table",
+      "name": "Table",
+      "version": ""
+    }
+  ],
+  "annotations": {
+    "list": []
+  },
+  "editable": true,
+  "gnetId": 3554,
+  "graphTooltip": 0,
+  "hideControls": false,
+  "id": null,
+  "links": [],
+  "refresh": "1m",
+  "rows": [
+    {
+      "collapse": false,
+      "height": 3,
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 1,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 6,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "DHCP"
+              },
+              "functions": [],
+              "group": {
+                "filter": "HSC"
+              },
+              "host": {
+                "filter": "HSC-DHCP01"
+              },
+              "item": {
+                "filter": "Status Serviço DHCP"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "0,0",
+          "title": "",
+          "type": "singlestat",
+          "valueFontSize": "100%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "Serviço DHCP",
+              "value": "0"
+            },
+            {
+              "op": "=",
+              "text": "Serviço DHCP",
+              "value": "1"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 6,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 6,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "DHCP scopes"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "name": "sumSeries",
+                    "category": "Aggregate",
+                    "params": [],
+                    "defaultParams": []
+                  },
+                  "params": [],
+                  "text": "sumSeries()",
+                  "added": false
+                }
+              ],
+              "group": {
+                "filter": "HSC"
+              },
+              "host": {
+                "filter": "HSC-DHCP01"
+              },
+              "item": {
+                "filter": "/Number of addresses that are free/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Total",
+          "type": "singlestat",
+          "valueFontSize": "100%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 266,
+      "panels": [
+        {
+          "aliasColors": {
+            "IPs Livres": "#447EBC"
+          },
+          "cacheTimeout": null,
+          "combine": {
+            "label": "Others",
+            "threshold": 0
+          },
+          "datasource": "${DS_ZABBIX}",
+          "fontSize": "80%",
+          "format": "none",
+          "id": 2,
+          "interval": null,
+          "legend": {
+            "percentage": false,
+            "show": true,
+            "values": true
+          },
+          "legendType": "Right side",
+          "links": [],
+          "maxDataPoints": 3,
+          "nullPointMode": "connected",
+          "pieType": "pie",
+          "span": 6,
+          "strokeWidth": "3",
+          "targets": [
+            {
+              "application": {
+                "filter": "DHCP scopes"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Aggregate",
+                    "defaultParams": [],
+                    "name": "sumSeries",
+                    "params": []
+                  },
+                  "params": [],
+                  "text": "sumSeries()"
+                },
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "IPs em uso"
+                  ],
+                  "text": "setAlias(IPs em uso)"
+                }
+              ],
+              "group": {
+                "filter": "HSC"
+              },
+              "host": {
+                "filter": "HSC-DHCP01"
+              },
+              "item": {
+                "filter": "/Number of addresses that are use/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "application": {
+                "filter": "DHCP scopes"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Aggregate",
+                    "defaultParams": [],
+                    "name": "sumSeries",
+                    "params": []
+                  },
+                  "params": [],
+                  "text": "sumSeries()"
+                },
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "IPs Livres"
+                  ],
+                  "text": "setAlias(IPs Livres)"
+                }
+              ],
+              "group": {
+                "filter": "HSC"
+              },
+              "host": {
+                "filter": "HSC-DHCP01"
+              },
+              "item": {
+                "filter": "/Number of addresses that are free/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B"
+            }
+          ],
+          "title": "DHCP",
+          "type": "grafana-piechart-panel",
+          "valueName": "current"
+        },
+        {
+          "columns": [
+            {
+              "text": "Current",
+              "value": "current"
+            }
+          ],
+          "fontSize": "100%",
+          "id": 3,
+          "links": [],
+          "maxDataPoints": "",
+          "pageSize": null,
+          "scroll": true,
+          "showHeader": true,
+          "sort": {
+            "col": 0,
+            "desc": true
+          },
+          "span": 6,
+          "styles": [
+            {
+              "alias": "Valor",
+              "colorMode": null,
+              "colors": [
+                "rgba(245, 54, 54, 0.9)",
+                "rgba(237, 129, 40, 0.89)",
+                "rgba(50, 172, 45, 0.97)"
+              ],
+              "dateFormat": "YYYY-MM-DD HH:mm:ss",
+              "decimals": 0,
+              "pattern": "Current",
+              "thresholds": [],
+              "type": "number",
+              "unit": "none"
+            }
+          ],
+          "targets": [
+            {
+              "application": {
+                "filter": "DHCP"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Total No Of Discovers"
+                  ],
+                  "text": "setAlias(Total No Of Discovers)"
+                }
+              ],
+              "group": {
+                "filter": "HSC"
+              },
+              "host": {
+                "filter": "HSC-DHCP01"
+              },
+              "item": {
+                "filter": "parDhcpTotalNoOfDiscovers"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "application": {
+                "filter": "DHCP"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Total No Of Requests"
+                  ],
+                  "text": "setAlias(Total No Of Requests)"
+                }
+              ],
+              "group": {
+                "filter": "HSC"
+              },
+              "host": {
+                "filter": "HSC-DHCP01"
+              },
+              "item": {
+                "filter": "parDhcpTotalNoOfRequests"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B"
+            },
+            {
+              "application": {
+                "filter": "DHCP"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Total No Of Releases"
+                  ],
+                  "text": "setAlias(Total No Of Releases)"
+                }
+              ],
+              "group": {
+                "filter": "HSC"
+              },
+              "host": {
+                "filter": "HSC-DHCP01"
+              },
+              "item": {
+                "filter": "parDhcpTotalNoOfReleases"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "C"
+            },
+            {
+              "application": {
+                "filter": "DHCP"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Total No Of Declines"
+                  ],
+                  "text": "setAlias(Total No Of Declines)"
+                }
+              ],
+              "group": {
+                "filter": "HSC"
+              },
+              "host": {
+                "filter": "HSC-DHCP01"
+              },
+              "item": {
+                "filter": "parDhcpTotalNoOfDeclines"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "D"
+            },
+            {
+              "application": {
+                "filter": "DHCP"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Total No Of Acks"
+                  ],
+                  "text": "setAlias(Total No Of Acks)"
+                }
+              ],
+              "group": {
+                "filter": "HSC"
+              },
+              "host": {
+                "filter": "HSC-DHCP01"
+              },
+              "item": {
+                "filter": "parDhcpTotalNoOfAcks"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "E"
+            },
+            {
+              "application": {
+                "filter": "DHCP"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Total No Of Nacks"
+                  ],
+                  "text": "setAlias(Total No Of Nacks)"
+                }
+              ],
+              "group": {
+                "filter": "HSC"
+              },
+              "host": {
+                "filter": "HSC-DHCP01"
+              },
+              "item": {
+                "filter": "parDhcpTotalNoOfNacks"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "F"
+            }
+          ],
+          "title": "Estatisticas DHCP",
+          "transform": "timeseries_aggregations",
+          "type": "table"
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 250,
+      "panels": [
+        {
+          "columns": [
+            {
+              "text": "Avg",
+              "value": "avg"
+            }
+          ],
+          "fontSize": "100%",
+          "id": 4,
+          "links": [],
+          "pageSize": null,
+          "scroll": false,
+          "showHeader": true,
+          "sort": {
+            "col": 0,
+            "desc": true
+          },
+          "span": 6,
+          "styles": [
+            {
+              "alias": "Scope",
+              "colorMode": null,
+              "colors": [
+                "rgba(245, 54, 54, 0.9)",
+                "rgba(237, 129, 40, 0.89)",
+                "rgba(50, 172, 45, 0.97)"
+              ],
+              "dateFormat": "YYYY-MM-DD HH:mm:ss",
+              "decimals": 2,
+              "pattern": "Metric",
+              "sanitize": true,
+              "thresholds": [],
+              "type": "string",
+              "unit": "short"
+            },
+            {
+              "alias": "Value",
+              "colorMode": null,
+              "colors": [
+                "rgba(245, 54, 54, 0.9)",
+                "rgba(237, 129, 40, 0.89)",
+                "rgba(50, 172, 45, 0.97)"
+              ],
+              "dateFormat": "YYYY-MM-DD HH:mm:ss",
+              "decimals": 0,
+              "pattern": "Avg",
+              "thresholds": [],
+              "type": "number",
+              "unit": "none"
+            }
+          ],
+          "targets": [
+            {
+              "application": {
+                "filter": "DHCP scopes"
+              },
+              "functions": [],
+              "group": {
+                "filter": "HSC"
+              },
+              "host": {
+                "filter": "HSC-DHCP01"
+              },
+              "item": {
+                "filter": "/Number of addresses that are free on scope/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "title": "Escopos (Livre)",
+          "transform": "timeseries_aggregations",
+          "type": "table"
+        },
+        {
+          "columns": [
+            {
+              "text": "Avg",
+              "value": "avg"
+            }
+          ],
+          "fontSize": "100%",
+          "id": 5,
+          "links": [],
+          "pageSize": null,
+          "scroll": false,
+          "showHeader": true,
+          "sort": {
+            "col": 0,
+            "desc": true
+          },
+          "span": 6,
+          "styles": [
+            {
+              "alias": "Scope",
+              "colorMode": null,
+              "colors": [
+                "rgba(245, 54, 54, 0.9)",
+                "rgba(237, 129, 40, 0.89)",
+                "rgba(50, 172, 45, 0.97)"
+              ],
+              "dateFormat": "YYYY-MM-DD HH:mm:ss",
+              "decimals": 2,
+              "pattern": "Metric",
+              "thresholds": [],
+              "type": "string",
+              "unit": "short"
+            },
+            {
+              "alias": "Value",
+              "colorMode": null,
+              "colors": [
+                "rgba(245, 54, 54, 0.9)",
+                "rgba(237, 129, 40, 0.89)",
+                "rgba(50, 172, 45, 0.97)"
+              ],
+              "dateFormat": "YYYY-MM-DD HH:mm:ss",
+              "decimals": 0,
+              "pattern": "Avg",
+              "thresholds": [],
+              "type": "number",
+              "unit": "none"
+            }
+          ],
+          "targets": [
+            {
+              "application": {
+                "filter": "DHCP scopes"
+              },
+              "functions": [],
+              "group": {
+                "filter": "HSC"
+              },
+              "host": {
+                "filter": "HSC-DHCP01"
+              },
+              "item": {
+                "filter": "/Number of addresses that are use on scope/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "title": "Escopos (Em uso)",
+          "transform": "timeseries_aggregations",
+          "type": "table"
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    }
+  ],
+  "schemaVersion": 14,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-30m",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "timezone": "browser",
+  "title": "DHCP Status",
+  "version": 13,
+  "description": "Dashboard para dhcp em windows server."
+}

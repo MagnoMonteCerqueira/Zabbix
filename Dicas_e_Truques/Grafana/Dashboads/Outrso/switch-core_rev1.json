@@ -1,0 +1,2697 @@
+{
+  "__inputs": [
+    {
+      "name": "DS_ZABBIX_3.4",
+      "label": "Zabbix 3.4",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "alexanderzobnin-zabbix-datasource",
+      "pluginName": "Zabbix"
+    }
+  ],
+  "__requires": [
+    {
+      "type": "datasource",
+      "name": "Zabbix",
+      "version": "1.0.0"
+    },
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "4.6.2"
+    },
+    {
+      "type": "panel",
+      "id": "graph",
+      "name": "Graph",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "singlestat",
+      "name": "Singlestat",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "text",
+      "name": "Text",
+      "version": ""
+    }
+  ],
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "Switch Core w/ health and link to nexus and 4 regular switches",
+  "editable": true,
+  "gnetId": 4918,
+  "graphTooltip": 0,
+  "hideControls": false,
+  "id": null,
+  "links": [],
+  "refresh": "30s",
+  "rows": [
+    {
+      "collapse": false,
+      "height": "50",
+      "panels": [
+        {
+          "content": "<div class=\"text-center dashboard-header\"><strong><em>Switch Core</em></strong></div>",
+          "editable": true,
+          "error": false,
+          "id": 34,
+          "links": [],
+          "mode": "html",
+          "span": 3,
+          "title": "",
+          "transparent": true,
+          "type": "text"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(166, 168, 5, 0.97)",
+            "rgba(23, 152, 7, 0.89)",
+            "rgba(205, 14, 14, 0.9)"
+          ],
+          "datasource": "${DS_ZABBIX_3.4}",
+          "editable": true,
+          "error": false,
+          "format": "s",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "50",
+          "hideTimeOverride": false,
+          "id": 1,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 2,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SW-CORE-PLT-01.cmpcrs.com.br"
+              },
+              "item": {
+                "filter": "Device uptime"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": "200,210,220",
+          "title": "Uptime",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "Rest",
+              "value": "0"
+            },
+            {
+              "op": "=",
+              "text": "Switched on",
+              "value": "3"
+            },
+            {
+              "op": "=",
+              "text": "Error",
+              "value": "65535"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "rgba(40, 237, 73, 0.89)",
+            "#cca300",
+            "rgba(172, 45, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIX_3.4}",
+          "editable": true,
+          "error": false,
+          "format": "percent",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "50",
+          "id": 2,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SW-CORE-PLT-01.cmpcrs.com.br"
+              },
+              "item": {
+                "filter": "#1: CPU utilization"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": "80,90",
+          "title": "CPU Utilization",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "rgba(40, 237, 73, 0.89)",
+            "#cca300",
+            "#bf1b00"
+          ],
+          "datasource": "${DS_ZABBIX_3.4}",
+          "decimals": 0,
+          "editable": true,
+          "error": false,
+          "format": "celsius",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "50",
+          "id": 31,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SW-CORE-PLT-01.cmpcrs.com.br"
+              },
+              "item": {
+                "filter": "SW#1, Sensor#1, GREEN : Temperature"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": "50,70",
+          "title": "Battery status",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "Normal",
+              "value": "2"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "rgba(245, 237, 54, 0.9)",
+            "rgba(40, 237, 73, 0.89)",
+            "rgba(172, 45, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIX_3.4}",
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "50",
+          "id": 33,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SW-CORE-PLT-01.cmpcrs.com.br"
+              },
+              "item": {
+                "filter": "SNMP availability"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": ",38",
+          "title": "SNMP",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "OK",
+              "value": "1"
+            },
+            {
+              "op": "=",
+              "text": "Problem",
+              "value": "0"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "#bf1b00",
+            "rgba(40, 237, 73, 0.89)",
+            "rgba(40, 237, 73, 0.89)"
+          ],
+          "datasource": "${DS_ZABBIX_3.4}",
+          "decimals": 0,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "50",
+          "id": 4,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SW-CORE-PLT-01.cmpcrs.com.br"
+              },
+              "item": {
+                "filter": "ICMP ping"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": "0,1",
+          "title": "Ping",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "OK",
+              "value": "1"
+            },
+            {
+              "op": "=",
+              "text": "Problem",
+              "value": "0"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "rgba(40, 237, 73, 0.89)",
+            "#cca300",
+            "#bf1b00"
+          ],
+          "datasource": "${DS_ZABBIX_3.4}",
+          "editable": true,
+          "error": false,
+          "format": "percent",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "50",
+          "hideTimeOverride": false,
+          "id": 32,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SW-CORE-PLT-01.cmpcrs.com.br"
+              },
+              "item": {
+                "filter": "ICMP loss"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": "1,10,15",
+          "title": "PING Loss",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "rgba(40, 237, 73, 0.89)",
+            "#cca300",
+            "#bf1b00"
+          ],
+          "datasource": "${DS_ZABBIX_3.4}",
+          "editable": true,
+          "error": false,
+          "format": "s",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "50",
+          "hideTimeOverride": false,
+          "id": 48,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 2,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SW-CORE-PLT-01.cmpcrs.com.br"
+              },
+              "item": {
+                "filter": "ICMP response time"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": "1,10,15",
+          "title": "ICMP response time",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [],
+          "valueName": "current"
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 250,
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "#bf1b00",
+            "rgba(40, 237, 73, 0.89)",
+            "rgba(40, 237, 73, 0.89)"
+          ],
+          "datasource": "${DS_ZABBIX_3.4}",
+          "decimals": 0,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "50",
+          "id": 64,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "N7K-C7004-S2-R SW735-02_1 Data Center"
+              },
+              "item": {
+                "filter": "ICMP ping"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": "0,1",
+          "title": "Ping Nexus",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "OK",
+              "value": "1"
+            },
+            {
+              "op": "=",
+              "text": "Problem",
+              "value": "0"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "#bf1b00",
+            "rgba(40, 237, 73, 0.89)",
+            "rgba(40, 237, 73, 0.89)"
+          ],
+          "datasource": "${DS_ZABBIX_3.4}",
+          "decimals": 0,
+          "editable": true,
+          "error": false,
+          "format": "Bps",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "90",
+          "id": 65,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SW-CORE-PLT-01.cmpcrs.com.br"
+              },
+              "item": {
+                "filter": "Interface Gi0/17(## UPLINK NEXUS 1 - Eth102/1/36 ##): Operational status"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": "0,1",
+          "title": "Status Nexus",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "UP",
+              "value": "1"
+            },
+            {
+              "op": "=",
+              "text": "Down",
+              "value": "0"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_ZABBIX_3.4}",
+          "decimals": null,
+          "fill": 2,
+          "id": 66,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "hideEmpty": false,
+            "hideZero": false,
+            "max": true,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "sort": "current",
+            "sortDesc": false,
+            "total": true,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 3,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Incoming traffic"
+                  ],
+                  "text": "setAlias(Incoming traffic)"
+                }
+              ],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SW-CORE-PLT-01.cmpcrs.com.br"
+              },
+              "item": {
+                "filter": "Incoming traffic on interface ## UPLINK NEXUS 1 - Eth102/1/36 ##"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Outbound traffic"
+                  ],
+                  "text": "setAlias(Outbound traffic)"
+                }
+              ],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SW-CORE-PLT-01.cmpcrs.com.br"
+              },
+              "item": {
+                "filter": "Outbound traffic on interface ## UPLINK NEXUS 1 - Eth102/1/36 ##"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "TX / RX N7K",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": false,
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "Bps",
+              "label": "",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": "",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 189,
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "#bf1b00",
+            "rgba(40, 237, 73, 0.89)",
+            "rgba(40, 237, 73, 0.89)"
+          ],
+          "datasource": "${DS_ZABBIX_3.4}",
+          "decimals": 0,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "50",
+          "id": 57,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SVGBFLW24"
+              },
+              "item": {
+                "filter": "ICMP ping"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": "0,1",
+          "title": "Ping FW SVGBFLW24",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "OK",
+              "value": "1"
+            },
+            {
+              "op": "=",
+              "text": "Problem",
+              "value": "0"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "#bf1b00",
+            "rgba(40, 237, 73, 0.89)",
+            "rgba(40, 237, 73, 0.89)"
+          ],
+          "datasource": "${DS_ZABBIX_3.4}",
+          "decimals": 0,
+          "editable": true,
+          "error": false,
+          "format": "Bps",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "90",
+          "id": 45,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SW-CORE-PLT-01.cmpcrs.com.br"
+              },
+              "item": {
+                "filter": "Interface Gi0/23(## SW-CORE-PLT-02 Porta 23 ##): Operational status"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": "0,1",
+          "title": "Status FW SVGBFLW24",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "UP",
+              "value": "1"
+            },
+            {
+              "op": "=",
+              "text": "Down",
+              "value": "0"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_ZABBIX_3.4}",
+          "decimals": null,
+          "fill": 2,
+          "id": 41,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "hideEmpty": false,
+            "hideZero": false,
+            "max": true,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "sort": "current",
+            "sortDesc": false,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 3,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Incoming traffic"
+                  ],
+                  "text": "setAlias(Incoming traffic)"
+                }
+              ],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SW-CORE-PLT-01.cmpcrs.com.br"
+              },
+              "item": {
+                "filter": "Interface Gi0/23(## SW-CORE-PLT-02 Porta 23 ##): Bits received"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Outbound traffic"
+                  ],
+                  "text": "setAlias(Outbound traffic)"
+                }
+              ],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SW-CORE-PLT-01.cmpcrs.com.br"
+              },
+              "item": {
+                "filter": "Interface Gi0/23(## SW-CORE-PLT-02 Porta 23 ##): Bits sent"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "TX / RX SVGBFLW24",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": false,
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "Bps",
+              "label": "",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": "",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "#bf1b00",
+            "rgba(40, 237, 73, 0.89)",
+            "rgba(40, 237, 73, 0.89)"
+          ],
+          "datasource": "${DS_ZABBIX_3.4}",
+          "decimals": 0,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "50",
+          "id": 49,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SW202-02_1 APOIO ADM"
+              },
+              "item": {
+                "filter": "ICMP ping"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": "0,1",
+          "title": "Ping SW ADM",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "OK",
+              "value": "1"
+            },
+            {
+              "op": "=",
+              "text": "Problem",
+              "value": "0"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "#bf1b00",
+            "rgba(40, 237, 73, 0.89)",
+            "rgba(40, 237, 73, 0.89)"
+          ],
+          "datasource": "${DS_ZABBIX_3.4}",
+          "decimals": 0,
+          "editable": true,
+          "error": false,
+          "format": "Bps",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "90",
+          "id": 50,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SW-CORE-PLT-01.cmpcrs.com.br"
+              },
+              "item": {
+                "filter": "Interface Gi1/1(## DOWNLINK SW202-02_1 - Gi 0/1 APOIO ADM ##): Operational status"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": "0,1",
+          "title": "Status SW ADM",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "UP",
+              "value": "1"
+            },
+            {
+              "op": "=",
+              "text": "Down",
+              "value": "0"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_ZABBIX_3.4}",
+          "decimals": null,
+          "fill": 2,
+          "id": 55,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "hideEmpty": false,
+            "hideZero": false,
+            "max": true,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "sort": "current",
+            "sortDesc": false,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Incoming traffic"
+                  ],
+                  "text": "setAlias(Incoming traffic)"
+                }
+              ],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SW-CORE-PLT-01.cmpcrs.com.br"
+              },
+              "item": {
+                "filter": "Incoming traffic on interface ## DOWNLINK SW202-02_1 - Gi 0/1 APOIO ADM ##"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Outbound traffic"
+                  ],
+                  "text": "setAlias(Outbound traffic)"
+                }
+              ],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SW-CORE-PLT-01.cmpcrs.com.br"
+              },
+              "item": {
+                "filter": "Outbound traffic on interface ## DOWNLINK SW202-02_1 - Gi 0/1 APOIO ADM ##"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "TX / RX ADM",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": false,
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "Bps",
+              "label": "",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": "",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 250,
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "#bf1b00",
+            "rgba(40, 237, 73, 0.89)",
+            "rgba(40, 237, 73, 0.89)"
+          ],
+          "datasource": "${DS_ZABBIX_3.4}",
+          "decimals": 0,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "50",
+          "id": 58,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SW202-03_1.cmpcrs.com.br"
+              },
+              "item": {
+                "filter": "ICMP ping"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": "0,1",
+          "title": "Ping     SW Balança",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "OK",
+              "value": "1"
+            },
+            {
+              "op": "=",
+              "text": "Problem",
+              "value": "0"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "#bf1b00",
+            "rgba(40, 237, 73, 0.89)",
+            "rgba(40, 237, 73, 0.89)"
+          ],
+          "datasource": "${DS_ZABBIX_3.4}",
+          "decimals": 0,
+          "editable": true,
+          "error": false,
+          "format": "Bps",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "90",
+          "id": 59,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SW-CORE-PLT-01.cmpcrs.com.br"
+              },
+              "item": {
+                "filter": "Interface Gi0/22(## SW-PLT-ACESSO-02 Porta Gi0/1 ##): Operational status"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": "0,1",
+          "title": "Status SW Balança",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "UP",
+              "value": "1"
+            },
+            {
+              "op": "=",
+              "text": "Down",
+              "value": "0"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_ZABBIX_3.4}",
+          "decimals": null,
+          "fill": 2,
+          "id": 60,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "hideEmpty": false,
+            "hideZero": false,
+            "max": true,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 3,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Incoming traffic"
+                  ],
+                  "text": "setAlias(Incoming traffic)"
+                }
+              ],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SW-CORE-PLT-01.cmpcrs.com.br"
+              },
+              "item": {
+                "filter": "Incoming traffic on interface ## SW-PLT-ACESSO-02 Porta Gi0/1 ##"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Outbound traffic"
+                  ],
+                  "text": "setAlias(Outbound traffic)"
+                }
+              ],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SW-CORE-PLT-01.cmpcrs.com.br"
+              },
+              "item": {
+                "filter": "Outbound traffic on interface ## SW-PLT-ACESSO-02 Porta Gi0/1 ##"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "TX / RX Balança",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": false,
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "Bps",
+              "label": "",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": "",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "#bf1b00",
+            "rgba(40, 237, 73, 0.89)",
+            "rgba(40, 237, 73, 0.89)"
+          ],
+          "datasource": "${DS_ZABBIX_3.4}",
+          "decimals": 0,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "50",
+          "id": 61,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SW202-03_1.cmpcrs.com.br"
+              },
+              "item": {
+                "filter": "ICMP ping"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": "0,1",
+          "title": "Ping SW Guarita",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "OK",
+              "value": "1"
+            },
+            {
+              "op": "=",
+              "text": "Problem",
+              "value": "0"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "#bf1b00",
+            "rgba(40, 237, 73, 0.89)",
+            "rgba(40, 237, 73, 0.89)"
+          ],
+          "datasource": "${DS_ZABBIX_3.4}",
+          "decimals": 0,
+          "editable": true,
+          "error": false,
+          "format": "Bps",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "90",
+          "id": 62,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SW-CORE-PLT-01.cmpcrs.com.br"
+              },
+              "item": {
+                "filter": "Interface Gi1/2(## DOWNLINK SW202-03_1 - Gi 0/1 GUARITA ##): Operational status"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": "0,1",
+          "title": "Status SW Guarita",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "UP",
+              "value": "1"
+            },
+            {
+              "op": "=",
+              "text": "Down",
+              "value": "0"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_ZABBIX_3.4}",
+          "decimals": null,
+          "fill": 2,
+          "id": 63,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "hideEmpty": false,
+            "hideZero": false,
+            "max": true,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 3,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Incoming traffic"
+                  ],
+                  "text": "setAlias(Incoming traffic)"
+                }
+              ],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SW-CORE-PLT-01.cmpcrs.com.br"
+              },
+              "item": {
+                "filter": "Incoming traffic on interface ## DOWNLINK SW202-03_1 - Gi 0/1 GUARITA ##"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Outbound traffic"
+                  ],
+                  "text": "setAlias(Outbound traffic)"
+                }
+              ],
+              "group": {
+                "filter": "ALL HOSTS"
+              },
+              "host": {
+                "filter": "SW-CORE-PLT-01.cmpcrs.com.br"
+              },
+              "item": {
+                "filter": "Outbound traffic on interface ## DOWNLINK SW202-03_1 - Gi 0/1 GUARITA ##"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "TX / RX Guarita",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": false,
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "Bps",
+              "label": "",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": "",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    }
+  ],
+  "schemaVersion": 14,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "timezone": "browser",
+  "title": "Switch Core",
+  "version": 14
+}

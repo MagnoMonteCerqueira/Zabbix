@@ -1,0 +1,924 @@
+{
+  "__inputs": [
+    {
+      "name": "DS_ZABBIX",
+      "label": "Zabbix",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "alexanderzobnin-zabbix-datasource",
+      "pluginName": "Zabbix"
+    }
+  ],
+  "__requires": [
+    {
+      "type": "panel",
+      "id": "text",
+      "name": "Text",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "alexanderzobnin-zabbix-triggers-panel",
+      "name": "Zabbix Triggers",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "singlestat",
+      "name": "Singlestat",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "graph",
+      "name": "Graph",
+      "version": ""
+    },
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "3.1.0"
+    },
+    {
+      "type": "datasource",
+      "id": "alexanderzobnin-zabbix-datasource",
+      "name": "Zabbix",
+      "version": "1.0.0"
+    }
+  ],
+  "id": null,
+  "title": "Zabbix Server 3.0.X",
+  "description": "Displays metrics collected by the host Zabbix Server",
+  "tags": [
+    "zabbix",
+    "zabbix-server"
+  ],
+  "style": "dark",
+  "timezone": "utc",
+  "editable": true,
+  "hideControls": false,
+  "sharedCrosshair": false,
+  "rows": [
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "content": " <center>\n<img src=\"http://zabbixbrasil.org/wp-content/uploads/2014/10/Logo_Versao_03.png\" alt=\"Zabbix-BR\" height=\"139\" width=\"476\">\n<h1>Displays metrics collected by the host Zabbix Server</h1>\n<p>Dashboard developed by Aécio Pires, a member of community <b>Zabbix-BR</b> (<a href=\"http://zabbixbrasil.org\">http://zabbixbrasil.org</a>)</p>\n<p>This dashboard use the <b>datasource Zabbix</b> provide by <b>plugin grafana-zabbix</b> developed Alexander Zobnin (<a href=\"https://github.com/alexanderzobnin/grafana-zabbix\">https://github.com/alexanderzobnin/grafana-zabbix</a>)</p>\n</center> ",
+          "editable": true,
+          "error": false,
+          "height": "50px",
+          "id": 1,
+          "isNew": true,
+          "links": [],
+          "mode": "html",
+          "span": 12,
+          "title": "Info Dashboard",
+          "transparent": true,
+          "type": "text"
+        }
+      ],
+      "title": "New row"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "200px",
+      "panels": [
+        {
+          "ageField": true,
+          "customLastChangeFormat": false,
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "height": "400px",
+          "hostField": true,
+          "id": 2,
+          "infoField": true,
+          "isNew": true,
+          "lastChangeField": true,
+          "limit": 10,
+          "links": [],
+          "okEventColor": "rgba(0, 245, 153, 0.45)",
+          "severityField": false,
+          "showEvents": {
+            "text": "Problems",
+            "value": "1"
+          },
+          "showTriggers": "all triggers",
+          "sortTriggersBy": {
+            "text": "last change",
+            "value": "lastchange"
+          },
+          "span": 8,
+          "statusField": false,
+          "targets": [
+            {}
+          ],
+          "title": "Triggers",
+          "transparent": false,
+          "triggerSeverity": [
+            {
+              "color": "#B7DBAB",
+              "priority": 0,
+              "severity": "Not classified",
+              "show": true
+            },
+            {
+              "color": "#82B5D8",
+              "priority": 1,
+              "severity": "Information",
+              "show": true
+            },
+            {
+              "color": "#E5AC0E",
+              "priority": 2,
+              "severity": "Warning",
+              "show": true
+            },
+            {
+              "color": "#C15C17",
+              "priority": 3,
+              "severity": "Average",
+              "show": true
+            },
+            {
+              "color": "#BF1B00",
+              "priority": 4,
+              "severity": "High",
+              "show": true
+            },
+            {
+              "color": "#890F02",
+              "priority": 5,
+              "severity": "Disaster",
+              "show": true
+            }
+          ],
+          "triggers": {
+            "application": {
+              "filter": ""
+            },
+            "group": {
+              "filter": ""
+            },
+            "host": {
+              "filter": ""
+            },
+            "trigger": {
+              "filter": ""
+            }
+          },
+          "type": "alexanderzobnin-zabbix-triggers-panel"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "decimals": 0,
+          "editable": true,
+          "error": false,
+          "format": "s",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": true,
+            "thresholdMarkers": false
+          },
+          "height": "100px",
+          "id": 5,
+          "interval": null,
+          "isNew": true,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "OS"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix servers"
+              },
+              "host": {
+                "filter": "Zabbix server"
+              },
+              "item": {
+                "filter": "System uptime"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "System Uptime",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(18, 143, 13, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "format": "bytes",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "100px",
+          "id": 4,
+          "interval": null,
+          "isNew": true,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(7, 86, 149, 0.18)",
+            "full": false,
+            "lineColor": "rgb(64, 210, 116)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Memory"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix servers"
+              },
+              "host": {
+                "filter": "Zabbix server"
+              },
+              "item": {
+                "filter": "Available memory"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "0,10000",
+          "title": "Avaliable Memory",
+          "transparent": false,
+          "type": "singlestat",
+          "valueFontSize": "70%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": true,
+            "thresholdMarkers": false
+          },
+          "height": "100px",
+          "id": 6,
+          "interval": null,
+          "isNew": true,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 2,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix server"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix servers"
+              },
+              "hide": false,
+              "host": {
+                "filter": "Zabbix server"
+              },
+              "item": {
+                "filter": "Values processed by Zabbix server per second"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Zabbix New Value Per Second",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": true,
+            "thresholdLabels": true,
+            "thresholdMarkers": true
+          },
+          "height": "300px",
+          "hideTimeOverride": false,
+          "id": 3,
+          "interval": null,
+          "isNew": true,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 2,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix servers"
+              },
+              "host": {
+                "filter": "Zabbix server"
+              },
+              "item": {
+                "filter": "Free disk space on / (percentage)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "20,40",
+          "title": "Free Space (%)",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "format": "percent",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "300px",
+          "id": 9,
+          "interval": null,
+          "isNew": true,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 2,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "application": {
+                "filter": "CPU"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix servers"
+              },
+              "host": {
+                "filter": "Zabbix server"
+              },
+              "item": {
+                "filter": "CPU idle time"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "CPU Idle Time (%)",
+          "transparent": false,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        }
+      ],
+      "title": "New row"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {
+            "Processor load (1 min average per core)": "#890F02"
+          },
+          "bars": false,
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)",
+            "thresholdLine": true
+          },
+          "height": "300px",
+          "id": 8,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "CPU"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix servers"
+              },
+              "host": {
+                "filter": "Zabbix server"
+              },
+              "item": {
+                "filter": "Processor load (1 min average per core)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "application": {
+                "filter": "CPU"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix servers"
+              },
+              "host": {
+                "filter": "Zabbix server"
+              },
+              "item": {
+                "filter": "Processor load (5 min average per core)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "CPU Load",
+          "tooltip": {
+            "msResolution": true,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "Incoming network traffic on eth0": "#7EB26D",
+            "Outgoing network traffic on eth0": "#447EBC"
+          },
+          "bars": false,
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "height": "300px",
+          "id": 7,
+          "isNew": true,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix servers"
+              },
+              "host": {
+                "filter": "Zabbix server"
+              },
+              "item": {
+                "filter": "Incoming network traffic on eth0"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix servers"
+              },
+              "host": {
+                "filter": "Zabbix server"
+              },
+              "item": {
+                "filter": "Outgoing network traffic on eth0"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Network traffic",
+          "tooltip": {
+            "msResolution": true,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "bps",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "title": "New row"
+    }
+  ],
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "templating": {
+    "list": []
+  },
+  "annotations": {
+    "list": []
+  },
+  "refresh": false,
+  "schemaVersion": 12,
+  "version": 21,
+  "links": [],
+  "gnetId": 733
+}

@@ -1,0 +1,2306 @@
+{
+  "__inputs": [
+    {
+      "name": "DS_ZABBIX",
+      "label": "Zabbix",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "alexanderzobnin-zabbix-datasource",
+      "pluginName": "Zabbix"
+    }
+  ],
+  "__requires": [
+    {
+      "type": "datasource",
+      "id": "alexanderzobnin-zabbix-datasource",
+      "name": "Zabbix",
+      "version": "1.0.0"
+    },
+    {
+      "type": "panel",
+      "id": "alexanderzobnin-zabbix-triggers-panel",
+      "name": "Zabbix Triggers",
+      "version": ""
+    },
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "4.6.3"
+    },
+    {
+      "type": "panel",
+      "id": "graph",
+      "name": "Graph",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "singlestat",
+      "name": "Singlestat",
+      "version": ""
+    }
+  ],
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "Painel de monitoria do Storage NEATPP",
+  "editable": true,
+  "gnetId": 5119,
+  "graphTooltip": 0,
+  "hideControls": true,
+  "id": null,
+  "links": [],
+  "rows": [
+    {
+      "collapse": false,
+      "height": 165,
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "#299c46",
+            "rgb(55, 208, 15)",
+            "#d44a3a"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "decimals": null,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 1,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 2,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "Storage"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ISP PRD - Servers (Local)"
+              },
+              "host": {
+                "filter": "$Hostname"
+              },
+              "item": {
+                "filter": "Hostname"
+              },
+              "itemids": "$Hostname",
+              "mode": 2,
+              "options": {
+                "showDisabledItems": true
+              },
+              "refId": "A",
+              "slaProperty": {
+                "name": "SLA",
+                "property": "sla"
+              },
+              "textFilter": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              },
+              "useCaptureGroups": false
+            }
+          ],
+          "thresholds": "",
+          "title": "Hostname",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "#299c46",
+            "rgb(44, 212, 0)",
+            "#d44a3a"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "decimals": null,
+          "format": "dtdurations",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 2,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 2,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "General"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ISP PRD - Servers (Local)"
+              },
+              "host": {
+                "filter": "$Hostname"
+              },
+              "item": {
+                "filter": "Device uptime"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "textFilter": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              },
+              "useCaptureGroups": false
+            }
+          ],
+          "thresholds": "",
+          "title": "Uptime",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "#299c46",
+            "rgb(49, 196, 11)",
+            "#d44a3a"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 18,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 2,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "Storage"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ISP PRD - Storage"
+              },
+              "host": {
+                "filter": "$Hostname"
+              },
+              "item": {
+                "filter": "Modelo do Equipamento"
+              },
+              "mode": 2,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "textFilter": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              },
+              "useCaptureGroups": false
+            }
+          ],
+          "thresholds": "",
+          "title": "Modelo",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "#299c46",
+            "rgba(237, 129, 40, 0.89)",
+            "#d44a3a"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "decimals": null,
+          "format": "percent",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 19,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 2,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "Storage"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ISP PRD - Servers (Local)"
+              },
+              "host": {
+                "filter": "$Hostname"
+              },
+              "item": {
+                "filter": "Uso de CPU"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "textFilter": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              },
+              "useCaptureGroups": false
+            }
+          ],
+          "thresholds": "75,85,95",
+          "title": "Utilização CPU",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "#299c46",
+            "rgba(237, 129, 40, 0.89)",
+            "#d44a3a"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "decimals": null,
+          "format": "percent",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 6,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 2,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "Storage"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ISP PRD - Servers (Local)"
+              },
+              "host": {
+                "filter": "$Hostname"
+              },
+              "item": {
+                "filter": "File System Max Used Bytes %"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "textFilter": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              },
+              "useCaptureGroups": false
+            }
+          ],
+          "thresholds": "75,85,95",
+          "title": "Utilização Espaço",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "#d44a3a",
+            "rgba(237, 129, 40, 0.89)",
+            "#299c46"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "decimals": null,
+          "format": "deckbytes",
+          "gauge": {
+            "maxValue": 10000,
+            "minValue": 0,
+            "show": true,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 20,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 2,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "Storage"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ISP PRD - Servers (Local)"
+              },
+              "host": {
+                "filter": "$Hostname"
+              },
+              "item": {
+                "filter": "Espaço Disponível para Utilização"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "textFilter": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              },
+              "useCaptureGroups": false
+            }
+          ],
+          "thresholds": "150,500,950",
+          "title": "Disponível para Utilização",
+          "type": "singlestat",
+          "valueFontSize": "50%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 188,
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "#299c46",
+            "#299c46",
+            "#d44a3a"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "decimals": null,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 9,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 2,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "Storage"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ISP PRD - Servers (Local)"
+              },
+              "host": {
+                "filter": "$Hostname"
+              },
+              "item": {
+                "filter": "Snap Mirror ON"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "textFilter": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              },
+              "useCaptureGroups": false
+            }
+          ],
+          "thresholds": "",
+          "title": "Snap Mirror ON",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            },
+            {
+              "op": "=",
+              "text": "ON",
+              "value": "2"
+            },
+            {
+              "op": "=",
+              "text": "OFF",
+              "value": "1"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "#299c46",
+            "#299c46",
+            "#d44a3a"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "decimals": null,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 10,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 2,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "Storage"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ISP PRD - Servers (Local)"
+              },
+              "host": {
+                "filter": "$Hostname"
+              },
+              "item": {
+                "filter": "Snap Mirror State"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "textFilter": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              },
+              "useCaptureGroups": false
+            }
+          ],
+          "thresholds": "",
+          "title": "Snap Mirror State",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            },
+            {
+              "op": "=",
+              "text": "Uninitialized",
+              "value": "1"
+            },
+            {
+              "op": "=",
+              "text": "Snapmirrored",
+              "value": "2"
+            },
+            {
+              "op": "=",
+              "text": "Broken-Off",
+              "value": "3"
+            },
+            {
+              "op": "=",
+              "text": "Quiesced",
+              "value": "4"
+            },
+            {
+              "op": "=",
+              "text": "Source",
+              "value": "5"
+            },
+            {
+              "op": "=",
+              "text": "Unknown",
+              "value": "6"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "#299c46",
+            "#299c46",
+            "#d44a3a"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "decimals": null,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 11,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "Storage"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ISP PRD - Servers (Local)"
+              },
+              "host": {
+                "filter": "$Hostname"
+              },
+              "item": {
+                "filter": "Raid Status Disco 1"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "textFilter": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              },
+              "useCaptureGroups": false
+            }
+          ],
+          "thresholds": "",
+          "title": "Raid Status Disco 1",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            },
+            {
+              "op": "=",
+              "text": "Active",
+              "value": "1"
+            },
+            {
+              "op": "=",
+              "text": "Reconstruction In Progress",
+              "value": "2"
+            },
+            {
+              "op": "=",
+              "text": "Parity Reconstruction In Progress",
+              "value": "3"
+            },
+            {
+              "op": "=",
+              "text": "Parity Verification In Progress",
+              "value": "4"
+            },
+            {
+              "op": "=",
+              "text": "Scrubbing In Progress",
+              "value": "5"
+            },
+            {
+              "op": "=",
+              "text": "Failed",
+              "value": "6"
+            },
+            {
+              "op": "=",
+              "text": "Prefailed",
+              "value": "9"
+            },
+            {
+              "op": "=",
+              "text": "Offline",
+              "value": "10"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "#299c46",
+            "#299c46",
+            "#d44a3a"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "decimals": null,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 12,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "Storage"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ISP PRD - Servers (Local)"
+              },
+              "host": {
+                "filter": "$Hostname"
+              },
+              "item": {
+                "filter": "Raid Status Disco 2"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "textFilter": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              },
+              "useCaptureGroups": false
+            }
+          ],
+          "thresholds": "",
+          "title": "Raid Status Disco 2",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            },
+            {
+              "op": "=",
+              "text": "Active",
+              "value": "1"
+            },
+            {
+              "op": "=",
+              "text": "Reconstruction In Progress",
+              "value": "2"
+            },
+            {
+              "op": "=",
+              "text": "Parity Reconstruction In Progress",
+              "value": "3"
+            },
+            {
+              "op": "=",
+              "text": "Parity Verification In Progress",
+              "value": "4"
+            },
+            {
+              "op": "=",
+              "text": "Scrubbing In Progress",
+              "value": "5"
+            },
+            {
+              "op": "=",
+              "text": "Failed",
+              "value": "6"
+            },
+            {
+              "op": "=",
+              "text": "Prefailed",
+              "value": "9"
+            },
+            {
+              "op": "=",
+              "text": "Offline",
+              "value": "10"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "#299c46",
+            "#299c46",
+            "#d44a3a"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "decimals": null,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 13,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "Storage"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ISP PRD - Servers (Local)"
+              },
+              "host": {
+                "filter": "$Hostname"
+              },
+              "item": {
+                "filter": "Raid Status Disco 3"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "textFilter": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              },
+              "useCaptureGroups": false
+            }
+          ],
+          "thresholds": "",
+          "title": "Raid Status Disco 3",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            },
+            {
+              "op": "=",
+              "text": "Active",
+              "value": "1"
+            },
+            {
+              "op": "=",
+              "text": "Reconstruction In Progress",
+              "value": "2"
+            },
+            {
+              "op": "=",
+              "text": "Parity Reconstruction In Progress",
+              "value": "3"
+            },
+            {
+              "op": "=",
+              "text": "Parity Verification In Progress",
+              "value": "4"
+            },
+            {
+              "op": "=",
+              "text": "Scrubbing In Progress",
+              "value": "5"
+            },
+            {
+              "op": "=",
+              "text": "Failed",
+              "value": "6"
+            },
+            {
+              "op": "=",
+              "text": "Prefailed",
+              "value": "9"
+            },
+            {
+              "op": "=",
+              "text": "Offline",
+              "value": "10"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "#299c46",
+            "#299c46",
+            "#d44a3a"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "decimals": null,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 14,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "Storage"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ISP PRD - Servers (Local)"
+              },
+              "host": {
+                "filter": "$Hostname"
+              },
+              "item": {
+                "filter": "Raid Status Disco 4"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "textFilter": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              },
+              "useCaptureGroups": false
+            }
+          ],
+          "thresholds": "",
+          "title": "Raid Status Disco 4",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            },
+            {
+              "op": "=",
+              "text": "Active",
+              "value": "1"
+            },
+            {
+              "op": "=",
+              "text": "Reconstruction In Progress",
+              "value": "2"
+            },
+            {
+              "op": "=",
+              "text": "Parity Reconstruction In Progress",
+              "value": "3"
+            },
+            {
+              "op": "=",
+              "text": "Parity Verification In Progress",
+              "value": "4"
+            },
+            {
+              "op": "=",
+              "text": "Scrubbing In Progress",
+              "value": "5"
+            },
+            {
+              "op": "=",
+              "text": "Failed",
+              "value": "6"
+            },
+            {
+              "op": "=",
+              "text": "Prefailed",
+              "value": "9"
+            },
+            {
+              "op": "=",
+              "text": "Offline",
+              "value": "10"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "#299c46",
+            "#299c46",
+            "#d44a3a"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "decimals": null,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 15,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "Storage"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ISP PRD - Servers (Local)"
+              },
+              "host": {
+                "filter": "$Hostname"
+              },
+              "item": {
+                "filter": "Raid Status Disco 5"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "textFilter": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              },
+              "useCaptureGroups": false
+            }
+          ],
+          "thresholds": "",
+          "title": "Raid Status Disco 5",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            },
+            {
+              "op": "=",
+              "text": "Active",
+              "value": "1"
+            },
+            {
+              "op": "=",
+              "text": "Reconstruction In Progress",
+              "value": "2"
+            },
+            {
+              "op": "=",
+              "text": "Parity Reconstruction In Progress",
+              "value": "3"
+            },
+            {
+              "op": "=",
+              "text": "Parity Verification In Progress",
+              "value": "4"
+            },
+            {
+              "op": "=",
+              "text": "Scrubbing In Progress",
+              "value": "5"
+            },
+            {
+              "op": "=",
+              "text": "Failed",
+              "value": "6"
+            },
+            {
+              "op": "=",
+              "text": "Prefailed",
+              "value": "9"
+            },
+            {
+              "op": "=",
+              "text": "Offline",
+              "value": "10"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "#299c46",
+            "rgba(237, 129, 40, 0.89)",
+            "#d44a3a"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "decimals": null,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 4,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "Storage"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ISP PRD - Servers (Local)"
+              },
+              "host": {
+                "filter": "$Hostname"
+              },
+              "item": {
+                "filter": "Quantidade de discos"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "textFilter": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              },
+              "useCaptureGroups": false
+            }
+          ],
+          "thresholds": "<4",
+          "title": "Total de discos",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "#299c46",
+            "rgba(237, 129, 40, 0.89)",
+            "#d44a3a"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "decimals": null,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 5,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "Storage"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ISP PRD - Servers (Local)"
+              },
+              "host": {
+                "filter": "$Hostname"
+              },
+              "item": {
+                "filter": "Quantidade de discos Spare"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "textFilter": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              },
+              "useCaptureGroups": false
+            }
+          ],
+          "thresholds": "1",
+          "title": "Discos Spare",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "#299c46",
+            "rgba(237, 129, 40, 0.89)",
+            "#d44a3a"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "decimals": null,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 3,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "Storage"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ISP PRD - Servers (Local)"
+              },
+              "host": {
+                "filter": "$Hostname"
+              },
+              "item": {
+                "filter": "Quantidade de discos Ativos"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "textFilter": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              },
+              "useCaptureGroups": false
+            }
+          ],
+          "thresholds": "<4",
+          "title": "Discos Ativos",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 250,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_ZABBIX}",
+          "fill": 2,
+          "id": 7,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "hideEmpty": false,
+            "max": true,
+            "min": false,
+            "rightSide": false,
+            "show": true,
+            "total": true,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Interfaces"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ISP PRD - Servers (Local)"
+              },
+              "host": {
+                "filter": "$Hostname"
+              },
+              "item": {
+                "filter": "Outgoing traffic on interface vif1"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": "Interfaces"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ISP PRD - Servers (Local)"
+              },
+              "host": {
+                "filter": "$Hostname"
+              },
+              "item": {
+                "filter": "Incoming traffic on interface vif1"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Fileshare BRNAS",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "decimals": null,
+              "format": "bps",
+              "label": "Fileshare BRNAS",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "bps",
+              "label": "Fileshare BRNAS",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 274,
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "#299c46",
+            "rgb(49, 196, 11)",
+            "#d44a3a"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "decimals": null,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 17,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 3,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "General"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ISP PRD - Servers (Local)"
+              },
+              "host": {
+                "filter": "$Hostname"
+              },
+              "item": {
+                "filter": "Device description"
+              },
+              "mode": 2,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "textFilter": "NetApp Release 8.2.5P1 7-Mode",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              },
+              "useCaptureGroups": false
+            }
+          ],
+          "thresholds": "",
+          "title": "Version",
+          "type": "singlestat",
+          "valueFontSize": "50%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "ackEventColor": "rgb(56, 219, 156)",
+          "customLastChangeFormat": false,
+          "datasources": [
+            "Zabbix"
+          ],
+          "descriptionAtNewLine": false,
+          "descriptionField": true,
+          "fontSize": "100%",
+          "highlightNewEvents": true,
+          "highlightNewerThan": "1h",
+          "hostField": true,
+          "hostGroups": false,
+          "hostTechNameField": false,
+          "hostsInMaintenance": true,
+          "id": 16,
+          "lastChangeFormat": "",
+          "limit": 100,
+          "links": [],
+          "okEventColor": "rgb(56, 189, 113)",
+          "pageSize": 10,
+          "schemaVersion": 4,
+          "severityField": true,
+          "showEvents": {
+            "text": "Problems",
+            "value": "1"
+          },
+          "showTags": true,
+          "showTriggers": "all triggers",
+          "sortTriggersBy": {
+            "text": "last change",
+            "value": "lastchange"
+          },
+          "span": 9,
+          "statusField": true,
+          "targets": {
+            "Zabbix": {
+              "application": {
+                "filter": ""
+              },
+              "group": {
+                "filter": "ISP PRD - Servers (Local)"
+              },
+              "host": {
+                "filter": "BRNAS01"
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              }
+            }
+          },
+          "title": "Alertas Storage",
+          "triggerSeverity": [
+            {
+              "color": "rgb(108, 108, 108)",
+              "priority": 0,
+              "severity": "Not classified",
+              "show": true
+            },
+            {
+              "color": "rgb(120, 158, 183)",
+              "priority": 1,
+              "severity": "Information",
+              "show": true
+            },
+            {
+              "color": "rgb(175, 180, 36)",
+              "priority": 2,
+              "severity": "Warning",
+              "show": true
+            },
+            {
+              "color": "rgb(255, 137, 30)",
+              "priority": 3,
+              "severity": "Average",
+              "show": true
+            },
+            {
+              "color": "rgb(255, 101, 72)",
+              "priority": 4,
+              "severity": "High",
+              "show": true
+            },
+            {
+              "color": "rgb(215, 0, 0)",
+              "priority": 5,
+              "severity": "Disaster",
+              "show": true
+            }
+          ],
+          "type": "alexanderzobnin-zabbix-triggers-panel"
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    }
+  ],
+  "schemaVersion": 14,
+  "style": "dark",
+  "tags": [
+    "NETAPP",
+    "STORAGE"
+  ],
+  "templating": {
+    "list": [
+      {
+        "allValue": null,
+        "current": {},
+        "datasource": "${DS_ZABBIX}",
+        "hide": 2,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "Grupo",
+        "options": [],
+        "query": "ISP PRD - Storage",
+        "refresh": 1,
+        "regex": "",
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": "",
+        "current": {},
+        "datasource": "${DS_ZABBIX}",
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "Hostname",
+        "options": [],
+        "query": "$Grupo.*",
+        "refresh": 1,
+        "regex": "",
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
+  },
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "timezone": "",
+  "title": "Dashboard NetAPP",
+  "version": 4
+}

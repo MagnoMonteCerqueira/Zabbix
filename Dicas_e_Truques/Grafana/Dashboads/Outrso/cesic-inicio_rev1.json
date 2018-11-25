@@ -1,0 +1,1658 @@
+{
+  "__inputs": [
+    {
+      "name": "DS_OTRS",
+      "label": "OTRS",
+      "description": "MySQL connection to OTRS database",
+      "type": "datasource",
+      "pluginId": "mysql",
+      "pluginName": "MySQL"
+    },
+    {
+      "name": "DS_ZABBIX",
+      "label": "zabbix",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "alexanderzobnin-zabbix-datasource",
+      "pluginName": "Zabbix"
+    }
+  ],
+  "__requires": [
+    {
+      "type": "datasource",
+      "id": "alexanderzobnin-zabbix-datasource",
+      "name": "Zabbix",
+      "version": "1.0.0"
+    },
+    {
+      "type": "panel",
+      "id": "dashlist",
+      "name": "Dashboard list",
+      "version": "5.0.0"
+    },
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "5.2.2"
+    },
+    {
+      "type": "panel",
+      "id": "graph",
+      "name": "Graph",
+      "version": "5.0.0"
+    },
+    {
+      "type": "datasource",
+      "id": "mysql",
+      "name": "MySQL",
+      "version": "5.0.0"
+    },
+    {
+      "type": "panel",
+      "id": "singlestat",
+      "name": "Singlestat",
+      "version": "5.0.0"
+    },
+    {
+      "type": "panel",
+      "id": "table",
+      "name": "Table",
+      "version": "5.0.0"
+    }
+  ],
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": 7855,
+  "graphTooltip": 0,
+  "id": null,
+  "links": [],
+  "panels": [
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 33,
+      "panels": [],
+      "repeat": null,
+      "title": "Accesos Directos",
+      "type": "row"
+    },
+    {
+      "folderId": null,
+      "gridPos": {
+        "h": 6,
+        "w": 12,
+        "x": 0,
+        "y": 1
+      },
+      "headings": false,
+      "id": 1,
+      "limit": 10,
+      "links": [],
+      "query": "",
+      "recent": false,
+      "search": true,
+      "starred": false,
+      "tags": [
+        "micope"
+      ],
+      "title": "Micro y Operaciones",
+      "type": "dashlist"
+    },
+    {
+      "folderId": null,
+      "gridPos": {
+        "h": 6,
+        "w": 12,
+        "x": 12,
+        "y": 1
+      },
+      "headings": false,
+      "id": 2,
+      "limit": 10,
+      "links": [],
+      "query": "",
+      "recent": false,
+      "search": true,
+      "starred": false,
+      "tags": [
+        "sistemas"
+      ],
+      "title": "Sistemas",
+      "type": "dashlist"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 7
+      },
+      "id": 34,
+      "panels": [],
+      "repeat": null,
+      "title": "Indicadores",
+      "type": "row"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "rgba(50, 172, 45, 0.97)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(245, 54, 54, 0.9)"
+      ],
+      "datasource": "${DS_OTRS}",
+      "format": "none",
+      "gauge": {
+        "maxValue": 700,
+        "minValue": 0,
+        "show": true,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 6,
+        "x": 0,
+        "y": 8
+      },
+      "id": 3,
+      "interval": null,
+      "links": [
+        {
+          "dashUri": "db/cesic-gestion",
+          "dashboard": "CESIC - Gestion",
+          "title": "CESIC - Gestion",
+          "type": "dashboard"
+        }
+      ],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "count(tn)",
+      "targets": [
+        {
+          "alias": "",
+          "format": "table",
+          "hide": false,
+          "rawSql": "select count(tn) from CESIC_Open\nwhere contar=1 and\nQueue<>'2 - Administración sistemas - Seguridad'",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "500,600",
+      "title": "Grupos UTE Iecisa/DMS",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "rgba(50, 172, 45, 0.97)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(245, 54, 54, 0.9)"
+      ],
+      "datasource": "${DS_OTRS}",
+      "format": "none",
+      "gauge": {
+        "maxValue": 380,
+        "minValue": 0,
+        "show": true,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 6,
+        "x": 6,
+        "y": 8
+      },
+      "id": 21,
+      "interval": null,
+      "links": [
+        {
+          "dashUri": "db/detalle-de-casos",
+          "dashboard": "Detalle de Casos",
+          "params": "var-Cola=2 - Administración sistemas - Seguridad&var-Estado=All&var-Tipo=All&var-Prioridad=All&var-Centro=All",
+          "title": "Detalle de Casos",
+          "type": "dashboard"
+        }
+      ],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "count(tn)",
+      "targets": [
+        {
+          "alias": "",
+          "format": "table",
+          "hide": false,
+          "rawSql": "select count(tn) from CESIC_Open\nwhere contar=1 and\nQueue='2 - Administración sistemas - Seguridad'",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "300,350",
+      "title": "Seguridad",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "columns": [],
+      "datasource": "${DS_OTRS}",
+      "fontSize": "100%",
+      "gridPos": {
+        "h": 8,
+        "w": 6,
+        "x": 12,
+        "y": 8
+      },
+      "id": 5,
+      "links": [],
+      "pageSize": null,
+      "scroll": true,
+      "showHeader": true,
+      "sort": {
+        "col": 1,
+        "desc": true
+      },
+      "styles": [
+        {
+          "alias": "Time",
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "pattern": "Time",
+          "type": "date"
+        },
+        {
+          "alias": "",
+          "colorMode": "value",
+          "colors": [
+            "rgba(50, 172, 45, 0.97)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(245, 54, 54, 0.9)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "pattern": "numero",
+          "thresholds": [
+            "30",
+            "50"
+          ],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": true,
+          "linkTargetBlank": true,
+          "linkTooltip": "Detalle",
+          "linkUrl": "https://grafana.ssib.es/dashboard/db/detalle-de-casos?panelId=1&fullscreen&edit&orgId=1&var-Cola=$__cell&var-Estado=All&var-Tipo=All&var-Prioridad=All",
+          "pattern": "cola",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "decimals": 2,
+          "pattern": "/.*/",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        }
+      ],
+      "targets": [
+        {
+          "alias": "",
+          "format": "table",
+          "hide": false,
+          "rawSql": "SELECT\nqueue as cola,\ncount(tn) as numero\nFROM otrs.CESIC_Open\nwhere \ntipo='Microinformatica'\ngroup by queue\norder by numero desc\n\n",
+          "refId": "A"
+        }
+      ],
+      "title": "Microinformatica",
+      "transform": "table",
+      "type": "table"
+    },
+    {
+      "columns": [],
+      "datasource": "${DS_OTRS}",
+      "fontSize": "100%",
+      "gridPos": {
+        "h": 8,
+        "w": 6,
+        "x": 18,
+        "y": 8
+      },
+      "id": 6,
+      "links": [
+        {
+          "dashUri": "db/detalle-de-incidencias",
+          "dashboard": "Detalle de Incidencias",
+          "params": "var-Cola=1 - Operaciones&var-Cola=2 - Administración VMWare&var-Cola=2 - Administración sistemas&var-Cola=2 - Administración sistemas - Seguridad&var-Cola=2 - Administración sistemas UNIX&var-Cola=2 - Administración sistemas Windows&var-Cola=2 - Almacenamiento&var-Cola=2 - Bases de Datos&var-Cola=2 - Bases de Datos::Informix&var-Cola=2 - Bases de Datos::Microsoft SQL Server&var-Cola=2 - Bases de Datos::MySQL&var-Cola=2 - Bases de Datos::Oracle&var-Cola=2 - Citrix&var-Cola=2 - Comunicaciones::CESIC&var-Cola=2 - Copia de Seguridad&var-Cola=2 - Correo Electrónico&var-Cola=2 - Intranet&var-Cola=2 - Inventario&var-Cola=2 - Monitorización&var-Estado=Nuevo&var-Estado=Abierto",
+          "targetBlank": true,
+          "title": "Incidencias abiertas",
+          "type": "dashboard"
+        },
+        {
+          "dashUri": "db/detalle-de-peticiones-de-servicio",
+          "dashboard": "Detalle de Peticiones de Servicio",
+          "params": "var-Cola=1 - Operaciones&var-Cola=2 - Administración VMWare&var-Cola=2 - Administración sistemas&var-Cola=2 - Administración sistemas UNIX&var-Cola=2 - Administración sistemas Windows&var-Cola=2 - Almacenamiento&var-Cola=2 - Bases de Datos&var-Cola=2 - Bases de Datos::Informix&var-Cola=2 - Bases de Datos::Microsoft SQL Server&var-Cola=2 - Bases de Datos::MySQL&var-Cola=2 - Bases de Datos::Oracle&var-Cola=2 - Citrix&var-Cola=2 - Comunicaciones::CESIC&var-Cola=2 - Copia de Seguridad&var-Cola=2 - Correo Electrónico&var-Cola=2 - Intranet&var-Cola=2 - Inventario&var-Cola=2 - Monitorización&var-Estado=Nuevo&var-Estado=Abierto",
+          "targetBlank": true,
+          "title": "Peticiones de servicio abiertas",
+          "type": "dashboard"
+        }
+      ],
+      "pageSize": null,
+      "scroll": true,
+      "showHeader": true,
+      "sort": {
+        "col": 1,
+        "desc": true
+      },
+      "styles": [
+        {
+          "alias": "Time",
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "pattern": "Time",
+          "type": "date"
+        },
+        {
+          "alias": "",
+          "colorMode": "value",
+          "colors": [
+            "rgba(50, 172, 45, 0.97)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(245, 54, 54, 0.9)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "pattern": "numero",
+          "thresholds": [
+            "30",
+            "50"
+          ],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": true,
+          "linkTargetBlank": true,
+          "linkTooltip": "Detalle",
+          "linkUrl": "https://grafana.ssib.es/dashboard/db/detalle-de-casos?panelId=1&fullscreen&edit&orgId=1&var-Cola=$__cell&var-Estado=All&var-Tipo=All&var-Prioridad=All",
+          "pattern": "cola",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "decimals": 2,
+          "pattern": "/.*/",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        }
+      ],
+      "targets": [
+        {
+          "alias": "",
+          "format": "table",
+          "hide": false,
+          "rawSql": "SELECT\nqueue as cola,\ncount(tn) as numero\nFROM otrs.CESIC_Open\nwhere \ntipo='Administradores'\ngroup by queue\norder by numero desc\n\n",
+          "refId": "A"
+        }
+      ],
+      "title": "Sistemas",
+      "transform": "table",
+      "type": "table"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "rgba(50, 172, 45, 0.97)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(245, 54, 54, 0.9)"
+      ],
+      "datasource": "${DS_OTRS}",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": true,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 4,
+        "x": 0,
+        "y": 16
+      },
+      "id": 24,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "num",
+      "targets": [
+        {
+          "alias": "",
+          "format": "table",
+          "hide": false,
+          "rawSql": "select \ncount(tn) as num\nfrom ticket a left join dynamic_field_value g on (a.id=g.object_id and g.field_id=12), ticket_priority b, ticket_state c, ticket_type d, users e, queue f\nwhere \na.ticket_priority_id=b.id and\na.ticket_state_id=c.id and\na.type_id = d.id and\na.user_id=e.id and\na.queue_id = f.id and\na.queue_id in\n(\n130,\n168,\n160,\n162,\n80,\n261,\n120,\n81,\n121,\n109,\n166,\n98,\n122,\n205,\n260,\n2,\n159,\n233,\n185,\n325,\n329)\nand \na.ticket_state_id in (19,11,18);",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "50,75",
+      "title": "Resueltos Micro",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "rgba(50, 172, 45, 0.97)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(245, 54, 54, 0.9)"
+      ],
+      "datasource": "${DS_OTRS}",
+      "format": "none",
+      "gauge": {
+        "maxValue": 30,
+        "minValue": 0,
+        "show": true,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 4,
+        "x": 4,
+        "y": 16
+      },
+      "id": 22,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "num",
+      "targets": [
+        {
+          "alias": "",
+          "format": "table",
+          "hide": false,
+          "rawSql": "select \ncount(tn) as num\nfrom ticket a left join dynamic_field_value g on (a.id=g.object_id and g.field_id=12), ticket_priority b, ticket_state c, ticket_type d, users e, queue f\nwhere \na.ticket_priority_id=b.id and\na.ticket_state_id=c.id and\na.type_id = d.id and\na.user_id=e.id and\na.queue_id = f.id and\na.queue_id in\n(44,\n225,\n147,\n360,\n2)\nand \na.ticket_state_id in (19,11,18)\n;",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "10,25",
+      "title": "Resueltos Operaciones",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "rgba(50, 172, 45, 0.97)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(245, 54, 54, 0.9)"
+      ],
+      "datasource": "${DS_OTRS}",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": true,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 4,
+        "x": 8,
+        "y": 16
+      },
+      "id": 23,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "num",
+      "targets": [
+        {
+          "alias": "",
+          "format": "table",
+          "hide": false,
+          "rawSql": "select \ncount(tn) as num\nfrom ticket a left join dynamic_field_value g on (a.id=g.object_id and g.field_id=12), ticket_priority b, ticket_state c, ticket_type d, users e, queue f\nwhere \na.ticket_priority_id=b.id and\na.ticket_state_id=c.id and\na.type_id = d.id and\na.user_id=e.id and\na.queue_id = f.id and\na.queue_id in\n(\n231,\n232,\n128,\n45,\n46,\n47,\n62,\n230,\n48,\n125,\n127,\n195,\n126,\n49,\n194,\n51,\n52,\n55,\n228,\n57,\n139,\n457,\n63)\nand \na.ticket_state_id in (19,11,18)\n;\n",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "50,75",
+      "title": "Resueltos Administradores",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 24
+      },
+      "id": 35,
+      "panels": [],
+      "repeat": null,
+      "title": "Disponibilidad Global de los Servicios de IBSALUT",
+      "type": "row"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#bf1b00",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "datasource": "${DS_ZABBIX}",
+      "decimals": 2,
+      "format": "percent",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": false
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 6,
+        "x": 0,
+        "y": 25
+      },
+      "id": 28,
+      "interval": null,
+      "links": [
+        {
+          "dashUri": "db/servicio-it",
+          "dashboard": "Servicio IT",
+          "keepTime": true,
+          "title": "Servicio IT",
+          "type": "dashboard"
+        }
+      ],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "num",
+      "targets": [
+        {
+          "alias": "",
+          "application": {
+            "filter": ""
+          },
+          "format": "table",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "hide": false,
+          "host": {
+            "filter": ""
+          },
+          "itServiceFilter": "Global",
+          "item": {
+            "filter": ""
+          },
+          "mode": 1,
+          "options": {
+            "showDisabledItems": false
+          },
+          "rawSql": "select \ncount(tn) as num\nfrom ticket a left join dynamic_field_value g on (a.id=g.object_id and g.field_id=12), ticket_priority b, ticket_state c, ticket_type d, users e, queue f\nwhere \na.ticket_priority_id=b.id and\na.ticket_state_id=c.id and\na.type_id = d.id and\na.user_id=e.id and\na.queue_id = f.id and\na.queue_id in\n(\n231,\n232,\n128,\n45,\n46,\n47,\n62,\n230,\n48,\n125,\n127,\n195,\n126,\n49,\n194,\n51,\n52,\n55,\n228,\n57,\n139,\n457,\n63)\nand \na.ticket_state_id in (19,11,18)\n;\n",
+          "refId": "A",
+          "slaProperty": {
+            "name": "SLA",
+            "property": "sla"
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": "80,98",
+      "title": "Disponibilidad Global",
+      "transparent": false,
+      "type": "singlestat",
+      "valueFontSize": "150%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#bf1b00",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "datasource": "${DS_ZABBIX}",
+      "decimals": 2,
+      "format": "percent",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": false
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 6,
+        "y": 25
+      },
+      "id": 29,
+      "interval": null,
+      "links": [
+        {
+          "dashUri": "db/servicio-it-historia-clinica",
+          "dashboard": "Servicio IT - Historia Clinica",
+          "keepTime": true,
+          "title": "Servicio IT - Historia Clinica",
+          "type": "dashboard"
+        }
+      ],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "num",
+      "targets": [
+        {
+          "alias": "",
+          "application": {
+            "filter": ""
+          },
+          "format": "table",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "hide": false,
+          "host": {
+            "filter": ""
+          },
+          "itServiceFilter": "Historia Clinica",
+          "item": {
+            "filter": ""
+          },
+          "mode": 1,
+          "options": {
+            "showDisabledItems": false
+          },
+          "rawSql": "select \ncount(tn) as num\nfrom ticket a left join dynamic_field_value g on (a.id=g.object_id and g.field_id=12), ticket_priority b, ticket_state c, ticket_type d, users e, queue f\nwhere \na.ticket_priority_id=b.id and\na.ticket_state_id=c.id and\na.type_id = d.id and\na.user_id=e.id and\na.queue_id = f.id and\na.queue_id in\n(\n231,\n232,\n128,\n45,\n46,\n47,\n62,\n230,\n48,\n125,\n127,\n195,\n126,\n49,\n194,\n51,\n52,\n55,\n228,\n57,\n139,\n457,\n63)\nand \na.ticket_state_id in (19,11,18)\n;\n",
+          "refId": "A",
+          "slaProperty": {
+            "name": "SLA",
+            "property": "sla"
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": "80,98",
+      "title": "Historia Clinica",
+      "transparent": false,
+      "type": "singlestat",
+      "valueFontSize": "120%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#bf1b00",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "datasource": "${DS_ZABBIX}",
+      "decimals": 2,
+      "format": "percent",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": false
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 10,
+        "y": 25
+      },
+      "id": 30,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "num",
+      "targets": [
+        {
+          "alias": "",
+          "application": {
+            "filter": ""
+          },
+          "format": "table",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "hide": false,
+          "host": {
+            "filter": ""
+          },
+          "itServiceFilter": "Gestion de proveedores",
+          "item": {
+            "filter": ""
+          },
+          "mode": 1,
+          "options": {
+            "showDisabledItems": false
+          },
+          "rawSql": "select \ncount(tn) as num\nfrom ticket a left join dynamic_field_value g on (a.id=g.object_id and g.field_id=12), ticket_priority b, ticket_state c, ticket_type d, users e, queue f\nwhere \na.ticket_priority_id=b.id and\na.ticket_state_id=c.id and\na.type_id = d.id and\na.user_id=e.id and\na.queue_id = f.id and\na.queue_id in\n(\n231,\n232,\n128,\n45,\n46,\n47,\n62,\n230,\n48,\n125,\n127,\n195,\n126,\n49,\n194,\n51,\n52,\n55,\n228,\n57,\n139,\n457,\n63)\nand \na.ticket_state_id in (19,11,18)\n;\n",
+          "refId": "A",
+          "slaProperty": {
+            "name": "SLA",
+            "property": "sla"
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": "80,98",
+      "title": "Gestion de proveedores",
+      "transparent": false,
+      "type": "singlestat",
+      "valueFontSize": "120%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#bf1b00",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "datasource": "${DS_ZABBIX}",
+      "decimals": 2,
+      "format": "percent",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": false
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 14,
+        "y": 25
+      },
+      "id": 31,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "num",
+      "targets": [
+        {
+          "alias": "",
+          "application": {
+            "filter": ""
+          },
+          "format": "table",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "hide": false,
+          "host": {
+            "filter": ""
+          },
+          "itServiceFilter": "Portales institucionales",
+          "item": {
+            "filter": ""
+          },
+          "mode": 1,
+          "options": {
+            "showDisabledItems": false
+          },
+          "rawSql": "select \ncount(tn) as num\nfrom ticket a left join dynamic_field_value g on (a.id=g.object_id and g.field_id=12), ticket_priority b, ticket_state c, ticket_type d, users e, queue f\nwhere \na.ticket_priority_id=b.id and\na.ticket_state_id=c.id and\na.type_id = d.id and\na.user_id=e.id and\na.queue_id = f.id and\na.queue_id in\n(\n231,\n232,\n128,\n45,\n46,\n47,\n62,\n230,\n48,\n125,\n127,\n195,\n126,\n49,\n194,\n51,\n52,\n55,\n228,\n57,\n139,\n457,\n63)\nand \na.ticket_state_id in (19,11,18)\n;\n",
+          "refId": "A",
+          "slaProperty": {
+            "name": "SLA",
+            "property": "sla"
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": "80,98",
+      "title": "Portales institucionales",
+      "transparent": false,
+      "type": "singlestat",
+      "valueFontSize": "120%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#bf1b00",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "datasource": "${DS_ZABBIX}",
+      "decimals": 2,
+      "format": "percent",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": false
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 18,
+        "y": 25
+      },
+      "id": 32,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "num",
+      "targets": [
+        {
+          "alias": "",
+          "application": {
+            "filter": ""
+          },
+          "format": "table",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "hide": false,
+          "host": {
+            "filter": ""
+          },
+          "itServiceFilter": "Sistemas Administrativos",
+          "item": {
+            "filter": ""
+          },
+          "mode": 1,
+          "options": {
+            "showDisabledItems": false
+          },
+          "rawSql": "select \ncount(tn) as num\nfrom ticket a left join dynamic_field_value g on (a.id=g.object_id and g.field_id=12), ticket_priority b, ticket_state c, ticket_type d, users e, queue f\nwhere \na.ticket_priority_id=b.id and\na.ticket_state_id=c.id and\na.type_id = d.id and\na.user_id=e.id and\na.queue_id = f.id and\na.queue_id in\n(\n231,\n232,\n128,\n45,\n46,\n47,\n62,\n230,\n48,\n125,\n127,\n195,\n126,\n49,\n194,\n51,\n52,\n55,\n228,\n57,\n139,\n457,\n63)\nand \na.ticket_state_id in (19,11,18)\n;\n",
+          "refId": "A",
+          "slaProperty": {
+            "name": "SLA",
+            "property": "sla"
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": "80,98",
+      "title": "Sistemas administrativos",
+      "transparent": false,
+      "type": "singlestat",
+      "valueFontSize": "120%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 28
+      },
+      "id": 36,
+      "panels": [],
+      "repeat": null,
+      "title": "Por tipo",
+      "type": "row"
+    },
+    {
+      "columns": [],
+      "datasource": "${DS_OTRS}",
+      "fontSize": "100%",
+      "gridPos": {
+        "h": 8,
+        "w": 10,
+        "x": 0,
+        "y": 29
+      },
+      "id": 25,
+      "links": [],
+      "pageSize": null,
+      "scroll": true,
+      "showHeader": true,
+      "sort": {
+        "col": 1,
+        "desc": true
+      },
+      "styles": [
+        {
+          "alias": "Time",
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "pattern": "Time",
+          "type": "date"
+        },
+        {
+          "alias": "Tipo de caso",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "link": true,
+          "linkTargetBlank": true,
+          "linkTooltip": "Detalle",
+          "linkUrl": "https://grafana.ssib.es/dashboard/db/detalle-de-casos?panelId=1&fullscreen&edit&orgId=1&var-Cola=All&var-Estado=All&var-Tipo=$__cell&var-Prioridad=All",
+          "pattern": "tipo",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "decimals": 0,
+          "pattern": "/.*/",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        }
+      ],
+      "targets": [
+        {
+          "alias": "",
+          "format": "table",
+          "hide": false,
+          "rawSql": "SELECT\ntype as tipo,\ncount(tn) as numero\nFROM otrs.CESIC_Open\nwhere \ncontar=1\ngroup by type\norder by type asc;\n\n",
+          "refId": "A"
+        }
+      ],
+      "title": "Casos Totales por tipo",
+      "transform": "table",
+      "type": "table"
+    },
+    {
+      "columns": [],
+      "datasource": "${DS_OTRS}",
+      "fontSize": "100%",
+      "gridPos": {
+        "h": 8,
+        "w": 10,
+        "x": 10,
+        "y": 29
+      },
+      "id": 26,
+      "links": [],
+      "pageSize": null,
+      "scroll": true,
+      "showHeader": true,
+      "sort": {
+        "col": 1,
+        "desc": true
+      },
+      "styles": [
+        {
+          "alias": "Time",
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "pattern": "Time",
+          "type": "date"
+        },
+        {
+          "alias": "Tipo de caso",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "link": true,
+          "linkTargetBlank": true,
+          "linkTooltip": "Detalle",
+          "linkUrl": "https://grafana.ssib.es/dashboard/db/detalle-de-casos?panelId=1&fullscreen&edit&orgId=1&var-Cola=All&var-Estado=All&var-Tipo=$__cell&var-Prioridad=All",
+          "pattern": "tipo",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "decimals": 0,
+          "pattern": "/.*/",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        }
+      ],
+      "targets": [
+        {
+          "alias": "",
+          "format": "table",
+          "hide": false,
+          "rawSql": "SELECT\ntype as tipo,\ncount(tn) as numero\nFROM otrs.CESIC_Open\nwhere \ncontar=1\nand estado in ('Abierto','Nuevo')\ngroup by type\norder by type asc;\n\n",
+          "refId": "A"
+        }
+      ],
+      "title": "Casos Abiertos por tipo",
+      "transform": "table",
+      "type": "table"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 37
+      },
+      "id": 38,
+      "panels": [],
+      "repeat": null,
+      "title": "Dashboard Row",
+      "type": "row"
+    },
+    {
+      "aliasColors": {},
+      "bars": true,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "${DS_OTRS}",
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 38
+      },
+      "id": 4,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": false,
+        "hideEmpty": true,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "alias": "",
+          "format": "time_series",
+          "hide": false,
+          "rawSql": "SELECT\n   queue.name as metric,\n count(tn) as value,\n  min(UNIX_TIMESTAMP(ticket.create_time)) as time_sec\n FROM ticket, queue\nWHERE  \nticket.create_time_unix>1483228800 and\nticket.queue_id = queue.id and\nticket.queue_id  in\n(2,\n44,\n45,\n46,\n47,\n48,\n49,\n51,\n52,\n55,\n57,\n62,\n80,\n81,\n98,\n120,\n121,\n122,\n125,\n126,\n127,\n128,\n130,\n147,\n168,\n194,\n195,\n205,\n228,\n230,\n231,\n232,\n260,\n360,\n160,\n225,\n261,\n139,\n162,\n233,\n109,\n166,\n159)\nand $__timeFilter(ticket.create_time)\nGROUP BY metric,UNIX_TIMESTAMP(ticket.create_time) DIV 1800",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Evolucion apertura por horas",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    }
+  ],
+  "refresh": false,
+  "schemaVersion": 16,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now/w",
+    "to": "now/w"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "timezone": "",
+  "title": "OTRS - Inicio",
+  "uid": "000000002",
+  "version": 88,
+  "description": "Overview of state of an Operations Service using OTRS as the main application"
+}

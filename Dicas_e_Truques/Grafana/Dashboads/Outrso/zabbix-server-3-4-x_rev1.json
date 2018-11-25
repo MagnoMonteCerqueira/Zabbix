@@ -1,0 +1,2796 @@
+{
+  "__inputs": [
+    {
+      "name": "DS_ZABBIX",
+      "label": "Zabbix",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "alexanderzobnin-zabbix-datasource",
+      "pluginName": "Zabbix"
+    }
+  ],
+  "__requires": [
+    {
+      "type": "datasource",
+      "id": "alexanderzobnin-zabbix-datasource",
+      "name": "Zabbix",
+      "version": "1.0.0"
+    },
+    {
+      "type": "panel",
+      "id": "alexanderzobnin-zabbix-triggers-panel",
+      "name": "Zabbix Triggers",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "briangann-gauge-panel",
+      "name": "D3 Gauge",
+      "version": "0.0.3"
+    },
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "4.4.1"
+    },
+    {
+      "type": "panel",
+      "id": "grafana-clock-panel",
+      "name": "Clock",
+      "version": "0.0.9"
+    },
+    {
+      "type": "panel",
+      "id": "grafana-piechart-panel",
+      "name": "Pie Chart",
+      "version": "1.1.5"
+    },
+    {
+      "type": "panel",
+      "id": "graph",
+      "name": "Graph",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "jdbranham-diagram-panel",
+      "name": "Diagram",
+      "version": "1.4.0"
+    },
+    {
+      "type": "panel",
+      "id": "singlestat",
+      "name": "Singlestat",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "table",
+      "name": "Table",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "text",
+      "name": "Text",
+      "version": ""
+    }
+  ],
+  "annotations": {
+    "list": []
+  },
+  "description": "Displays metrics collected by the host Zabbix Server",
+  "editable": true,
+  "gnetId": 2741,
+  "graphTooltip": 0,
+  "hideControls": false,
+  "id": null,
+  "links": [
+    {
+      "asDropdown": true,
+      "icon": "external link",
+      "includeVars": false,
+      "keepTime": false,
+      "tags": [],
+      "targetBlank": true,
+      "title": "All Dashboards",
+      "type": "dashboards"
+    },
+    {
+      "icon": "external link",
+      "tags": [],
+      "targetBlank": true,
+      "title": "Zabbix-BR",
+      "tooltip": "Community Zabbix Brazil",
+      "type": "link",
+      "url": "http://zabbixbrasil.org"
+    },
+    {
+      "icon": "external link",
+      "tags": [],
+      "targetBlank": true,
+      "title": "Zabbix",
+      "tooltip": "Zabbix SIA",
+      "type": "link",
+      "url": "http://zabbix.com"
+    },
+    {
+      "icon": "external link",
+      "tags": [],
+      "targetBlank": true,
+      "title": "Grafana",
+      "tooltip": "Grafana site",
+      "type": "link",
+      "url": "http://grafana.org"
+    },
+    {
+      "icon": "external link",
+      "tags": [],
+      "targetBlank": true,
+      "title": "Aécio Pires",
+      "tooltip": "Home site",
+      "type": "link",
+      "url": "http://aeciopires.com"
+    }
+  ],
+  "refresh": false,
+  "rows": [
+    {
+      "collapse": false,
+      "height": 334,
+      "panels": [
+        {
+          "content": " <center>\n<img src=\"http://zabbixbrasil.org/wp-content/uploads/2014/10/Logo_Versao_03.png\" alt=\"Zabbix-BR\" height=\"139\" width=\"476\">\n<h1>Displays metrics collected by the host Zabbix Server</h1>\n</center> \n<br>\n<br>\n<br>\n<p>Dashboard developed by <a href=\"http://aeciopires.com\">Aécio Pires</a>, a member of community <b>Zabbix-BR</b> (<a href=\"http://zabbixbrasil.org\">http://zabbixbrasil.org</a>)</p>\n<p>This dashboad is extensive as the goal is to unite various ideas that inspire the creation and editing of other dashboards.<br>\nThis dashboard displays the use of various plugins and the data collected comes from Zabbix.</p>\n<p>This dashboard use the <b>datasource Zabbix</b> provide by <b><a href=\"https://grafana.net/plugins/alexanderzobnin-zabbix-app\">plugin grafana-zabbix</a></b> developed Alexander Zobnin (<a href=\"https://github.com/alexanderzobnin/grafana-zabbix\">https://github.com/alexanderzobnin/grafana-zabbix</a>)</p>\n",
+          "editable": true,
+          "error": false,
+          "height": "425px",
+          "id": 1,
+          "links": [],
+          "mode": "html",
+          "span": 5,
+          "title": "Info Dashboard",
+          "transparent": true,
+          "type": "text"
+        },
+        {
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "content": "graph LR\n\nA1((Host A))-->B1(Zabbix Agent)\nB1-->C(Zabbix Server)\n\nA2((Host B))-->B2(Zabbix Agent)\nB2-->C\n\n\nC-->D((database))\n\nE(Web)-->D \nD-->E\n\nE-->F((User))\nF-->E\n\n\n\n",
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "format": "percent",
+          "graphId": "diagram_10",
+          "height": "320px",
+          "hideTimeOverride": true,
+          "id": 10,
+          "init": {
+            "arrowMarkerAbsolute": true,
+            "cloneCssStyles": false,
+            "flowchart": {
+              "htmlLabels": true,
+              "useMaxWidth": true
+            },
+            "gantt": {
+              "barGap": 4,
+              "barHeight": 20,
+              "fontFamily": "\"Open-Sans\", \"sans-serif\"",
+              "fontSize": 11,
+              "gridLineStartPadding": 35,
+              "leftPadding": 75,
+              "numberSectionStyles": 3,
+              "titleTopMargin": 25,
+              "topPadding": 50
+            },
+            "logLevel": 2,
+            "sequenceDiagram": {
+              "actorMargin": 50,
+              "bottomMarginAdj": 1,
+              "boxMargin": 10,
+              "boxTextMargin": 5,
+              "diagramMarginX": 50,
+              "diagramMarginY": 10,
+              "height": 65,
+              "messageMargin": 35,
+              "mirrorActors": true,
+              "noteMargin": 10,
+              "useMaxWidth": true,
+              "width": 150
+            },
+            "startOnLoad": false
+          },
+          "legend": {
+            "avg": true,
+            "current": true,
+            "gradient": {
+              "enabled": true,
+              "show": true
+            },
+            "max": true,
+            "min": true,
+            "show": true,
+            "total": true
+          },
+          "links": [],
+          "mappingType": 1,
+          "maxDataPoints": 100,
+          "maxWidth": true,
+          "nullPointMode": "connected",
+          "seriesOverrides": [],
+          "span": 7,
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": ""
+              },
+              "hide": false,
+              "host": {
+                "filter": ""
+              },
+              "item": {
+                "filter": ""
+              },
+              "itservice": {
+                "algorithm": "1",
+                "goodsla": "98.0000",
+                "name": "Telly",
+                "serviceid": "40",
+                "showsla": "1",
+                "sortorder": "0",
+                "status": "0",
+                "triggerid": "15688"
+              },
+              "mode": 1,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "slaProperty": {
+                "name": "SLA",
+                "property": "sla"
+              }
+            }
+          ],
+          "thresholds": "90,97",
+          "title": "Workflow Monitoring",
+          "type": "jdbranham-diagram-panel",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current",
+          "valueOptions": [
+            "avg",
+            "min",
+            "max",
+            "total",
+            "current"
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Head",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 309,
+      "panels": [
+        {
+          "content": "<b>This is simulate a URL of the map of the Zabbix</b><br>\n<iframe src=\"https://www.zabbix.com/documentation/2.2/_media/manual/web_interface/maps.png?w=600&tok=ec839a\" height=\"650px\" width=\"800px\" align=\"middle\"></iframe>\n\n\n\n\n",
+          "editable": true,
+          "error": false,
+          "id": 14,
+          "links": [],
+          "mode": "html",
+          "span": 5,
+          "title": "",
+          "transparent": true,
+          "type": "text"
+        },
+        {
+          "content": "Google Maps<br>\n<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103361.0258552732!2d-48.01161230209457!3d-15.688748713638892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a49d8dc10217d%3A0x8e11f9d0cc6e34a7!2sParque+Nacional+de+Brasilia+-+Torto%2C+Bras%C3%ADlia+-+DF!5e0!3m2!1spt-BR!2sbr!4v1479147596102\" width=\"575\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>\n<br>\nOpenStreetMaps<br>\n<iframe width=\"575\" height=\"300\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" src=\"https://www.openstreetmap.org/export/embed.html?bbox=-48.172645568847656%2C-15.89166867321083%2C-47.74177551269532%2C-15.584348480535366&amp;layer=mapnik\" style=\"border: 1px solid black\"></iframe><br/><small><a href=\"http://www.openstreetmap.org/#map=12/-15.7381/-47.9572&amp;layers=N\">View Larger Map</a></small>",
+          "id": 17,
+          "links": [],
+          "mode": "html",
+          "span": 4,
+          "title": "",
+          "type": "text"
+        },
+        {
+          "aliasColors": {
+            "Free disk space on /home": "#3F6833",
+            "Number of running processes": "#629E51",
+            "Used disk space on /home": "#890F02"
+          },
+          "cacheTimeout": null,
+          "combine": {
+            "label": "Others",
+            "threshold": 0
+          },
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "fontSize": "80%",
+          "format": "short",
+          "height": "350px",
+          "id": 12,
+          "interval": null,
+          "legend": {
+            "percentage": true,
+            "show": true,
+            "values": false
+          },
+          "legendType": "Under graph",
+          "links": [],
+          "maxDataPoints": 3,
+          "nullPointMode": "connected",
+          "pieType": "donut",
+          "span": 3,
+          "strokeWidth": 1,
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix servers"
+              },
+              "host": {
+                "filter": "Zabbix Server"
+              },
+              "item": {
+                "filter": "Used disk space on /"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix servers"
+              },
+              "host": {
+                "filter": "Zabbix Server"
+              },
+              "item": {
+                "filter": "Free disk space on /"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B"
+            }
+          ],
+          "title": "Use Partition",
+          "type": "grafana-piechart-panel",
+          "valueName": "current"
+        },
+        {
+          "bgColor": null,
+          "clockType": "24 hour",
+          "countdownSettings": {
+            "endCountdownTime": "2017-07-28T12:28:00.000Z",
+            "endText": "00:00:00"
+          },
+          "dateSettings": {
+            "dateFormat": "YYYY-MM-DD",
+            "fontSize": "40px",
+            "fontWeight": "bold",
+            "showDate": false
+          },
+          "id": 20,
+          "links": [],
+          "mode": "time",
+          "offsetFromUtc": null,
+          "offsetFromUtcMinutes": null,
+          "span": 3,
+          "timeSettings": {
+            "customFormat": "HH:mm:ss",
+            "fontSize": "90px",
+            "fontWeight": "bold"
+          },
+          "title": "Clock",
+          "type": "grafana-clock-panel"
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Mapa",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": -13,
+      "panels": [
+        {
+          "ackEventColor": "rgba(0, 0, 0, 0)",
+          "ageField": true,
+          "customLastChangeFormat": false,
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "fontSize": "100%",
+          "height": "400px",
+          "hideHostsInMaintenance": false,
+          "hostField": true,
+          "id": 2,
+          "infoField": true,
+          "lastChangeField": true,
+          "limit": 10,
+          "links": [],
+          "okEventColor": "rgba(0, 245, 153, 0.45)",
+          "pageSize": 10,
+          "scroll": true,
+          "severityField": false,
+          "showEvents": {
+            "text": "Problems",
+            "value": "1"
+          },
+          "showTriggers": "all triggers",
+          "sortTriggersBy": {
+            "text": "last change",
+            "value": "lastchange"
+          },
+          "span": 8,
+          "statusField": false,
+          "targets": [
+            {}
+          ],
+          "title": "Triggers",
+          "transparent": false,
+          "triggerSeverity": [
+            {
+              "color": "#B7DBAB",
+              "priority": 0,
+              "severity": "Not classified",
+              "show": true
+            },
+            {
+              "color": "#82B5D8",
+              "priority": 1,
+              "severity": "Information",
+              "show": true
+            },
+            {
+              "color": "#E5AC0E",
+              "priority": 2,
+              "severity": "Warning",
+              "show": true
+            },
+            {
+              "color": "#C15C17",
+              "priority": 3,
+              "severity": "Average",
+              "show": true
+            },
+            {
+              "color": "#BF1B00",
+              "priority": 4,
+              "severity": "High",
+              "show": true
+            },
+            {
+              "color": "#890F02",
+              "priority": 5,
+              "severity": "Disaster",
+              "show": true
+            }
+          ],
+          "triggers": {
+            "application": {
+              "filter": ""
+            },
+            "group": {
+              "filter": ""
+            },
+            "host": {
+              "filter": ""
+            },
+            "trigger": {
+              "filter": ""
+            }
+          },
+          "type": "alexanderzobnin-zabbix-triggers-panel"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(57, 207, 109, 0.89)",
+            "rgba(20, 149, 219, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "decimals": 0,
+          "editable": true,
+          "error": false,
+          "format": "s",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": true,
+            "thresholdMarkers": false
+          },
+          "height": "100px",
+          "id": 5,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "OS"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix servers"
+              },
+              "host": {
+                "filter": "Zabbix Server"
+              },
+              "item": {
+                "filter": "System uptime"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "System Uptime",
+          "type": "singlestat",
+          "valueFontSize": "50%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(18, 143, 13, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "format": "bytes",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "100px",
+          "id": 4,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(7, 86, 149, 0.18)",
+            "full": false,
+            "lineColor": "rgb(64, 210, 116)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "Memory"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix servers"
+              },
+              "host": {
+                "filter": "Zabbix Server"
+              },
+              "item": {
+                "filter": "Available memory"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "0,10000",
+          "title": "Avaliable Memory",
+          "transparent": false,
+          "type": "singlestat",
+          "valueFontSize": "70%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": true,
+            "thresholdMarkers": false
+          },
+          "height": "100px",
+          "id": 6,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 2,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "Zabbix server"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix servers"
+              },
+              "hide": false,
+              "host": {
+                "filter": "Zabbix Server"
+              },
+              "item": {
+                "filter": "Values processed by Zabbix server per second"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "",
+          "title": "Zabbix New Value Per Second",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": true,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "decimals": 0,
+          "editable": true,
+          "error": false,
+          "format": "percent",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": true,
+            "thresholdLabels": true,
+            "thresholdMarkers": true
+          },
+          "height": "275px",
+          "hideTimeOverride": false,
+          "id": 3,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 2,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix servers"
+              },
+              "host": {
+                "filter": "Zabbix Server"
+              },
+              "item": {
+                "filter": "Free disk space on / (percentage)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "20,40",
+          "title": "Free Space Partition / (%)",
+          "transparent": true,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(45, 73, 172, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "format": "percent",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "280px",
+          "id": 9,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 2,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "CPU"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix servers"
+              },
+              "host": {
+                "filter": "Zabbix Server"
+              },
+              "item": {
+                "filter": "CPU idle time"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "20,50",
+          "title": "CPU Idle Time (%)",
+          "transparent": false,
+          "type": "singlestat",
+          "valueFontSize": "200%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Triggers and metrics",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 237,
+      "panels": [
+        {
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "decimals": 2,
+          "editable": true,
+          "error": false,
+          "fontSizes": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46,
+            48,
+            50,
+            52,
+            54,
+            56,
+            58,
+            60,
+            62,
+            64,
+            66,
+            68,
+            70
+          ],
+          "fontTypes": [
+            "Arial",
+            "Avant Garde",
+            "Bookman",
+            "Consolas",
+            "Courier",
+            "Courier New",
+            "Garamond",
+            "Helvetica",
+            "Open Sans",
+            "Palatino",
+            "Times",
+            "Times New Roman",
+            "Verdana"
+          ],
+          "format": "none",
+          "gauge": {
+            "animateNeedleValueTransition": true,
+            "edgeWidth": 0.05,
+            "gaugeRadius": 0,
+            "gaugeUnits": "",
+            "innerCol": "#fff",
+            "labelFontSize": 18,
+            "maxNeedleAngle": 320,
+            "maxTickAngle": 300,
+            "maxValue": 100,
+            "minValue": 0,
+            "needleCol": "#0099CC",
+            "needleLengthNeg": 0.2,
+            "needleTickGap": 0.05,
+            "needleWidth": 5,
+            "outerEdgeCol": "#0099CC",
+            "padding": 0.05,
+            "pivotCol": "#999",
+            "pivotRadius": 0.1,
+            "show": false,
+            "showLowerThresholdRange": true,
+            "showMiddleThresholdRange": true,
+            "showThresholdColorOnBackground": true,
+            "showThresholdColorOnValue": true,
+            "showThresholdOnGauge": true,
+            "showUpperThresholdRange": true,
+            "tickColMaj": "#0099CC",
+            "tickColMin": "#000",
+            "tickEdgeGap": 0.05,
+            "tickFont": "Open Sans",
+            "tickLabelCol": "#000",
+            "tickLengthMaj": 0.15,
+            "tickLengthMin": 0.05,
+            "tickSpaceMajVal": 10,
+            "tickSpaceMinVal": 1,
+            "tickWidthMaj": 5,
+            "tickWidthMin": 1,
+            "ticknessGaugeBasis": 200,
+            "unitsFont": "Open Sans",
+            "unitsLabelCol": "#000",
+            "unitsLabelFontSize": 50,
+            "zeroNeedleAngle": 40,
+            "zeroTickAngle": 60
+          },
+          "gaugeDivId": "d3gauge_svg_11",
+          "height": "200px",
+          "id": 11,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "minSpan": 2,
+          "operatorName": "current",
+          "operatorNameOptions": [
+            "min",
+            "max",
+            "avg",
+            "current",
+            "total",
+            "name"
+          ],
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 2,
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": ""
+              },
+              "host": {
+                "filter": ""
+              },
+              "item": {
+                "filter": ""
+              },
+              "itservice": {
+                "algorithm": "1",
+                "goodsla": "98.0000",
+                "name": "Telly",
+                "serviceid": "40",
+                "showsla": "1",
+                "sortorder": "0",
+                "status": "0",
+                "triggerid": "15688"
+              },
+              "mode": 1,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "slaProperty": {
+                "name": "SLA",
+                "property": "sla"
+              }
+            }
+          ],
+          "thresholds": "80,98",
+          "title": "SLA Link 1",
+          "transparent": false,
+          "type": "briangann-gauge-panel",
+          "unitFormats": [
+            {
+              "submenu": [
+                {
+                  "click": "menuItemSelected(0,0)",
+                  "text": "none",
+                  "value": "none"
+                },
+                {
+                  "click": "menuItemSelected(0,1)",
+                  "text": "short",
+                  "value": "short"
+                },
+                {
+                  "click": "menuItemSelected(0,2)",
+                  "text": "percent (0-100)",
+                  "value": "percent"
+                },
+                {
+                  "click": "menuItemSelected(0,3)",
+                  "text": "percent (0.0-1.0)",
+                  "value": "percentunit"
+                },
+                {
+                  "click": "menuItemSelected(0,4)",
+                  "text": "Humidity (%H)",
+                  "value": "humidity"
+                },
+                {
+                  "click": "menuItemSelected(0,5)",
+                  "text": "ppm",
+                  "value": "ppm"
+                },
+                {
+                  "click": "menuItemSelected(0,6)",
+                  "text": "decibel",
+                  "value": "dB"
+                }
+              ],
+              "text": "none"
+            },
+            {
+              "submenu": [
+                {
+                  "click": "menuItemSelected(1,0)",
+                  "text": "Dollars ($)",
+                  "value": "currencyUSD"
+                },
+                {
+                  "click": "menuItemSelected(1,1)",
+                  "text": "Pounds (£)",
+                  "value": "currencyGBP"
+                },
+                {
+                  "click": "menuItemSelected(1,2)",
+                  "text": "Euro (€)",
+                  "value": "currencyEUR"
+                },
+                {
+                  "click": "menuItemSelected(1,3)",
+                  "text": "Yen (¥)",
+                  "value": "currencyJPY"
+                }
+              ],
+              "text": "currency"
+            },
+            {
+              "submenu": [
+                {
+                  "click": "menuItemSelected(2,0)",
+                  "text": "Hertz (1/s)",
+                  "value": "hertz"
+                },
+                {
+                  "click": "menuItemSelected(2,1)",
+                  "text": "nanoseconds (ns)",
+                  "value": "ns"
+                },
+                {
+                  "click": "menuItemSelected(2,2)",
+                  "text": "microseconds (µs)",
+                  "value": "µs"
+                },
+                {
+                  "click": "menuItemSelected(2,3)",
+                  "text": "milliseconds (ms)",
+                  "value": "ms"
+                },
+                {
+                  "click": "menuItemSelected(2,4)",
+                  "text": "seconds (s)",
+                  "value": "s"
+                },
+                {
+                  "click": "menuItemSelected(2,5)",
+                  "text": "minutes (m)",
+                  "value": "m"
+                },
+                {
+                  "click": "menuItemSelected(2,6)",
+                  "text": "hours (h)",
+                  "value": "h"
+                },
+                {
+                  "click": "menuItemSelected(2,7)",
+                  "text": "days (d)",
+                  "value": "d"
+                },
+                {
+                  "click": "menuItemSelected(2,8)",
+                  "text": "duration (ms)",
+                  "value": "dtdurationms"
+                },
+                {
+                  "click": "menuItemSelected(2,9)",
+                  "text": "duration (s)",
+                  "value": "dtdurations"
+                }
+              ],
+              "text": "time"
+            },
+            {
+              "submenu": [
+                {
+                  "click": "menuItemSelected(3,0)",
+                  "text": "bits",
+                  "value": "bits"
+                },
+                {
+                  "click": "menuItemSelected(3,1)",
+                  "text": "bytes",
+                  "value": "bytes"
+                },
+                {
+                  "click": "menuItemSelected(3,2)",
+                  "text": "kilobytes",
+                  "value": "kbytes"
+                },
+                {
+                  "click": "menuItemSelected(3,3)",
+                  "text": "megabytes",
+                  "value": "mbytes"
+                },
+                {
+                  "click": "menuItemSelected(3,4)",
+                  "text": "gigabytes",
+                  "value": "gbytes"
+                }
+              ],
+              "text": "data"
+            },
+            {
+              "submenu": [
+                {
+                  "click": "menuItemSelected(4,0)",
+                  "text": "packets/sec",
+                  "value": "pps"
+                },
+                {
+                  "click": "menuItemSelected(4,1)",
+                  "text": "bits/sec",
+                  "value": "bps"
+                },
+                {
+                  "click": "menuItemSelected(4,2)",
+                  "text": "bytes/sec",
+                  "value": "Bps"
+                },
+                {
+                  "click": "menuItemSelected(4,3)",
+                  "text": "kilobits/sec",
+                  "value": "Kbits"
+                },
+                {
+                  "click": "menuItemSelected(4,4)",
+                  "text": "kilobytes/sec",
+                  "value": "KBs"
+                },
+                {
+                  "click": "menuItemSelected(4,5)",
+                  "text": "megabits/sec",
+                  "value": "Mbits"
+                },
+                {
+                  "click": "menuItemSelected(4,6)",
+                  "text": "megabytes/sec",
+                  "value": "MBs"
+                },
+                {
+                  "click": "menuItemSelected(4,7)",
+                  "text": "gigabytes/sec",
+                  "value": "GBs"
+                },
+                {
+                  "click": "menuItemSelected(4,8)",
+                  "text": "gigabits/sec",
+                  "value": "Gbits"
+                }
+              ],
+              "text": "data rate"
+            },
+            {
+              "submenu": [
+                {
+                  "click": "menuItemSelected(5,0)",
+                  "text": "ops/sec (ops)",
+                  "value": "ops"
+                },
+                {
+                  "click": "menuItemSelected(5,1)",
+                  "text": "reads/sec (rps)",
+                  "value": "rps"
+                },
+                {
+                  "click": "menuItemSelected(5,2)",
+                  "text": "writes/sec (wps)",
+                  "value": "wps"
+                },
+                {
+                  "click": "menuItemSelected(5,3)",
+                  "text": "I/O ops/sec (iops)",
+                  "value": "iops"
+                }
+              ],
+              "text": "throughput"
+            },
+            {
+              "submenu": [
+                {
+                  "click": "menuItemSelected(6,0)",
+                  "text": "millimetre (mm)",
+                  "value": "lengthmm"
+                },
+                {
+                  "click": "menuItemSelected(6,1)",
+                  "text": "meter (m)",
+                  "value": "lengthm"
+                },
+                {
+                  "click": "menuItemSelected(6,2)",
+                  "text": "kilometer (km)",
+                  "value": "lengthkm"
+                },
+                {
+                  "click": "menuItemSelected(6,3)",
+                  "text": "mile (mi)",
+                  "value": "lengthmi"
+                }
+              ],
+              "text": "length"
+            },
+            {
+              "submenu": [
+                {
+                  "click": "menuItemSelected(7,0)",
+                  "text": "m/s",
+                  "value": "velocityms"
+                },
+                {
+                  "click": "menuItemSelected(7,1)",
+                  "text": "km/h",
+                  "value": "velocitykmh"
+                },
+                {
+                  "click": "menuItemSelected(7,2)",
+                  "text": "mph",
+                  "value": "velocitymph"
+                },
+                {
+                  "click": "menuItemSelected(7,3)",
+                  "text": "knot (kn)",
+                  "value": "velocityknot"
+                }
+              ],
+              "text": "velocity"
+            },
+            {
+              "submenu": [
+                {
+                  "click": "menuItemSelected(8,0)",
+                  "text": "millilitre",
+                  "value": "mlitre"
+                },
+                {
+                  "click": "menuItemSelected(8,1)",
+                  "text": "litre",
+                  "value": "litre"
+                },
+                {
+                  "click": "menuItemSelected(8,2)",
+                  "text": "cubic metre",
+                  "value": "m3"
+                }
+              ],
+              "text": "volume"
+            },
+            {
+              "submenu": [
+                {
+                  "click": "menuItemSelected(9,0)",
+                  "text": "watt (W)",
+                  "value": "watt"
+                },
+                {
+                  "click": "menuItemSelected(9,1)",
+                  "text": "kilowatt (kW)",
+                  "value": "kwatt"
+                },
+                {
+                  "click": "menuItemSelected(9,2)",
+                  "text": "volt-ampere (VA)",
+                  "value": "voltamp"
+                },
+                {
+                  "click": "menuItemSelected(9,3)",
+                  "text": "kilovolt-ampere (kVA)",
+                  "value": "kvoltamp"
+                },
+                {
+                  "click": "menuItemSelected(9,4)",
+                  "text": "volt-ampere reactive (var)",
+                  "value": "voltampreact"
+                },
+                {
+                  "click": "menuItemSelected(9,5)",
+                  "text": "watt-hour (Wh)",
+                  "value": "watth"
+                },
+                {
+                  "click": "menuItemSelected(9,6)",
+                  "text": "kilowatt-hour (kWh)",
+                  "value": "kwatth"
+                },
+                {
+                  "click": "menuItemSelected(9,7)",
+                  "text": "joule (J)",
+                  "value": "joule"
+                },
+                {
+                  "click": "menuItemSelected(9,8)",
+                  "text": "electron volt (eV)",
+                  "value": "ev"
+                },
+                {
+                  "click": "menuItemSelected(9,9)",
+                  "text": "Ampere (A)",
+                  "value": "amp"
+                },
+                {
+                  "click": "menuItemSelected(9,10)",
+                  "text": "Volt (V)",
+                  "value": "volt"
+                },
+                {
+                  "click": "menuItemSelected(9,11)",
+                  "text": "Decibel-milliwatt (dBm)",
+                  "value": "dBm"
+                }
+              ],
+              "text": "energy"
+            },
+            {
+              "submenu": [
+                {
+                  "click": "menuItemSelected(10,0)",
+                  "text": "Celcius (°C)",
+                  "value": "celsius"
+                },
+                {
+                  "click": "menuItemSelected(10,1)",
+                  "text": "Farenheit (°F)",
+                  "value": "farenheit"
+                },
+                {
+                  "click": "menuItemSelected(10,2)",
+                  "text": "Kelvin (K)",
+                  "value": "kelvin"
+                }
+              ],
+              "text": "temperature"
+            },
+            {
+              "submenu": [
+                {
+                  "click": "menuItemSelected(11,0)",
+                  "text": "Millibars",
+                  "value": "pressurembar"
+                },
+                {
+                  "click": "menuItemSelected(11,1)",
+                  "text": "Hectopascals",
+                  "value": "pressurehpa"
+                },
+                {
+                  "click": "menuItemSelected(11,2)",
+                  "text": "Inches of mercury",
+                  "value": "pressurehg"
+                },
+                {
+                  "click": "menuItemSelected(11,3)",
+                  "text": "PSI",
+                  "value": "pressurepsi"
+                }
+              ],
+              "text": "pressure"
+            }
+          ],
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            },
+            {
+              "op": "=",
+              "text": "",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "decimals": 2,
+          "editable": true,
+          "error": false,
+          "fontSizes": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46,
+            48,
+            50,
+            52,
+            54,
+            56,
+            58,
+            60,
+            62,
+            64,
+            66,
+            68,
+            70
+          ],
+          "fontTypes": [
+            "Arial",
+            "Avant Garde",
+            "Bookman",
+            "Consolas",
+            "Courier",
+            "Courier New",
+            "Garamond",
+            "Helvetica",
+            "Open Sans",
+            "Palatino",
+            "Times",
+            "Times New Roman",
+            "Verdana"
+          ],
+          "format": "none",
+          "gauge": {
+            "animateNeedleValueTransition": true,
+            "edgeWidth": 0.05,
+            "gaugeRadius": 0,
+            "gaugeUnits": "",
+            "innerCol": "rgb(3, 0, 0)",
+            "labelFontSize": 18,
+            "maxNeedleAngle": 320,
+            "maxTickAngle": 300,
+            "maxValue": 100,
+            "minValue": 0,
+            "needleCol": "rgb(233, 241, 244)",
+            "needleLengthNeg": 0.2,
+            "needleTickGap": 0.05,
+            "needleWidth": 5,
+            "outerEdgeCol": "rgb(229, 239, 242)",
+            "padding": 0.05,
+            "pivotCol": "#999",
+            "pivotRadius": 0.1,
+            "show": false,
+            "showLowerThresholdRange": true,
+            "showMiddleThresholdRange": true,
+            "showThresholdColorOnBackground": true,
+            "showThresholdColorOnValue": true,
+            "showThresholdOnGauge": true,
+            "showUpperThresholdRange": true,
+            "tickColMaj": "rgb(229, 241, 245)",
+            "tickColMin": "rgb(249, 242, 242)",
+            "tickEdgeGap": 0.05,
+            "tickFont": "Open Sans",
+            "tickLabelCol": "rgb(247, 240, 240)",
+            "tickLengthMaj": 0.15,
+            "tickLengthMin": 0.05,
+            "tickSpaceMajVal": 10,
+            "tickSpaceMinVal": 1,
+            "tickWidthMaj": 5,
+            "tickWidthMin": 1,
+            "ticknessGaugeBasis": 200,
+            "unitsFont": "Open Sans",
+            "unitsLabelCol": "rgb(233, 222, 222)",
+            "unitsLabelFontSize": 50,
+            "zeroNeedleAngle": 40,
+            "zeroTickAngle": 60
+          },
+          "gaugeDivId": "d3gauge_svg_15",
+          "height": "200px",
+          "id": 15,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "minSpan": 2,
+          "operatorName": "current",
+          "operatorNameOptions": [
+            "min",
+            "max",
+            "avg",
+            "current",
+            "total",
+            "name"
+          ],
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 2,
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": ""
+              },
+              "host": {
+                "filter": ""
+              },
+              "item": {
+                "filter": ""
+              },
+              "itservice": {
+                "algorithm": "1",
+                "goodsla": "98.0000",
+                "name": "Vivo",
+                "serviceid": "18",
+                "showsla": "1",
+                "sortorder": "0",
+                "status": "0",
+                "triggerid": "15621"
+              },
+              "mode": 1,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "slaProperty": {
+                "name": "SLA",
+                "property": "sla"
+              }
+            }
+          ],
+          "thresholds": "80,98",
+          "title": "SLA Link 2",
+          "transparent": false,
+          "type": "briangann-gauge-panel",
+          "unitFormats": [
+            {
+              "submenu": [
+                {
+                  "click": "menuItemSelected(0,0)",
+                  "text": "none",
+                  "value": "none"
+                },
+                {
+                  "click": "menuItemSelected(0,1)",
+                  "text": "short",
+                  "value": "short"
+                },
+                {
+                  "click": "menuItemSelected(0,2)",
+                  "text": "percent (0-100)",
+                  "value": "percent"
+                },
+                {
+                  "click": "menuItemSelected(0,3)",
+                  "text": "percent (0.0-1.0)",
+                  "value": "percentunit"
+                },
+                {
+                  "click": "menuItemSelected(0,4)",
+                  "text": "Humidity (%H)",
+                  "value": "humidity"
+                },
+                {
+                  "click": "menuItemSelected(0,5)",
+                  "text": "ppm",
+                  "value": "ppm"
+                },
+                {
+                  "click": "menuItemSelected(0,6)",
+                  "text": "decibel",
+                  "value": "dB"
+                }
+              ],
+              "text": "none"
+            },
+            {
+              "submenu": [
+                {
+                  "click": "menuItemSelected(1,0)",
+                  "text": "Dollars ($)",
+                  "value": "currencyUSD"
+                },
+                {
+                  "click": "menuItemSelected(1,1)",
+                  "text": "Pounds (£)",
+                  "value": "currencyGBP"
+                },
+                {
+                  "click": "menuItemSelected(1,2)",
+                  "text": "Euro (€)",
+                  "value": "currencyEUR"
+                },
+                {
+                  "click": "menuItemSelected(1,3)",
+                  "text": "Yen (¥)",
+                  "value": "currencyJPY"
+                }
+              ],
+              "text": "currency"
+            },
+            {
+              "submenu": [
+                {
+                  "click": "menuItemSelected(2,0)",
+                  "text": "Hertz (1/s)",
+                  "value": "hertz"
+                },
+                {
+                  "click": "menuItemSelected(2,1)",
+                  "text": "nanoseconds (ns)",
+                  "value": "ns"
+                },
+                {
+                  "click": "menuItemSelected(2,2)",
+                  "text": "microseconds (µs)",
+                  "value": "µs"
+                },
+                {
+                  "click": "menuItemSelected(2,3)",
+                  "text": "milliseconds (ms)",
+                  "value": "ms"
+                },
+                {
+                  "click": "menuItemSelected(2,4)",
+                  "text": "seconds (s)",
+                  "value": "s"
+                },
+                {
+                  "click": "menuItemSelected(2,5)",
+                  "text": "minutes (m)",
+                  "value": "m"
+                },
+                {
+                  "click": "menuItemSelected(2,6)",
+                  "text": "hours (h)",
+                  "value": "h"
+                },
+                {
+                  "click": "menuItemSelected(2,7)",
+                  "text": "days (d)",
+                  "value": "d"
+                },
+                {
+                  "click": "menuItemSelected(2,8)",
+                  "text": "duration (ms)",
+                  "value": "dtdurationms"
+                },
+                {
+                  "click": "menuItemSelected(2,9)",
+                  "text": "duration (s)",
+                  "value": "dtdurations"
+                }
+              ],
+              "text": "time"
+            },
+            {
+              "submenu": [
+                {
+                  "click": "menuItemSelected(3,0)",
+                  "text": "bits",
+                  "value": "bits"
+                },
+                {
+                  "click": "menuItemSelected(3,1)",
+                  "text": "bytes",
+                  "value": "bytes"
+                },
+                {
+                  "click": "menuItemSelected(3,2)",
+                  "text": "kilobytes",
+                  "value": "kbytes"
+                },
+                {
+                  "click": "menuItemSelected(3,3)",
+                  "text": "megabytes",
+                  "value": "mbytes"
+                },
+                {
+                  "click": "menuItemSelected(3,4)",
+                  "text": "gigabytes",
+                  "value": "gbytes"
+                }
+              ],
+              "text": "data"
+            },
+            {
+              "submenu": [
+                {
+                  "click": "menuItemSelected(4,0)",
+                  "text": "packets/sec",
+                  "value": "pps"
+                },
+                {
+                  "click": "menuItemSelected(4,1)",
+                  "text": "bits/sec",
+                  "value": "bps"
+                },
+                {
+                  "click": "menuItemSelected(4,2)",
+                  "text": "bytes/sec",
+                  "value": "Bps"
+                },
+                {
+                  "click": "menuItemSelected(4,3)",
+                  "text": "kilobits/sec",
+                  "value": "Kbits"
+                },
+                {
+                  "click": "menuItemSelected(4,4)",
+                  "text": "kilobytes/sec",
+                  "value": "KBs"
+                },
+                {
+                  "click": "menuItemSelected(4,5)",
+                  "text": "megabits/sec",
+                  "value": "Mbits"
+                },
+                {
+                  "click": "menuItemSelected(4,6)",
+                  "text": "megabytes/sec",
+                  "value": "MBs"
+                },
+                {
+                  "click": "menuItemSelected(4,7)",
+                  "text": "gigabytes/sec",
+                  "value": "GBs"
+                },
+                {
+                  "click": "menuItemSelected(4,8)",
+                  "text": "gigabits/sec",
+                  "value": "Gbits"
+                }
+              ],
+              "text": "data rate"
+            },
+            {
+              "submenu": [
+                {
+                  "click": "menuItemSelected(5,0)",
+                  "text": "ops/sec (ops)",
+                  "value": "ops"
+                },
+                {
+                  "click": "menuItemSelected(5,1)",
+                  "text": "reads/sec (rps)",
+                  "value": "rps"
+                },
+                {
+                  "click": "menuItemSelected(5,2)",
+                  "text": "writes/sec (wps)",
+                  "value": "wps"
+                },
+                {
+                  "click": "menuItemSelected(5,3)",
+                  "text": "I/O ops/sec (iops)",
+                  "value": "iops"
+                }
+              ],
+              "text": "throughput"
+            },
+            {
+              "submenu": [
+                {
+                  "click": "menuItemSelected(6,0)",
+                  "text": "millimetre (mm)",
+                  "value": "lengthmm"
+                },
+                {
+                  "click": "menuItemSelected(6,1)",
+                  "text": "meter (m)",
+                  "value": "lengthm"
+                },
+                {
+                  "click": "menuItemSelected(6,2)",
+                  "text": "kilometer (km)",
+                  "value": "lengthkm"
+                },
+                {
+                  "click": "menuItemSelected(6,3)",
+                  "text": "mile (mi)",
+                  "value": "lengthmi"
+                }
+              ],
+              "text": "length"
+            },
+            {
+              "submenu": [
+                {
+                  "click": "menuItemSelected(7,0)",
+                  "text": "m/s",
+                  "value": "velocityms"
+                },
+                {
+                  "click": "menuItemSelected(7,1)",
+                  "text": "km/h",
+                  "value": "velocitykmh"
+                },
+                {
+                  "click": "menuItemSelected(7,2)",
+                  "text": "mph",
+                  "value": "velocitymph"
+                },
+                {
+                  "click": "menuItemSelected(7,3)",
+                  "text": "knot (kn)",
+                  "value": "velocityknot"
+                }
+              ],
+              "text": "velocity"
+            },
+            {
+              "submenu": [
+                {
+                  "click": "menuItemSelected(8,0)",
+                  "text": "millilitre",
+                  "value": "mlitre"
+                },
+                {
+                  "click": "menuItemSelected(8,1)",
+                  "text": "litre",
+                  "value": "litre"
+                },
+                {
+                  "click": "menuItemSelected(8,2)",
+                  "text": "cubic metre",
+                  "value": "m3"
+                }
+              ],
+              "text": "volume"
+            },
+            {
+              "submenu": [
+                {
+                  "click": "menuItemSelected(9,0)",
+                  "text": "watt (W)",
+                  "value": "watt"
+                },
+                {
+                  "click": "menuItemSelected(9,1)",
+                  "text": "kilowatt (kW)",
+                  "value": "kwatt"
+                },
+                {
+                  "click": "menuItemSelected(9,2)",
+                  "text": "volt-ampere (VA)",
+                  "value": "voltamp"
+                },
+                {
+                  "click": "menuItemSelected(9,3)",
+                  "text": "kilovolt-ampere (kVA)",
+                  "value": "kvoltamp"
+                },
+                {
+                  "click": "menuItemSelected(9,4)",
+                  "text": "volt-ampere reactive (var)",
+                  "value": "voltampreact"
+                },
+                {
+                  "click": "menuItemSelected(9,5)",
+                  "text": "watt-hour (Wh)",
+                  "value": "watth"
+                },
+                {
+                  "click": "menuItemSelected(9,6)",
+                  "text": "kilowatt-hour (kWh)",
+                  "value": "kwatth"
+                },
+                {
+                  "click": "menuItemSelected(9,7)",
+                  "text": "joule (J)",
+                  "value": "joule"
+                },
+                {
+                  "click": "menuItemSelected(9,8)",
+                  "text": "electron volt (eV)",
+                  "value": "ev"
+                },
+                {
+                  "click": "menuItemSelected(9,9)",
+                  "text": "Ampere (A)",
+                  "value": "amp"
+                },
+                {
+                  "click": "menuItemSelected(9,10)",
+                  "text": "Volt (V)",
+                  "value": "volt"
+                },
+                {
+                  "click": "menuItemSelected(9,11)",
+                  "text": "Decibel-milliwatt (dBm)",
+                  "value": "dBm"
+                }
+              ],
+              "text": "energy"
+            },
+            {
+              "submenu": [
+                {
+                  "click": "menuItemSelected(10,0)",
+                  "text": "Celcius (°C)",
+                  "value": "celsius"
+                },
+                {
+                  "click": "menuItemSelected(10,1)",
+                  "text": "Farenheit (°F)",
+                  "value": "farenheit"
+                },
+                {
+                  "click": "menuItemSelected(10,2)",
+                  "text": "Kelvin (K)",
+                  "value": "kelvin"
+                }
+              ],
+              "text": "temperature"
+            },
+            {
+              "submenu": [
+                {
+                  "click": "menuItemSelected(11,0)",
+                  "text": "Millibars",
+                  "value": "pressurembar"
+                },
+                {
+                  "click": "menuItemSelected(11,1)",
+                  "text": "Hectopascals",
+                  "value": "pressurehpa"
+                },
+                {
+                  "click": "menuItemSelected(11,2)",
+                  "text": "Inches of mercury",
+                  "value": "pressurehg"
+                },
+                {
+                  "click": "menuItemSelected(11,3)",
+                  "text": "PSI",
+                  "value": "pressurepsi"
+                }
+              ],
+              "text": "pressure"
+            }
+          ],
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ]
+        },
+        {
+          "columns": [],
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "fontSize": "100%",
+          "height": "315px",
+          "id": 13,
+          "links": [],
+          "maxDataPoints": "7",
+          "pageSize": null,
+          "scroll": true,
+          "showHeader": true,
+          "sort": {
+            "col": 0,
+            "desc": true
+          },
+          "span": 8,
+          "styles": [
+            {
+              "dateFormat": "YYYY-MM-DD HH:mm:ss",
+              "pattern": "Time",
+              "type": "date"
+            },
+            {
+              "colorMode": null,
+              "colors": [
+                "rgba(245, 54, 54, 0.9)",
+                "rgba(237, 129, 40, 0.89)",
+                "rgba(50, 172, 45, 0.97)"
+              ],
+              "decimals": 2,
+              "pattern": "/.*/",
+              "thresholds": [],
+              "type": "number",
+              "unit": "short"
+            }
+          ],
+          "targets": [
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix servers"
+              },
+              "host": {
+                "filter": "Zabbix Server"
+              },
+              "item": {
+                "filter": "Number of logged in users"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix servers"
+              },
+              "host": {
+                "filter": "Zabbix Server"
+              },
+              "item": {
+                "filter": "Number of processes"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B"
+            },
+            {
+              "application": {
+                "filter": ""
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix servers"
+              },
+              "host": {
+                "filter": "Zabbix Server"
+              },
+              "item": {
+                "filter": "Number of running processes"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "C"
+            }
+          ],
+          "title": "Users & Process",
+          "transform": "timeseries_to_columns",
+          "transparent": false,
+          "type": "table"
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "SLA and Process",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {
+            "Processor load (1 min average per core)": "#890F02"
+          },
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {},
+          "height": "300px",
+          "id": 8,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 3,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": true,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "CPU"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix servers"
+              },
+              "host": {
+                "filter": "Zabbix Server"
+              },
+              "item": {
+                "filter": "Processor load (1 min average per core)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "application": {
+                "filter": "CPU"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix servers"
+              },
+              "host": {
+                "filter": "Zabbix Server"
+              },
+              "item": {
+                "filter": "Processor load (5 min average per core)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "CPU Load",
+          "tooltip": {
+            "msResolution": true,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "alert": {
+            "conditions": [
+              {
+                "evaluator": {
+                  "params": [
+                    250000
+                  ],
+                  "type": "gt"
+                },
+                "query": {
+                  "datasourceId": 1,
+                  "model": {
+                    "application": {
+                      "filter": "Network interfaces"
+                    },
+                    "functions": [],
+                    "group": {
+                      "filter": "Zabbix servers"
+                    },
+                    "host": {
+                      "filter": "Zabbix server"
+                    },
+                    "item": {
+                      "filter": "Incoming network traffic on eth0"
+                    },
+                    "mode": 0,
+                    "options": {
+                      "showDisabledItems": false
+                    },
+                    "refId": "A"
+                  },
+                  "params": [
+                    "A",
+                    "5m",
+                    "now"
+                  ]
+                },
+                "reducer": {
+                  "params": [],
+                  "type": "avg"
+                },
+                "type": "query"
+              }
+            ],
+            "executionErrorState": "alerting",
+            "frequency": "60s",
+            "handler": 1,
+            "message": "Tráfego acima de 250 Kbps",
+            "name": "Network traffic alert",
+            "noDataState": "no_data",
+            "notifications": []
+          },
+          "aliasColors": {
+            "Incoming network traffic on eth0": "#7EB26D",
+            "Outgoing network traffic on eth0": "#447EBC"
+          },
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {},
+          "height": "300px",
+          "id": 7,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix servers"
+              },
+              "host": {
+                "filter": "Zabbix Server"
+              },
+              "item": {
+                "filter": "Incoming network traffic on ens160"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix servers"
+              },
+              "host": {
+                "filter": "Zabbix Server"
+              },
+              "item": {
+                "filter": "Outgoing network traffic on ens160"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B"
+            }
+          ],
+          "thresholds": [
+            {
+              "colorMode": "critical",
+              "fill": true,
+              "line": true,
+              "op": "gt",
+              "value": 250000
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Network traffic",
+          "tooltip": {
+            "msResolution": true,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "bps",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Graphics",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 250,
+      "panels": [
+        {
+          "aliasColors": {
+            "Processor load (15 min average per core)": "#1F78C1",
+            "Processor load (5 min average per core)": "#6D1F62"
+          },
+          "bars": true,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "id": 19,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": true,
+            "min": true,
+            "rightSide": true,
+            "show": true,
+            "total": true,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 3,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 12,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Performance"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix servers"
+              },
+              "host": {
+                "filter": "Zabbix Server"
+              },
+              "item": {
+                "filter": "Processor load (15 min average per core)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "application": {
+                "filter": "Performance"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Zabbix servers"
+              },
+              "host": {
+                "filter": "Zabbix Server"
+              },
+              "item": {
+                "filter": "Processor load (5 min average per core)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Load CPU",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Load CPU",
+      "titleSize": "h6"
+    }
+  ],
+  "schemaVersion": 14,
+  "style": "dark",
+  "tags": [
+    "zabbix",
+    "zabbix-server"
+  ],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "timezone": "utc",
+  "title": "Zabbix Server 3.4.X",
+  "version": 4
+}

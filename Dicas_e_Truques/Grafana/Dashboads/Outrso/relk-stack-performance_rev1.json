@@ -1,0 +1,3481 @@
+{
+  "__inputs": [
+    {
+      "name": "DS_ZABBIX",
+      "label": "Zabbix",
+      "description": "Based on plugin from \"alexanderzobnin-zabbix-datasource\"",
+      "type": "datasource",
+      "pluginId": "alexanderzobnin-zabbix-datasource",
+      "pluginName": "Zabbix"
+    }
+  ],
+  "__requires": [
+    {
+      "type": "panel",
+      "id": "singlestat",
+      "name": "Singlestat",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "graph",
+      "name": "Graph",
+      "version": ""
+    },
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "3.1.1"
+    },
+    {
+      "type": "datasource",
+      "id": "alexanderzobnin-zabbix-datasource",
+      "name": "Zabbix",
+      "version": "1.0.0"
+    }
+  ],
+  "id": null,
+  "title": "RELK Stack Performance",
+  "tags": [],
+  "style": "dark",
+  "timezone": "browser",
+  "editable": true,
+  "hideControls": false,
+  "sharedCrosshair": false,
+  "rows": [
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "200px",
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "rgba(50, 172, 45, 0.97)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(245, 54, 54, 0.9)"
+          ],
+          "datasource": "${DS_ZABBIX}",
+          "decimals": 0,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 5,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "100%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 6,
+          "sparkline": {
+            "fillColor": "rgba(255, 255, 255, 0.18)",
+            "full": true,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "alias": "ElasticSearch Cluster Status",
+              "application": {
+                "filter": "ES Cluster",
+                "name": "ES Cluster"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [],
+              "group": {
+                "filter": "ElasticSearch Servers",
+                "groupid": "8",
+                "name": "Lacent::Production::Monitoring::Elasticsearch"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 1 HQ",
+                "host": "lalplmon007",
+                "hostid": "10170",
+                "name": "lalplmon007"
+              },
+              "item": {
+                "filter": "ElasticSearch Cluster Status",
+                "name": "ElasticSearch Cluster Status"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "thresholds": "1,2",
+          "title": "ES Cluster status",
+          "transparent": false,
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "Green",
+              "value": "0"
+            },
+            {
+              "op": "=",
+              "text": "Yellow",
+              "value": "1"
+            },
+            {
+              "op": "=",
+              "text": "Red",
+              "value": "2"
+            }
+          ],
+          "valueName": "current",
+          "height": "100"
+        },
+        {
+          "title": "ES Nodes",
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "singlestat",
+          "isNew": true,
+          "id": 16,
+          "targets": [
+            {
+              "mode": 0,
+              "group": {
+                "filter": "ElasticSearch Servers"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 1 HQ"
+              },
+              "application": {
+                "filter": "ES Cluster"
+              },
+              "item": {
+                "filter": "Number of nodes"
+              },
+              "functions": [],
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "links": [],
+          "datasource": "${DS_ZABBIX}",
+          "maxDataPoints": 100,
+          "interval": null,
+          "cacheTimeout": null,
+          "format": "none",
+          "prefix": "",
+          "postfix": "",
+          "nullText": null,
+          "valueMaps": [
+            {
+              "value": "null",
+              "op": "=",
+              "text": "N/A"
+            }
+          ],
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "rangeMaps": [
+            {
+              "from": "null",
+              "to": "null",
+              "text": "N/A"
+            }
+          ],
+          "mappingType": 1,
+          "nullPointMode": "connected",
+          "valueName": "avg",
+          "prefixFontSize": "50%",
+          "valueFontSize": "80%",
+          "postfixFontSize": "50%",
+          "thresholds": "",
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "sparkline": {
+            "show": false,
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "fillColor": "rgba(31, 118, 189, 0.18)"
+          },
+          "gauge": {
+            "show": false,
+            "minValue": 0,
+            "maxValue": 100,
+            "thresholdMarkers": true,
+            "thresholdLabels": false
+          },
+          "height": "100"
+        },
+        {
+          "title": "ES Data nodes",
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "singlestat",
+          "isNew": true,
+          "id": 17,
+          "targets": [
+            {
+              "mode": 0,
+              "group": {
+                "filter": "ElasticSearch Servers"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 1 HQ"
+              },
+              "application": {
+                "filter": "ES Cluster"
+              },
+              "item": {
+                "filter": "Number of data nodes"
+              },
+              "functions": [],
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "links": [],
+          "datasource": "${DS_ZABBIX}",
+          "maxDataPoints": 100,
+          "interval": null,
+          "cacheTimeout": null,
+          "format": "none",
+          "prefix": "",
+          "postfix": "",
+          "nullText": null,
+          "valueMaps": [
+            {
+              "value": "null",
+              "op": "=",
+              "text": "N/A"
+            }
+          ],
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "rangeMaps": [
+            {
+              "from": "null",
+              "to": "null",
+              "text": "N/A"
+            }
+          ],
+          "mappingType": 1,
+          "nullPointMode": "connected",
+          "valueName": "avg",
+          "prefixFontSize": "50%",
+          "valueFontSize": "80%",
+          "postfixFontSize": "50%",
+          "thresholds": "",
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "sparkline": {
+            "show": false,
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "fillColor": "rgba(31, 118, 189, 0.18)"
+          },
+          "gauge": {
+            "show": false,
+            "minValue": 0,
+            "maxValue": 100,
+            "thresholdMarkers": true,
+            "thresholdLabels": false
+          },
+          "height": "100"
+        },
+        {
+          "title": "Number of Records",
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "singlestat",
+          "isNew": true,
+          "id": 18,
+          "targets": [
+            {
+              "mode": 0,
+              "group": {
+                "filter": "ElasticSearch Servers"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 1 HQ"
+              },
+              "application": {
+                "filter": "ES Cluster"
+              },
+              "item": {
+                "filter": "Total number of records"
+              },
+              "functions": [],
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "links": [],
+          "datasource": "${DS_ZABBIX}",
+          "maxDataPoints": 100,
+          "interval": null,
+          "cacheTimeout": null,
+          "format": "none",
+          "prefix": "",
+          "postfix": "",
+          "nullText": null,
+          "valueMaps": [
+            {
+              "value": "null",
+              "op": "=",
+              "text": "N/A"
+            }
+          ],
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "rangeMaps": [
+            {
+              "from": "null",
+              "to": "null",
+              "text": "N/A"
+            }
+          ],
+          "mappingType": 1,
+          "nullPointMode": "connected",
+          "valueName": "avg",
+          "prefixFontSize": "50%",
+          "valueFontSize": "80%",
+          "postfixFontSize": "50%",
+          "thresholds": "",
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "sparkline": {
+            "show": false,
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "fillColor": "rgba(31, 118, 189, 0.18)"
+          },
+          "gauge": {
+            "show": false,
+            "minValue": 0,
+            "maxValue": 100,
+            "thresholdMarkers": true,
+            "thresholdLabels": false
+          },
+          "height": "100"
+        },
+        {
+          "title": "Active shards",
+          "error": false,
+          "span": 3,
+          "editable": true,
+          "type": "singlestat",
+          "isNew": true,
+          "id": 19,
+          "targets": [
+            {
+              "mode": 0,
+              "group": {
+                "filter": "ElasticSearch Servers"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 1 HQ"
+              },
+              "application": {
+                "filter": "ES Cluster"
+              },
+              "item": {
+                "filter": "Number of active shards"
+              },
+              "functions": [],
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "links": [],
+          "datasource": "${DS_ZABBIX}",
+          "maxDataPoints": 100,
+          "interval": null,
+          "cacheTimeout": null,
+          "format": "none",
+          "prefix": "",
+          "postfix": "",
+          "nullText": null,
+          "valueMaps": [
+            {
+              "value": "null",
+              "op": "=",
+              "text": "N/A"
+            }
+          ],
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "rangeMaps": [
+            {
+              "from": "null",
+              "to": "null",
+              "text": "N/A"
+            }
+          ],
+          "mappingType": 1,
+          "nullPointMode": "connected",
+          "valueName": "avg",
+          "prefixFontSize": "50%",
+          "valueFontSize": "80%",
+          "postfixFontSize": "50%",
+          "thresholds": "",
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "sparkline": {
+            "show": true,
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "fillColor": "rgba(31, 118, 189, 0.18)"
+          },
+          "gauge": {
+            "show": false,
+            "minValue": 0,
+            "maxValue": 100,
+            "thresholdMarkers": true,
+            "thresholdLabels": false
+          },
+          "height": "100"
+        },
+        {
+          "title": "Active Primary shards",
+          "error": false,
+          "span": 3,
+          "editable": true,
+          "type": "singlestat",
+          "isNew": true,
+          "id": 20,
+          "targets": [
+            {
+              "mode": 0,
+              "group": {
+                "filter": "ElasticSearch Servers"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 1 HQ"
+              },
+              "application": {
+                "filter": "ES Cluster"
+              },
+              "item": {
+                "filter": "Number of active primary shards"
+              },
+              "functions": [],
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "links": [],
+          "datasource": "${DS_ZABBIX}",
+          "maxDataPoints": 100,
+          "interval": null,
+          "cacheTimeout": null,
+          "format": "none",
+          "prefix": "",
+          "postfix": "",
+          "nullText": null,
+          "valueMaps": [
+            {
+              "value": "null",
+              "op": "=",
+              "text": "N/A"
+            }
+          ],
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "rangeMaps": [
+            {
+              "from": "null",
+              "to": "null",
+              "text": "N/A"
+            }
+          ],
+          "mappingType": 1,
+          "nullPointMode": "connected",
+          "valueName": "avg",
+          "prefixFontSize": "50%",
+          "valueFontSize": "80%",
+          "postfixFontSize": "50%",
+          "thresholds": "",
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "sparkline": {
+            "show": true,
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "fillColor": "rgba(31, 118, 189, 0.18)"
+          },
+          "gauge": {
+            "show": false,
+            "minValue": 0,
+            "maxValue": 100,
+            "thresholdMarkers": true,
+            "thresholdLabels": false
+          },
+          "height": "100"
+        },
+        {
+          "title": "Initializing shards",
+          "error": false,
+          "span": 3,
+          "editable": true,
+          "type": "singlestat",
+          "isNew": true,
+          "id": 21,
+          "targets": [
+            {
+              "mode": 0,
+              "group": {
+                "filter": "ElasticSearch Servers"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 1 HQ"
+              },
+              "application": {
+                "filter": "ES Cluster"
+              },
+              "item": {
+                "filter": "Number of initializing shards"
+              },
+              "functions": [],
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "links": [],
+          "datasource": "${DS_ZABBIX}",
+          "maxDataPoints": 100,
+          "interval": null,
+          "cacheTimeout": null,
+          "format": "none",
+          "prefix": "",
+          "postfix": "",
+          "nullText": null,
+          "valueMaps": [
+            {
+              "value": "null",
+              "op": "=",
+              "text": "N/A"
+            }
+          ],
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "rangeMaps": [
+            {
+              "from": "null",
+              "to": "null",
+              "text": "N/A"
+            }
+          ],
+          "mappingType": 1,
+          "nullPointMode": "connected",
+          "valueName": "avg",
+          "prefixFontSize": "50%",
+          "valueFontSize": "80%",
+          "postfixFontSize": "50%",
+          "thresholds": "",
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "sparkline": {
+            "show": true,
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "fillColor": "rgba(31, 118, 189, 0.18)"
+          },
+          "gauge": {
+            "show": false,
+            "minValue": 0,
+            "maxValue": 100,
+            "thresholdMarkers": true,
+            "thresholdLabels": false
+          },
+          "height": "100"
+        },
+        {
+          "title": "Unassigned shards",
+          "error": false,
+          "span": 3,
+          "editable": true,
+          "type": "singlestat",
+          "isNew": true,
+          "id": 22,
+          "targets": [
+            {
+              "mode": 0,
+              "group": {
+                "filter": "ElasticSearch Servers"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 1 HQ"
+              },
+              "application": {
+                "filter": "ES Cluster"
+              },
+              "item": {
+                "filter": "Number of unassigned shards"
+              },
+              "functions": [],
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "links": [],
+          "datasource": "${DS_ZABBIX}",
+          "maxDataPoints": 100,
+          "interval": null,
+          "cacheTimeout": null,
+          "format": "none",
+          "prefix": "",
+          "postfix": "",
+          "nullText": null,
+          "valueMaps": [
+            {
+              "value": "null",
+              "op": "=",
+              "text": "N/A"
+            }
+          ],
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "rangeMaps": [
+            {
+              "from": "null",
+              "to": "null",
+              "text": "N/A"
+            }
+          ],
+          "mappingType": 1,
+          "nullPointMode": "connected",
+          "valueName": "avg",
+          "prefixFontSize": "50%",
+          "valueFontSize": "80%",
+          "postfixFontSize": "50%",
+          "thresholds": "",
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "sparkline": {
+            "show": true,
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "fillColor": "rgba(31, 118, 189, 0.18)"
+          },
+          "gauge": {
+            "show": false,
+            "minValue": 0,
+            "maxValue": 100,
+            "thresholdMarkers": true,
+            "thresholdLabels": false
+          },
+          "height": "100"
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {
+            "Node Storage Size": "#1F78C1",
+            "laltlmon007": "#DEDAF7",
+            "laltlmon008": "#82B5D8",
+            "laltlmon009": "#447EBC"
+          },
+          "bars": false,
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "fill": 7,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 1,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": true,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 0,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "ES Node"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ElasticSearch Servers"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 1 HQ"
+              },
+              "item": {
+                "filter": "Records indexed per second"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "application": {
+                "filter": "ES Node"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ElasticSearch Servers"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 2 HQ"
+              },
+              "item": {
+                "filter": "Records indexed per second"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B"
+            },
+            {
+              "application": {
+                "filter": "ES Node"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ElasticSearch Servers"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 1 EQ"
+              },
+              "item": {
+                "filter": "Records indexed per second"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "C"
+            },
+            {
+              "application": {
+                "filter": "ES Node"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ElasticSearch Servers"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 2 EQ"
+              },
+              "item": {
+                "filter": "Records indexed per second"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "D"
+            },
+            {
+              "application": {
+                "filter": "ES Node"
+              },
+              "functions": [],
+              "group": {
+                "filter": "ElasticSearch Servers"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 3 EQ"
+              },
+              "item": {
+                "filter": "Records indexed per second"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "E"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Elasticsearch records indexed per second",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "LALPLMON003": "#890F02",
+            "LALPLMON004": "#BF1B00",
+            "Redis Server EQ": "#E24D42",
+            "Redis Server HQ": "#BF1B00",
+            "lalplmon003": "#EA6460",
+            "lalplmon004": "#BF1B00",
+            "laltlmon003": "#F9D9F9",
+            "laltlmon004": "#64B0C8",
+            "laltlmon007": "#DEDAF7",
+            "laltlmon008": "#6ED0E0",
+            "laltlmon009": "#0A50A1"
+          },
+          "bars": false,
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "fill": 5,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 4,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": true,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "lalplmon003",
+              "application": {
+                "filter": "redis",
+                "name": "redis"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Redis Server HQ"
+                  ],
+                  "text": "setAlias(Redis Server HQ)"
+                }
+              ],
+              "group": {
+                "filter": "Redis Servers",
+                "groupid": "9",
+                "name": "Lacent::Production::Monitoring::Redis"
+              },
+              "host": {
+                "filter": "Redis Server HQ",
+                "host": "lalplmon003",
+                "hostid": "10105",
+                "name": "lalplmon003"
+              },
+              "item": {
+                "filter": "Redis $2 (llenall)",
+                "name": "Redis $2 (llenall)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "scale": ""
+            },
+            {
+              "alias": "lalplmon004",
+              "application": {
+                "filter": "redis",
+                "name": "redis"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Redis Server EQ"
+                  ],
+                  "text": "setAlias(Redis Server EQ)"
+                }
+              ],
+              "group": {
+                "filter": "Redis Servers",
+                "groupid": "9",
+                "name": "Lacent::Production::Monitoring::Redis"
+              },
+              "host": {
+                "filter": "Redis Server EQ",
+                "host": "lalplmon004",
+                "hostid": "10106",
+                "name": "lalplmon004"
+              },
+              "item": {
+                "filter": "Redis $2 (llenall)",
+                "name": "Redis $2 (llenall)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "scale": ""
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Redis Queue Length",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "logBase": 1,
+              "max": null,
+              "min": 0,
+              "show": true
+            },
+            {
+              "format": "short",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "New row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {
+            "Processor load (1 min average per core)": "#82B5D8",
+            "laltlmon007": "#DEDAF7",
+            "laltlmon008": "#64B0C8",
+            "laltlmon009": "#447EBC"
+          },
+          "bars": false,
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "fill": 5,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 2,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "lalplmon007",
+              "application": {
+                "filter": "CPU",
+                "name": "CPU"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "ES Node 1 HQ"
+                  ],
+                  "text": "setAlias(ES Node 1 HQ)"
+                }
+              ],
+              "group": {
+                "filter": "ElasticSearch Servers",
+                "groupid": "8",
+                "name": "Lacent::Production::Monitoring::Elasticsearch"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 1 HQ",
+                "host": "lalplmon007",
+                "hostid": "10116",
+                "name": "lalplmon007"
+              },
+              "item": {
+                "filter": "Processor load (1 min average per core)",
+                "name": "Processor load (1 min average per core)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "target": ""
+            },
+            {
+              "alias": "lalplmon007",
+              "application": {
+                "filter": "CPU",
+                "name": "CPU"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "ES Node 2 HQ"
+                  ],
+                  "text": "setAlias(ES Node 2 HQ)"
+                }
+              ],
+              "group": {
+                "filter": "ElasticSearch Servers",
+                "groupid": "8",
+                "name": "Lacent::Production::Monitoring::Elasticsearch"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 2 HQ",
+                "host": "lalplmon007",
+                "hostid": "10116",
+                "name": "lalplmon007"
+              },
+              "item": {
+                "filter": "Processor load (1 min average per core)",
+                "name": "Processor load (1 min average per core)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B",
+              "target": ""
+            },
+            {
+              "alias": "lalplmon007",
+              "application": {
+                "filter": "CPU",
+                "name": "CPU"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "ES Node 1 EQ"
+                  ],
+                  "text": "setAlias(ES Node 1 EQ)"
+                }
+              ],
+              "group": {
+                "filter": "ElasticSearch Servers",
+                "groupid": "8",
+                "name": "Lacent::Production::Monitoring::Elasticsearch"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 1 EQ",
+                "host": "lalplmon007",
+                "hostid": "10116",
+                "name": "lalplmon007"
+              },
+              "item": {
+                "filter": "Processor load (1 min average per core)",
+                "name": "Processor load (1 min average per core)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "C",
+              "target": ""
+            },
+            {
+              "alias": "lalplmon007",
+              "application": {
+                "filter": "CPU",
+                "name": "CPU"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "ES Node 2 EQ"
+                  ],
+                  "text": "setAlias(ES Node 2 EQ)"
+                }
+              ],
+              "group": {
+                "filter": "ElasticSearch Servers",
+                "groupid": "8",
+                "name": "Lacent::Production::Monitoring::Elasticsearch"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 2 EQ",
+                "host": "lalplmon007",
+                "hostid": "10116",
+                "name": "lalplmon007"
+              },
+              "item": {
+                "filter": "Processor load (1 min average per core)",
+                "name": "Processor load (1 min average per core)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "D",
+              "target": ""
+            },
+            {
+              "alias": "lalplmon007",
+              "application": {
+                "filter": "CPU",
+                "name": "CPU"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "ES Node 3 EQ"
+                  ],
+                  "text": "setAlias(ES Node 3 EQ)"
+                }
+              ],
+              "group": {
+                "filter": "ElasticSearch Servers",
+                "groupid": "8",
+                "name": "Lacent::Production::Monitoring::Elasticsearch"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 3 EQ",
+                "host": "lalplmon007",
+                "hostid": "10116",
+                "name": "lalplmon007"
+              },
+              "item": {
+                "filter": "Processor load (1 min average per core)",
+                "name": "Processor load (1 min average per core)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "E",
+              "target": ""
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "ElasticSearch cluster CPU load",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "logBase": 1,
+              "max": 2,
+              "min": 0,
+              "show": true
+            },
+            {
+              "format": "short",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 10,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "lalplmon003",
+              "application": {
+                "filter": "",
+                "name": "*",
+                "visible_name": "All"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Redis Server HQ"
+                  ],
+                  "text": "setAlias(Redis Server HQ)"
+                }
+              ],
+              "group": {
+                "filter": "Redis Servers",
+                "groupid": "9",
+                "name": "Lacent::Production::Monitoring::Redis"
+              },
+              "host": {
+                "filter": "Redis Server HQ",
+                "host": "lalplmon003",
+                "hostid": "10105",
+                "name": "lalplmon003"
+              },
+              "item": {
+                "filter": "Processor load (1 min average per core)",
+                "name": "Processor load (1 min average per core)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "alias": "lalplmon004",
+              "application": {
+                "filter": "",
+                "name": "*",
+                "visible_name": "All"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Redis Server EQ"
+                  ],
+                  "text": "setAlias(Redis Server EQ)"
+                }
+              ],
+              "group": {
+                "filter": "Redis Servers",
+                "groupid": "9",
+                "name": "Lacent::Production::Monitoring::Redis"
+              },
+              "host": {
+                "filter": "Redis Server EQ",
+                "host": "lalplmon004",
+                "hostid": "10106",
+                "name": "lalplmon004"
+              },
+              "item": {
+                "filter": "Processor load (1 min average per core)",
+                "name": "Processor load (1 min average per core)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B",
+              "target": ""
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Processor Load REDIS Servers",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "logBase": 1,
+              "max": 1,
+              "min": 0,
+              "show": true
+            },
+            {
+              "format": "short",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "New row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 8,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "lalplmon007",
+              "application": {
+                "filter": "CPU",
+                "name": "CPU"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "ES Node 1 HQ"
+                  ],
+                  "text": "setAlias(ES Node 1 HQ)"
+                }
+              ],
+              "group": {
+                "filter": "ElasticSearch Servers",
+                "groupid": "8",
+                "name": "Lacent::Production::Monitoring::Elasticsearch"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 1 HQ",
+                "host": "lalplmon007",
+                "hostid": "10116",
+                "name": "lalplmon007"
+              },
+              "item": {
+                "filter": "CPU iowait time",
+                "name": "CPU iowait time"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "target": ""
+            },
+            {
+              "alias": "lalplmon007",
+              "application": {
+                "filter": "CPU",
+                "name": "CPU"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "ES Node 2 HQ"
+                  ],
+                  "text": "setAlias(ES Node 2 HQ)"
+                }
+              ],
+              "group": {
+                "filter": "ElasticSearch Servers",
+                "groupid": "8",
+                "name": "Lacent::Production::Monitoring::Elasticsearch"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 2 HQ",
+                "host": "lalplmon007",
+                "hostid": "10116",
+                "name": "lalplmon007"
+              },
+              "item": {
+                "filter": "CPU iowait time",
+                "name": "CPU iowait time"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B",
+              "target": ""
+            },
+            {
+              "alias": "lalplmon007",
+              "application": {
+                "filter": "CPU",
+                "name": "CPU"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "ES Node 1 EQ"
+                  ],
+                  "text": "setAlias(ES Node 1 EQ)"
+                }
+              ],
+              "group": {
+                "filter": "ElasticSearch Servers",
+                "groupid": "8",
+                "name": "Lacent::Production::Monitoring::Elasticsearch"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 1 EQ",
+                "host": "lalplmon007",
+                "hostid": "10116",
+                "name": "lalplmon007"
+              },
+              "item": {
+                "filter": "CPU iowait time",
+                "name": "CPU iowait time"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "C",
+              "target": ""
+            },
+            {
+              "alias": "lalplmon007",
+              "application": {
+                "filter": "CPU",
+                "name": "CPU"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "ES Node 2 EQ"
+                  ],
+                  "text": "setAlias(ES Node 2 EQ)"
+                }
+              ],
+              "group": {
+                "filter": "ElasticSearch Servers",
+                "groupid": "8",
+                "name": "Lacent::Production::Monitoring::Elasticsearch"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 2 EQ",
+                "host": "lalplmon007",
+                "hostid": "10116",
+                "name": "lalplmon007"
+              },
+              "item": {
+                "filter": "CPU iowait time",
+                "name": "CPU iowait time"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "D",
+              "target": ""
+            },
+            {
+              "alias": "lalplmon007",
+              "application": {
+                "filter": "CPU",
+                "name": "CPU"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "ES Node 3 EQ"
+                  ],
+                  "text": "setAlias(ES Node 3 EQ)"
+                }
+              ],
+              "group": {
+                "filter": "ElasticSearch Servers",
+                "groupid": "8",
+                "name": "Lacent::Production::Monitoring::Elasticsearch"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 3 EQ",
+                "host": "lalplmon007",
+                "hostid": "10116",
+                "name": "lalplmon007"
+              },
+              "item": {
+                "filter": "CPU iowait time",
+                "name": "CPU iowait time"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "E",
+              "target": ""
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Elasticsearch IO wait",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "percent",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "New row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 12,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "lalplmon005",
+              "application": {
+                "filter": "",
+                "name": "*",
+                "visible_name": "All"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Logstash Indexer HQ"
+                  ],
+                  "text": "setAlias(Logstash Indexer HQ)"
+                }
+              ],
+              "group": {
+                "filter": "Logstash Indexers",
+                "groupid": "11",
+                "name": "Lacent::Production::Monitoring::Logstash"
+              },
+              "host": {
+                "filter": "Logstash Indexer HQ",
+                "host": "lalplmon005",
+                "hostid": "10109",
+                "name": "lalplmon005"
+              },
+              "item": {
+                "filter": "Processor load (1 min average per core)",
+                "name": "Processor load (1 min average per core)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "alias": "lalplmon006",
+              "application": {
+                "filter": "",
+                "name": "*",
+                "visible_name": "All"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Logstash Indexer EQ"
+                  ],
+                  "text": "setAlias(Logstash Indexer EQ)"
+                }
+              ],
+              "group": {
+                "filter": "Logstash Indexers",
+                "groupid": "11",
+                "name": "Lacent::Production::Monitoring::Logstash"
+              },
+              "host": {
+                "filter": "Logstash Indexer EQ",
+                "host": "lalplmon006",
+                "hostid": "10110",
+                "name": "lalplmon006"
+              },
+              "item": {
+                "filter": "Processor load (1 min average per core)",
+                "name": "Processor load (1 min average per core)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B",
+              "target": ""
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Processor Load Logstash Indexers",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "logBase": 1,
+              "max": 1,
+              "min": 0,
+              "show": true
+            },
+            {
+              "format": "short",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 7,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "lalplmon007",
+              "application": {
+                "filter": "Filesystems",
+                "name": "Filesystems"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "ES Node 1 HQ"
+                  ],
+                  "text": "setAlias(ES Node 1 HQ)"
+                }
+              ],
+              "group": {
+                "filter": "ElasticSearch Servers",
+                "groupid": "8",
+                "name": "Lacent::Production::Monitoring::Elasticsearch"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 1 HQ",
+                "host": "lalplmon007",
+                "hostid": "10116",
+                "name": "lalplmon007"
+              },
+              "item": {
+                "filter": "Free disk space on /data (percentage)",
+                "name": "Free disk space on /data (percentage)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "target": ""
+            },
+            {
+              "alias": "lalplmon007",
+              "application": {
+                "filter": "Filesystems",
+                "name": "Filesystems"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "ES Node 2 HQ"
+                  ],
+                  "text": "setAlias(ES Node 2 HQ)"
+                }
+              ],
+              "group": {
+                "filter": "ElasticSearch Servers",
+                "groupid": "8",
+                "name": "Lacent::Production::Monitoring::Elasticsearch"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 2 HQ",
+                "host": "lalplmon007",
+                "hostid": "10116",
+                "name": "lalplmon007"
+              },
+              "item": {
+                "filter": "Free disk space on /data (percentage)",
+                "name": "Free disk space on /data (percentage)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B",
+              "target": ""
+            },
+            {
+              "alias": "lalplmon007",
+              "application": {
+                "filter": "Filesystems",
+                "name": "Filesystems"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "ES Node 1 EQ"
+                  ],
+                  "text": "setAlias(ES Node 1 EQ)"
+                }
+              ],
+              "group": {
+                "filter": "ElasticSearch Servers",
+                "groupid": "8",
+                "name": "Lacent::Production::Monitoring::Elasticsearch"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 1 EQ",
+                "host": "lalplmon007",
+                "hostid": "10116",
+                "name": "lalplmon007"
+              },
+              "item": {
+                "filter": "Free disk space on /data (percentage)",
+                "name": "Free disk space on /data (percentage)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "C",
+              "target": ""
+            },
+            {
+              "alias": "lalplmon007",
+              "application": {
+                "filter": "Filesystems",
+                "name": "Filesystems"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "ES Node 2 EQ"
+                  ],
+                  "text": "setAlias(ES Node 2 EQ)"
+                }
+              ],
+              "group": {
+                "filter": "ElasticSearch Servers",
+                "groupid": "8",
+                "name": "Lacent::Production::Monitoring::Elasticsearch"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 2 EQ",
+                "host": "lalplmon007",
+                "hostid": "10116",
+                "name": "lalplmon007"
+              },
+              "item": {
+                "filter": "Free disk space on /data (percentage)",
+                "name": "Free disk space on /data (percentage)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "D",
+              "target": ""
+            },
+            {
+              "alias": "lalplmon007",
+              "application": {
+                "filter": "Filesystems",
+                "name": "Filesystems"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "ES Node 3 EQ"
+                  ],
+                  "text": "setAlias(ES Node 3 EQ)"
+                }
+              ],
+              "group": {
+                "filter": "ElasticSearch Servers",
+                "groupid": "8",
+                "name": "Lacent::Production::Monitoring::Elasticsearch"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 3 EQ",
+                "host": "lalplmon007",
+                "hostid": "10116",
+                "name": "lalplmon007"
+              },
+              "item": {
+                "filter": "Free disk space on /data (percentage)",
+                "name": "Free disk space on /data (percentage)"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "E",
+              "target": ""
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Free disk space in /data",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "percent",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "New row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 9,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "lalplmon007",
+              "application": {
+                "filter": "ES Cache",
+                "name": "*",
+                "visible_name": "All"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "ES Node 1 HQ"
+                  ],
+                  "text": "setAlias(ES Node 1 HQ)"
+                }
+              ],
+              "group": {
+                "filter": "ElasticSearch Servers",
+                "groupid": "8",
+                "name": "Lacent::Production::Monitoring::Elasticsearch"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 1 HQ",
+                "host": "lalplmon007",
+                "hostid": "10116",
+                "name": "lalplmon007"
+              },
+              "item": {
+                "filter": "Node Filter Cache Size",
+                "name": "Node Field Cache Size"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "target": ""
+            },
+            {
+              "alias": "lalplmon007",
+              "application": {
+                "filter": "ES Cache",
+                "name": "*",
+                "visible_name": "All"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "ES Node 2 HQ"
+                  ],
+                  "text": "setAlias(ES Node 2 HQ)"
+                }
+              ],
+              "group": {
+                "filter": "ElasticSearch Servers",
+                "groupid": "8",
+                "name": "Lacent::Production::Monitoring::Elasticsearch"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 2 HQ",
+                "host": "lalplmon007",
+                "hostid": "10116",
+                "name": "lalplmon007"
+              },
+              "item": {
+                "filter": "Node Field Cache Size",
+                "name": "Node Field Cache Size"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B",
+              "target": ""
+            },
+            {
+              "alias": "lalplmon007",
+              "application": {
+                "filter": "ES Cache",
+                "name": "*",
+                "visible_name": "All"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "ES Node 1 EQ"
+                  ],
+                  "text": "setAlias(ES Node 1 EQ)"
+                }
+              ],
+              "group": {
+                "filter": "ElasticSearch Servers",
+                "groupid": "8",
+                "name": "Lacent::Production::Monitoring::Elasticsearch"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 1 EQ",
+                "host": "lalplmon007",
+                "hostid": "10116",
+                "name": "lalplmon007"
+              },
+              "item": {
+                "filter": "Node Field Cache Size",
+                "name": "Node Field Cache Size"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "C",
+              "target": ""
+            },
+            {
+              "alias": "lalplmon007",
+              "application": {
+                "filter": "ES Cache",
+                "name": "*",
+                "visible_name": "All"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "ES Node 2 EQ"
+                  ],
+                  "text": "setAlias(ES Node 2 EQ)"
+                }
+              ],
+              "group": {
+                "filter": "ElasticSearch Servers",
+                "groupid": "8",
+                "name": "Lacent::Production::Monitoring::Elasticsearch"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 2 EQ",
+                "host": "lalplmon007",
+                "hostid": "10116",
+                "name": "lalplmon007"
+              },
+              "item": {
+                "filter": "Node Field Cache Size",
+                "name": "Node Field Cache Size"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "D",
+              "target": ""
+            },
+            {
+              "alias": "lalplmon007",
+              "application": {
+                "filter": "ES Cache",
+                "name": "*",
+                "visible_name": "All"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "ES Node 3 EQ"
+                  ],
+                  "text": "setAlias(ES Node 3 EQ)"
+                }
+              ],
+              "group": {
+                "filter": "ElasticSearch Servers",
+                "groupid": "8",
+                "name": "Lacent::Production::Monitoring::Elasticsearch"
+              },
+              "host": {
+                "filter": "ElasticSearch Node 3 EQ",
+                "host": "lalplmon007",
+                "hostid": "10116",
+                "name": "lalplmon007"
+              },
+              "item": {
+                "filter": "Node Field Cache Size",
+                "name": "Node Field Cache Size"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "E",
+              "target": ""
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Field Data Cache size",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "bytes",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 13,
+          "legend": {
+            "alignAsTable": false,
+            "avg": false,
+            "current": true,
+            "max": false,
+            "min": false,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "maxDataPoints": "",
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "lalplmon005",
+              "application": {
+                "filter": "",
+                "name": "*",
+                "visible_name": "All"
+              },
+              "downsampleFunction": {
+                "name": "max",
+                "value": "max"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Logstash Indexer HQ"
+                  ],
+                  "text": "setAlias(Logstash Indexer HQ)"
+                }
+              ],
+              "group": {
+                "filter": "Logstash Indexers",
+                "groupid": "11",
+                "name": "Lacent::Production::Monitoring::Logstash"
+              },
+              "host": {
+                "filter": "Logstash Indexer HQ",
+                "host": "lalplmon005",
+                "hostid": "10109",
+                "name": "lalplmon005"
+              },
+              "item": {
+                "filter": "Available memory",
+                "name": "Available memory"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "alias": "lalplmon005",
+              "application": {
+                "filter": "",
+                "name": "*",
+                "visible_name": "All"
+              },
+              "downsampleFunction": {
+                "name": "max",
+                "value": "max"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Logstash Indexer EQ"
+                  ],
+                  "text": "setAlias(Logstash Indexer EQ)"
+                }
+              ],
+              "group": {
+                "filter": "Logstash Indexers",
+                "groupid": "11",
+                "name": "Lacent::Production::Monitoring::Logstash"
+              },
+              "host": {
+                "filter": "Logstash Indexer EQ",
+                "host": "lalplmon005",
+                "hostid": "10109",
+                "name": "lalplmon005"
+              },
+              "item": {
+                "filter": "Available memory",
+                "name": "Available memory"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Available Memory Logstash Indexers",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "bytes",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "bytes",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "New row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {
+            "lalplmon007: Memory Heap commited": "#890F02",
+            "lalplmon008: Memory Heap commited": "#890F02",
+            "lalplmon009: Memory Heap commited": "#890F02"
+          },
+          "bars": false,
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 15,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "hideEmpty": false,
+            "max": true,
+            "min": true,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "Heap used",
+              "application": {
+                "filter": "ES Cluster",
+                "name": "ES Cluster"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [],
+              "group": {
+                "filter": "ElasticSearch Servers",
+                "groupid": "2",
+                "name": "Linux servers"
+              },
+              "host": {
+                "filter": "/.*/",
+                "name": "*",
+                "visible_name": "All"
+              },
+              "item": {
+                "filter": "Node JVM Heap used in bytes",
+                "name": "Node JVM Heap used in bytes"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "target": ""
+            }
+          ],
+          "thresholds": [
+            {
+              "colorMode": "custom",
+              "line": true,
+              "lineColor": "rgba(255, 0, 0, 0.27)",
+              "op": "gt",
+              "value": 8589934592
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "ElasticSearch Data Nodes heap usage",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "bytes",
+              "label": "",
+              "logBase": 1,
+              "max": 17179869184,
+              "min": 0,
+              "show": true
+            },
+            {
+              "format": "kbytes",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": false
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "New row",
+      "titleSize": "h6"
+    },
+    {
+      "title": "New row",
+      "height": "250px",
+      "editable": true,
+      "collapse": false,
+      "panels": [
+        {
+          "aliasColors": {
+            "laltlmon005": "#BADFF4",
+            "laltlmon006": "#1F78C1"
+          },
+          "bars": false,
+          "datasource": "${DS_ZABBIX}",
+          "editable": true,
+          "error": false,
+          "fill": 6,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 6,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "hideEmpty": false,
+            "hideZero": false,
+            "max": true,
+            "min": false,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "lalplmon005",
+              "application": {
+                "filter": "Logstash",
+                "name": "*",
+                "visible_name": "All"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Logstash Indexer HQ"
+                  ],
+                  "text": "setAlias(Logstash Indexer HQ)"
+                }
+              ],
+              "group": {
+                "filter": "Logstash Indexers",
+                "groupid": "11",
+                "name": "Lacent::Production::Monitoring::Logstash"
+              },
+              "host": {
+                "filter": "Logstash Indexer HQ",
+                "host": "lalplmon005",
+                "hostid": "10109",
+                "name": "lalplmon005"
+              },
+              "item": {
+                "filter": "Number of Logstash Events",
+                "name": "Number of Logstash Events"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "alias": "lalplmon006",
+              "application": {
+                "filter": "Logstash",
+                "name": "Logstash"
+              },
+              "downsampleFunction": {
+                "name": "avg",
+                "value": "avg"
+              },
+              "errors": {},
+              "functions": [
+                {
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Logstash Indexer EQ"
+                  ],
+                  "text": "setAlias(Logstash Indexer EQ)"
+                }
+              ],
+              "group": {
+                "filter": "Logstash Indexers",
+                "groupid": "11",
+                "name": "Lacent::Production::Monitoring::Logstash"
+              },
+              "host": {
+                "filter": "Logstash Indexer EQ",
+                "host": "lalplmon006",
+                "hostid": "10110",
+                "name": "lalplmon006"
+              },
+              "item": {
+                "filter": "Number of Logstash Events",
+                "name": "Number of Logstash Events"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Logstash Indexers events/sec",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {
+    "now": true,
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "templating": {
+    "list": []
+  },
+  "annotations": {
+    "list": []
+  },
+  "refresh": "10s",
+  "schemaVersion": 12,
+  "version": 39,
+  "links": [],
+  "gnetId": 1449,
+  "description": "Dashboard for Redis, Elasticsearch and Logstash"
+}
