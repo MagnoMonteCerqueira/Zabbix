@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>2.0</version>
+    <date>2015-11-30T12:03:21Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template SNMP OS Windows</template>
+            <name>Template SNMP OS Windows</name>
+            <description/>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <applications/>
+            <items/>
+            <discovery_rules/>
+            <macros/>
+            <templates>
+                <template>
+                    <name>Template SNMP Discos</name>
+                </template>
+                <template>
+                    <name>Template SNMP Genérico</name>
+                </template>
+                <template>
+                    <name>Template SNMP Interfaces</name>
+                </template>
+                <template>
+                    <name>Template SNMP Processadores</name>
+                </template>
+            </templates>
+            <screens/>
+        </template>
+    </templates>
+</zabbix_export>

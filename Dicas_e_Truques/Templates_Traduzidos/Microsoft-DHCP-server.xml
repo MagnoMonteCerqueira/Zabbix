@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export version="1.0" date="16.09.13" time="12.00">
+  <hosts>
+    <host name="Template_Microsoft_DHCP_Server">
+      <ip>0.0.0.0</ip>
+      <port>10050</port>
+      <status>3</status>
+      <groups>
+        <group>Templates</group>
+      </groups>
+      <triggers>
+      
+        <!-- Service state -->
+        
+        <trigger>
+          <description>Alteração no estado do serviço Servidor DHCP</description>
+          <expression>{Template_Microsoft_DHCP_Server:service_state[DHCPServer].last(0)}#0</expression>
+          <priority>4</priority>
+        </trigger>
+
+      </triggers>
+      <items>
+
+        <!-- DHCP Server -->
+        
+        <item type="0" key="perf_counter[\DHCP Server\Acks/sec]" value_type="0">
+          <description>Servidor DHCP: Acks por segundos</description>
+          <delay>60</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Microsoft DHCP</application>
+          </applications>
+        </item>
+        <item type="0" key="perf_counter[\DHCP Server\Declines/sec]" value_type="0">
+          <description>Servidor DHCP: Declines por segundo</description>
+          <delay>60</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Microsoft DHCP</application>
+          </applications>
+        </item>
+        <item type="0" key="perf_counter[\DHCP Server\Discovers/sec]" value_type="0">
+          <description>Servidor DHCP: Discovers por segundo</description>
+          <delay>60</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Microsoft DHCP</application>
+          </applications>
+        </item>
+        <item type="0" key="perf_counter[\DHCP Server\Nacks/sec]" value_type="0">
+          <description>Servidor DHCP: NAcks por segundo</description>
+          <delay>60</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Microsoft DHCP</application>
+          </applications>
+        </item>
+
+        <!-- Service State -->
+
+        <item type="0" key="service_state[DHCPServer]" value_type="3">
+          <description>Servidor DHCP: Estado do serviço</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Microsoft DHCP</application>
+          </applications>
+        </item>
+        
+      </items>
+      <templates/>
+      <graphs />
+      <macros/>
+    </host>
+  </hosts>
+  <dependencies/>
+</zabbix_export>

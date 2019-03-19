@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export version="1.0" date="16.09.13" time="12.00">
+  <hosts>
+    <host name="Template_Microsoft_DNS_Server">
+      <ip>0.0.0.0</ip>
+      <port>10050</port>
+      <status>3</status>
+      <groups>
+        <group>Templates</group>
+      </groups>
+      <triggers>
+      
+        <!-- Service state -->
+      
+        <trigger>
+          <description>Alteração no estado do serviço Servidor DNS</description>
+          <expression>{Template_Microsoft_DNS_Server:service_state[DNS].last(0)}#0</expression>
+          <priority>4</priority>
+        </trigger>
+        
+      </triggers>
+      <items>
+      
+        <!-- DNS server -->
+      
+        <item type="0" key="perf_counter[\DNS\Recursive Queries/sec]" value_type="0">
+          <description>Servidor DNS: Consultas recursivas por segundo</description>
+          <delay>60</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Microsoft DNS</application>
+          </applications>
+        </item>
+        <item type="0" key="perf_counter[\DNS\Secure Update Received/sec]" value_type="0">
+          <description>Servidor DNS: Atualizações seguras recebidas por segundo</description>
+          <delay>60</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Microsoft DNS</application>
+          </applications>
+        </item>
+        <item type="0" key="perf_counter[\DNS\TCP Query Received/sec]" value_type="0">
+          <description>Servidor DNS: Consultas TCP recebidas por segundo</description>
+          <delay>60</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Microsoft DNS</application>
+          </applications>
+        </item>
+        <item type="0" key="perf_counter[\DNS\UDP Query Received/sec]" value_type="0">
+          <description>Servidor DNS: Consultas UDP recebidas por segundo</description>
+          <delay>60</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Microsoft DNS</application>
+          </applications>
+        </item>
+        
+        <!-- Service state -->
+      
+        <item type="0" key="service_state[DNS]" value_type="3">
+          <description>Servidor DNS: Estado do serviço</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Microsoft DNS</application>
+          </applications>
+        </item>
+
+      </items>
+      <templates/>
+      <graphs />
+      <macros/>
+    </host>
+  </hosts>
+  <dependencies/>
+</zabbix_export>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export version="1.0" date="08.12.15" time="12.00">
+  <hosts>
+    <host name="Template_Microsoft_Active_Directory_Domain_Controller">
+      <ip>0.0.0.0</ip>
+      <port>10050</port>
+      <status>3</status>
+      <groups>
+        <group>Templates</group>
+      </groups>
+      <triggers>
+
+        <!-- Service state -->
+
+        <trigger>
+          <description>Alteração no estado do serviço Active Directory Domain Services</description>
+          <expression>{Template_Microsoft_Active_Directory_Domain_Controller:service_state[NTDS].last(0)}#0</expression>
+          <priority>4</priority>
+        </trigger>
+        <trigger>
+          <description>Alteração no estado do serviço Kerberos Key Distribution Center</description>
+          <expression>{Template_Microsoft_Active_Directory_Domain_Controller:service_state[KDC].last(0)}#0</expression>
+          <priority>4</priority>
+        </trigger>
+        <trigger>
+          <description>Alteração no estado do serviço Windows Time</description>
+          <expression>{Template_Microsoft_Active_Directory_Domain_Controller:service_state[W32Time].last(0)}#0</expression>
+          <priority>4</priority>
+        </trigger>
+        
+      </triggers>
+      <items>
+      
+        <!-- NTDS -->
+        
+        <item type="0" key="perf_counter[\DirectoryServices(NTDS)\DRA Pending Replication Synchronisations]" value_type="0">
+          <description>Active Directory: Sincronizações de replicações pendentes</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Active Directory</application>
+          </applications>
+        </item>
+        <item type="0" key="perf_counter[\DirectoryServices(NTDS)\DS Search sub-operations/sec]" value_type="0">
+          <description>Active Directory: Sub-operações DSSearch por segundo</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Active Directory</application>
+          </applications>
+        </item>
+        <item type="0" key="perf_counter[\DirectoryServices(NTDS)\LDAP Client Sessions]" value_type="0">
+          <description>Active Directory: Sessões de cliente LDAP</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Active Directory</application>
+          </applications>
+        </item>
+        <item type="0" key="perf_counter[\DirectoryServices(NTDS)\LDAP Searches/sec]" value_type="0">
+          <description>Active Directory: Pesquisas LDAP por segundo</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Active Directory</application>
+          </applications>
+        </item>
+      
+        <!-- Service state -->
+      
+        <item type="0" key="service_state[NTDS]" value_type="3">
+          <description>Active Directory Domain Services: Estado do serviço</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Active Directory</application>
+          </applications>
+        </item>
+        <item type="0" key="service_state[KDC]" value_type="3">
+          <description>Kerberos Key Distribution Center: Estado do serviço</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Active Directory</application>
+          </applications>
+        </item>
+        <item type="0" key="service_state[W32Time]" value_type="3">
+          <description>Windows Time: Estado do serviço</description>
+          <delay>30</delay>
+          <history>90</history>
+          <trends>365</trends>
+          <applications>
+            <application>Active Directory</application>
+          </applications>
+        </item>
+      </items>
+      <templates/>
+      <graphs>
+      
+        <!-- NTDS -->
+      
+        <graph name="Visão geral das sessões de cliente LDAP" width="900" height="200">
+          <ymin_type>0</ymin_type>
+          <ymax_type>0</ymax_type>
+          <show_work_period>0</show_work_period>
+          <show_triggers>1</show_triggers>
+          <graphtype>0</graphtype>
+          <yaxismin>0.0000</yaxismin>
+          <yaxismax>1000.0000</yaxismax>
+          <graph_elements>
+            <graph_element item="Template_Microsoft_Active_Directory_Domain_Controller:perf_counter[\DirectoryServices(NTDS)\LDAP Client Sessions]">
+              <drawtype>0</drawtype>
+              <color>BB0000</color>
+              <yaxisside>0</yaxisside>
+              <calc_fnc>2</calc_fnc>
+              <periods_cnt>5</periods_cnt>
+            </graph_element>
+          </graph_elements>
+        </graph>
+      </graphs>
+      <macros/>
+    </host>
+  </hosts>
+  <dependencies/>
+</zabbix_export>
