@@ -3,7 +3,7 @@
 ## Overview
 
 ##### The idea of this template is to make life easier by being able to use a single template for the printers in the environment, saving valuable time instead of having a template for each host.
-This template was created on top of Zabbix Server version 3.4, following RFC1759 and RFC3805 (Printer-MIB).
+This template was created on top of Zabbix Server version 5.0, following RFC1759 and RFC3805 (Printer-MIB).
 
 ##### Links to the RFCs.
 
