@@ -88,4 +88,9 @@ There are no template links in this template.
 
 ![Alt Text](https://grafana.com/api/dashboards/13304/images/9229/image)
 
+### 03- General information.
+
+![Alt Text](https://grafana.com/api/dashboards/13304/images/9231/image)
+
+
 
