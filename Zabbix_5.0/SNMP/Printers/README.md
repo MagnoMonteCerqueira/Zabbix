@@ -78,8 +78,8 @@ There are no template links in this template.
 |ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 1m</p>|
 |ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 1m</p>|
 |ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 1m</p>|
-|Total Printed Pages|<p>-</p>|'SNMP agent`|prtMarkerLifeCount.1.1<p>Update: 10m</p>|
-|Uptime|<p>-</p>|'SNMP agent`|prtMarkerLifeCount.1.1<p>Update: 10m</p>|
+|Total Printed Pages|<p>-</p>|`Simple check`|prtMarkerLifeCount.1.1<p>Update: 10m</p>|
+|Uptime|<p>-</p>|`Simple check`|prtMarkerLifeCount.1.1<p>Update: 10m</p>|
 |01- Equipment description|<p>-</p>|`SNMP agent`|hrDeviceDescr[{#SNMPVALUE}]<p>Update: 1d</p>|
 |02- Description of Device Type Equipment|<p>-</p>|`SNMP agent`|hrDeviceType[{#SNMPVALUE}]<p>Update: 1d</p>|
 |03- Description of Device Type Equipment Identification|<p>-</p>|`SNMP agent`|hrDeviceIndex[{#SNMPVALUE}]<p>Update: 1d</p>|
