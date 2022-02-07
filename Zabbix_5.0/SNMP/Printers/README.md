@@ -80,10 +80,12 @@ There are no template links in this template.
 ## Dashboards
 [Download Grafana Dashboards](https://grafana.com/grafana/dashboards/13304)
 
-### cartridge information.
-
-
+### 01- cartridge information.
 
 ![Alt Text](https://grafana.com/api/dashboards/13304/images/9228/image)
+
+### 02- printed page information.
+
+![Alt Text](https://grafana.com/api/dashboards/13304/images/9229/image)
 
 
