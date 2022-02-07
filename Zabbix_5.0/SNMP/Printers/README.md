@@ -92,8 +92,10 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Ping loss is too high {HOST.NAME}|<p>-</p>|<p>**Expression**: {template_impressora_lld_universal.xml:icmppingloss.min(2m)}>10</p><p>**Recovery expression**: </p>|high|
-
+|Ping loss is too high {HOST.NAME}|<p>-</p>|<p>**Expression**: {template_impressora_lld_universal.xml:icmppingloss.min(2m)}>10</p><p>**Recovery expression**: </p>|Warning|
+|Printer {HOST.NAME} Has Restarted|<p>-</p>|<p>**Expression**: {template_impressora_lld_universal.xml:sysUpTimeInstance.last()}<600</p><p>**Recovery expression**: </p>|Information|
+|Response time is too high on Printer {HOST.NAME}|<p>-</p>|<p>**Expression**: {template_impressora_lld_universal.xml:icmppingsec.avg(5m)}>0.15</p><p>**Recovery expression**: </p>|Warning|
+|{HOST.NAME} does not respond to Ping|<p>-</p>|<p>**Expression**: {template_impressora_lld_universal.xml:icmpping.max(#3)}=0</p><p>**Recovery expression**: </p>|high|
 
 
 ## Dashboards
