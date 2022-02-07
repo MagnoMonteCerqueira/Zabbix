@@ -78,9 +78,10 @@ There are no template links in this template.
 |Abastecimento de Papel A4 Necessario em {ITEM.VALUE} Na {HOSTNAME}|<p>-</p>|<p>**Expression**: {Snmp_Impressora_LLD_VERSAO-0.1:niveldepapelTray1[{#SNMPVALUE}].last()}=1</p><p>**Recovery expression**: </p>|high|
 
 ## Dashboards
+[Download Grafana Dashboards](https://grafana.com/grafana/dashboards/13304)
 
 ### cartridge information.
-[Download Grafana Dashboards](https://grafana.com/grafana/dashboards/13304)
+
 
 
 ![Alt Text](https://grafana.com/api/dashboards/13304/images/9228/image)
