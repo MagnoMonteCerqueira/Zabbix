@@ -92,7 +92,9 @@ There are no template links in this template.
 
 |Name|Description|Expression|Priority|
 |----|-----------|----------|--------|
-|Abastecimento de Papel A4 Necessario em {ITEM.VALUE} Na {HOSTNAME}|<p>-</p>|<p>**Expression**: {Snmp_Impressora_LLD_VERSAO-0.1:niveldepapelTray1[{#SNMPVALUE}].last()}=1</p><p>**Recovery expression**: </p>|high|
+|Ping loss is too high {HOST.NAME}|<p>-</p>|<p>**Expression**: {template_impressora_lld_universal.xml:icmppingloss.min(2m)}>10</p><p>**Recovery expression**: </p>|high|
+
+
 
 ## Dashboards
 [Download Grafana Dashboards](https://grafana.com/grafana/dashboards/13304)
