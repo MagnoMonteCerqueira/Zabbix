@@ -29,8 +29,8 @@ This template was created on top of Zabbix Server version 5.0, following RFC1759
 ##### Models: MX-2010U.
 ---
 ##### Lexmark Manufacturer: 
-##### Models: Lexmark_X656de.
----
+## Models: Lexmark_X656de.
+
 
 Att:
 
