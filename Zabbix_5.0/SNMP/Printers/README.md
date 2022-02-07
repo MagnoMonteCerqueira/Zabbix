@@ -69,7 +69,7 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Ping por Segundo|<p>-</p>|`Simple check`|icmppingsec<p>Update: 60</p>|
+|Count of Printed Pages Per Month|<p>-</p>|`Calculated`|contador_impressoes_mes<p>Update:md1h00m04</p>|
 
 ## Triggers
 
