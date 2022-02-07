@@ -79,7 +79,7 @@ There are no template links in this template.
 
 ## Dashboards
 
-### printer summary. 
+### cartridge information.
 [Download Grafana Dashboards](https://grafana.com/grafana/dashboards/13304)
 
 
