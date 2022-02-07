@@ -69,13 +69,17 @@ There are no template links in this template.
 
 |Name|Description|Type|Key and additional info|
 |----|-----------|----|----|
-|Count of Printed Pages Per Month|<p>-</p>|`Calculated`|contador_impressoes_mes<p>Update:md1h00m04</p>|
-|Count of Printed Pages Per Week|<p>-</p>|`Calculated`|contador_impressoes_semana<p>Update:wd1h00m03</p>|
-|Formations of Printed Pages per day|<p>-</p>|`Calculated`|contador_impressoes_dia<p>Update:h00m02</p>|
-|Pages Printed Per Day|<p>-</p>|`Calculated`|impressoes_dia<p>Update:10m</p>|
-|Pages Printed Per Month|<p>-</p>|`Calculated`|impressoes_mes<p>Update:10m</p>|
-|Pages Printed Per Week|<p>-</p>|`Calculated`|impressoes_semana<p>Update:10m</p>|
-|ICMP loss|<p>-</p>|`Calculated`|icmppingloss<p>Update:1m</p>|
+|Count of Printed Pages Per Month|<p>-</p>|`Calculated`|contador_impressoes_mes<p>Update: md1h00m04</p>|
+|Count of Printed Pages Per Week|<p>-</p>|`Calculated`|contador_impressoes_semana<p>Update: wd1h00m03</p>|
+|Formations of Printed Pages per day|<p>-</p>|`Calculated`|contador_impressoes_dia<p>Update: h00m02</p>|
+|Pages Printed Per Day|<p>-</p>|`Calculated`|impressoes_dia<p>Update: 10m</p>|
+|Pages Printed Per Month|<p>-</p>|`Calculated`|impressoes_mes<p>Update: 10m</p>|
+|Pages Printed Per Week|<p>-</p>|`Calculated`|impressoes_semana<p>Update: 10m</p>|
+|ICMP loss|<p>-</p>|`Simple check`|icmppingloss<p>Update: 1m</p>|
+|ICMP ping|<p>-</p>|`Simple check`|icmpping<p>Update: 1m</p>|
+|ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 1m</p>|
+|Total Printed Pages|<p>-</p>|'prtMarkerLifeCount.1.1`|SNMP agent<p>Update: 10m</p>|
+|Uptime|<p>-</p>|'sysUpTimeInstance`|SNMP agent<p>Update: 10m</p>|
 
 |Formations of Printed Pages per day|<p>-</p>|`Calculated`|contador_impressoes_dia<p>Update:h00m02</p>|
 |Formations of Printed Pages per day|<p>-</p>|`Calculated`|contador_impressoes_dia<p>Update:h00m02</p>|
