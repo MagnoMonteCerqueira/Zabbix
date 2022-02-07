@@ -12,19 +12,24 @@ This template was created on top of Zabbix Server version 5.0, following RFC1759
 [RFC3805 Printer MIB v2](https://tools.ietf.org/html/rfc3805)
 
 ##### The template supports the following printers:
-Samsung Manufacturer:
-Models: Samsung K-7400LX, Samsung CLX-8640, Samsung X-4220RX, Samsung M-5370LX, Samsung CLX-6260, Samsung M4510.
-HP Manufacturer:
-Models: HP LaserJet 1212nf, HP LaserJet P2055dn, HP LaserJet HP3525dn.
-Canon Manufacturer:
-Models: Canon IR C1335.
-Kyocera Manufacturer:
-Models: Ecosys M2035DN.
-Sharp Manufacturer:
-Models: MX-2010U.
-Lexmark Manufacturer:
-Models: Lexmark_X656de.
-What comes with the template!
+##### Samsung Manufacturer: 
+##### Models: Samsung K-7400LX, Samsung CLX-8640, Samsung X-4220RX, Samsung M-5370LX, Samsung CLX-6260, Samsung M4510.
+
+
+##### HP Manufacturer: 
+##### Models: HP LaserJet 1212nf, HP LaserJet P2055dn, HP LaserJet HP3525dn.
+
+##### Canon Manufacturer: 
+##### Models: Canon IR C1335.
+
+##### Kyocera Manufacturer: 
+##### Models: Ecosys M2035DN.
+
+##### Sharp Manufacturer: 
+##### Models: MX-2010U.
+
+##### Lexmark Manufacturer: 
+##### Models: Lexmark_X656de.
 
 
 Att:
