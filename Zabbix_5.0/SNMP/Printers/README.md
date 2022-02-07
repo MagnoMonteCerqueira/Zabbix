@@ -80,11 +80,11 @@ There are no template links in this template.
 |ICMP response time|<p>-</p>|`Simple check`|icmppingsec<p>Update: 1m</p>|
 |Total Printed Pages|<p>-</p>|'prtMarkerLifeCount.1.1`|SNMP agent<p>Update: 10m</p>|
 |Uptime|<p>-</p>|'sysUpTimeInstance`|SNMP agent<p>Update: 10m</p>|
-
-|Formations of Printed Pages per day|<p>-</p>|`Calculated`|contador_impressoes_dia<p>Update:h00m02</p>|
-|Formations of Printed Pages per day|<p>-</p>|`Calculated`|contador_impressoes_dia<p>Update:h00m02</p>|
-|Formations of Printed Pages per day|<p>-</p>|`Calculated`|contador_impressoes_dia<p>Update:h00m02</p>|
-|Formations of Printed Pages per day|<p>-</p>|`Calculated`|contador_impressoes_dia<p>Update:h00m02</p>|
+|01- Equipment description|<p>-</p>|`SNMP agent`|hrDeviceDescr[{#SNMPVALUE}]<p>Update: 1d</p>|
+|02- Description of Device Type Equipment|<p>-</p>|`SNMP agent`|hrDeviceType[{#SNMPVALUE}]<p>Update: 1d</p>|
+|03- Description of Device Type Equipment Identification|<p>-</p>|`SNMP agent`|hrDeviceIndex[{#SNMPVALUE}]<p>Update: 1d</p>|
+|04- Attached Devices|<p>-</p>|`SNMP agent`|hrDeviceIndex[{#SNMPVALUE}]<p>Update: 10m</p>|
+|05- Devices On Equipment Error Status|<p>-</p>|`SNMP agent`|hrDeviceErrors[{#SNMPVALUE}]<p>Update: 10m</p>|
 
 
 
@@ -96,12 +96,6 @@ There are no template links in this template.
 |Printer {HOST.NAME} Has Restarted|<p>-</p>|<p>**Expression**: {template_impressora_lld_universal.xml:sysUpTimeInstance.last()}<600</p><p>**Recovery expression**: </p>|Information|
 |Response time is too high on Printer {HOST.NAME}|<p>-</p>|<p>**Expression**: {template_impressora_lld_universal.xml:icmppingsec.avg(5m)}>0.15</p><p>**Recovery expression**: </p>|Warning|
 |{HOST.NAME} does not respond to Ping|<p>-</p>|<p>**Expression**: {template_impressora_lld_universal.xml:icmpping.max(#3)}=0</p><p>**Recovery expression**: </p>|high|
-
-## graphics collection
-
-|Name|Description|Width|Height|Graph Type|
-|----|-----------|----------|--------|--------|
-|01- Availability|<p>-</p>|<p>900</p>|<p>200</p>|Normal|
 
 
 ## Dashboards
