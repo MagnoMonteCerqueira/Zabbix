@@ -97,6 +97,12 @@ There are no template links in this template.
 |Response time is too high on Printer {HOST.NAME}|<p>-</p>|<p>**Expression**: {template_impressora_lld_universal.xml:icmppingsec.avg(5m)}>0.15</p><p>**Recovery expression**: </p>|Warning|
 |{HOST.NAME} does not respond to Ping|<p>-</p>|<p>**Expression**: {template_impressora_lld_universal.xml:icmpping.max(#3)}=0</p><p>**Recovery expression**: </p>|high|
 
+## graphics collection
+
+|Name|Description|Width|Height|Graph Type|
+|----|-----------|----------|--------|--------|
+|01- Availability|<p>-</p>|<p>900</p>|<p>200</p>|Normal|
+
 
 ## Dashboards
 [Download Grafana Dashboards](https://grafana.com/grafana/dashboards/13304)
