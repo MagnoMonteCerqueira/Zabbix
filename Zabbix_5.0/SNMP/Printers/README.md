@@ -64,3 +64,23 @@ There are no template links in this template.
 |07- LLD Discovery Toners|<p>-</p>|`SNMP agent`|prtMarkerSuppliesDescriptionToners<p>Update: 1d</p>|
 |08- LLD Discovery Transfer Unit|<p>-</p>|`SNMP agent`|prtMarkerSuppliesDescriptionTransfer<p>Update: 1d</p>|
 |09- LLD Discovery Unit Toner	|<p>-</p>|`SNMP agent`|prtMarkerSuppliesDescription<p>Update: 1d</p>|
+
+## Items collected
+
+|Name|Description|Type|Key and additional info|
+|----|-----------|----|----|
+|Ping por Segundo|<p>-</p>|`Simple check`|icmppingsec<p>Update: 60</p>|
+
+## Triggers
+
+|Name|Description|Expression|Priority|
+|----|-----------|----------|--------|
+|Abastecimento de Papel A4 Necessario em {ITEM.VALUE} Na {HOSTNAME}|<p>-</p>|<p>**Expression**: {Snmp_Impressora_LLD_VERSAO-0.1:niveldepapelTray1[{#SNMPVALUE}].last()}=1</p><p>**Recovery expression**: </p>|high|
+
+## Dashboards
+[Download Grafana Dashboards](https://grafana.com/grafana/dashboards/13304)
+
+
+![Alt Text](https://grafana.com/api/dashboards/13304/images/9228/image)
+
+
