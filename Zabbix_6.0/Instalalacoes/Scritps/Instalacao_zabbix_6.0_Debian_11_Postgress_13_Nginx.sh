@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Faz p update dos pacotes no repositorio e instala as dependencias
-sudo apt-get update
-sudo apt-get -y install sudo
-sudo apt-get -y install gnupg2
+apt-get update
+apt-get -y install sudo
+apt-get -y install gnupg2
 
 # Install Zabbix repository
 cd /tmp && wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_6.0-1+debian11_all.deb
@@ -15,7 +15,7 @@ sudo apt-get -y install zabbix-server-pgsql zabbix-frontend-php php7.4-pgsql zab
 
 # Criar banco de dados e o usuario do banco
 sudo sed -i "s/ident/md5/g" /etc/postgresql/13/main/pg_hba.conf
-sudo -u postgres psql -c "create user zabbix with encrypted passwd 'zabbix'" 2>/dev/null
+sudo -u postgres psql -c "create user zabbix with encrypted password 'zabbix'" 2>/dev/null
 sudo -u postgres createdb -O zabbix -E Unicode -T template0 zabbix 2>/dev/null
 
 # faz o upload das tabelas
