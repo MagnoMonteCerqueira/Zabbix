@@ -2,8 +2,7 @@
 
 # Faz p update dos pacotes no repositorio e instala as dependencias
 apt-get update
-apt-get -y install sudo
-apt-get -y install gnupg2
+apt-get -y install sudo gnupg2
 
 # Install Zabbix repository
 cd /tmp && wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_6.0-1+debian11_all.deb
