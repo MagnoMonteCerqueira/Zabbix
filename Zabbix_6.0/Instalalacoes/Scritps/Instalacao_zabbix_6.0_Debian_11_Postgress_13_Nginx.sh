@@ -27,7 +27,7 @@ zcat /usr/share/doc/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix
  sed -i "s/# DBPassword=/DBPassword=zabbix/" /etc/zabbix/zabbix_server.conf
  
  # Configuração do postgres
- sed -i "s/#listen_address = 'localhost'/listen_address = '*'/" /etc/postgresql/13/main/postgresql.conf
+ sed -i "s/#listen_addresses = 'localhost'/listen_addresses = '*'/" /etc/postgresql/13/main/postgresql.conf
 
 
 # reinicia os serviços envolvidos e coloca para iniciar durante o reboot do sistema operacional
