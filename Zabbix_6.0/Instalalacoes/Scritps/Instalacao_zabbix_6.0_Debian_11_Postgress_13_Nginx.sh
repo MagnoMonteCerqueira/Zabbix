@@ -29,6 +29,12 @@ zcat /usr/share/doc/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix
  # Configuração do postgres
  sed -i "s/#listen_addresses = 'localhost'/listen_addresses = '*'/" /etc/postgresql/13/main/postgresql.conf
 
+ # Configuração do nginx do zabbix
+ sed -i "s/#        listen          80;/        listen          80;/" /etc/zabbix/nginx.conf
+ sed -i "s/#        server_name     example.com;/        server_name     example.com;/" /etc/zabbix/nginx.conf
+
+
+
 
 # reinicia os serviços envolvidos e coloca para iniciar durante o reboot do sistema operacional
 systemctl restart zabbix-server zabbix-agent nginx php7.4-fpm postgresql@13-main
