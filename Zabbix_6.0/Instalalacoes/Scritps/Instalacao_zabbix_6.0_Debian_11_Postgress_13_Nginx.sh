@@ -10,7 +10,7 @@ dpkg -i zabbix-release_6.0-1+debian11_all.deb
 apt update
 
 # Install Zabbix server, frontend, agent e banco de dados
-apt-get -y install zabbix-server-pgsql zabbix-frontend-php php7.4-pgsql zabbix-nginx-conf zabbix-sql-scripts zabbix-agent postgresql-13
+apt-get -y install zabbix-server-pgsql zabbix-frontend-php php7.4-pgsql zabbix-nginx-conf zabbix-sql-scripts zabbix-agent postgresql-13 sudo 
 
 
 # Criar banco de dados e o usuario do banco
