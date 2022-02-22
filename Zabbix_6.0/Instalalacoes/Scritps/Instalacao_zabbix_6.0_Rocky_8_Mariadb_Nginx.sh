@@ -34,6 +34,7 @@ mysql -e "grant all privileges on zabbix.* to zabbix@localhost"
 # Configuração do zabbix server
 sudo sed -i "s/# DBHost=localhost/DBHost=localhost/" /etc/zabbix/zabbix_server.conf
 sudo sed -i "s/# DBPassword=/DBPassword=zabbix/" /etc/zabbix/zabbix_server.conf
+sudo sed -i "s/# AllowUnsupportedDBVersions=0/AllowUnsupportedDBVersions=1/" /etc/zabbix/zabbix_server.conf
 
 # reinicia os servicos e habilita para iniciar no boot
 systemctl restart zabbix-server zabbix-agent httpd php-fpm mariadb.service
