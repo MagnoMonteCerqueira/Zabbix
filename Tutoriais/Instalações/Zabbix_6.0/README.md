@@ -4,6 +4,7 @@
 
 [![Zabbix Expert Bootcamp - Debian 11 Required Installations - Zabbix server 6.0 - 01 camada](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Tutoriais/Instala%C3%A7%C3%B5es/Zabbix_6.0/Imgs/capa.JPG)](https://www.youtube.com/watch?v=hDlEMOlffP8)
 
-## Instalações do Zabbix Server 6.0 - - Debian 11 - Mariadb-server - Nginx - 01 camada.
+
+## Instalações do Zabbix Server 6.0 - Debian 11 - Mariadb-server - Nginx - 01 camada.
 
 [![Zabbix Expert Bootcamp - Debian 11 Required Installations - Zabbix server 6.0 - 01 camada](https://github.com/MagnoMonteCerqueira/Zabbix/blob/master/Tutoriais/Instala%C3%A7%C3%B5es/Zabbix_6.0/Imgs/capa.JPG)](https://www.youtube.com/watch?v=9GS_WD6D4U4)
