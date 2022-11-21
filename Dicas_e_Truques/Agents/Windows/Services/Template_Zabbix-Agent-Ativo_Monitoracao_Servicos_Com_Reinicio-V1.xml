@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>6.2</version>
+    <date>2022-11-21T00:23:57Z</date>
+    <template_groups>
+        <template_group>
+            <uuid>32d8023a344f4c13a57259d66b2f8a88</uuid>
+            <name>Templates/Services</name>
+        </template_group>
+    </template_groups>
+    <templates>
+        <template>
+            <uuid>615cdf71d6f94a9caa70cd96a11eda9c</uuid>
+            <template>Template_Zabbix-Agent-Ativo_Monitoracao_Servicos_Com_Reinicio-V1</template>
+            <name>Template_Zabbix-Agent-Ativo_Monitoracao_Servicos_Com_Reinicio-V1</name>
+            <description>Esse template monitora os servicos windows e tambem reinicia</description>
+            <groups>
+                <group>
+                    <name>Templates/Services</name>
+                </group>
+            </groups>
+            <items>
+                <item>
+                    <uuid>52acc73afa334c63868eb77b256cb2dd</uuid>
+                    <name>01- Discovery raw services windows</name>
+                    <type>ZABBIX_ACTIVE</type>
+                    <key>service.discovery</key>
+                    <history>1d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>Este item faz a coleta de todos os servicos do windows</description>
+                    <preprocessing>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>{#SERVICE.NAME}</parameter>
+                                <parameter>SERVICENAME</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>{#SERVICE.DISPLAYNAME}</parameter>
+                                <parameter>SERVICEDISPLAYNAME</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>STR_REPLACE</type>
+                            <parameters>
+                                <parameter>{#SERVICE.DESCRIPTION}</parameter>
+                                <parameter>SERVICEDESCRIPTION</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <tags>
+                        <tag>
+                            <tag>Component</tag>
+                            <value>Discovery</value>
+                        </tag>
+                    </tags>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <uuid>447fbed2612446d5a990900c99acf617</uuid>
+                    <name>01- Discovery raw services windows</name>
+                    <type>DEPENDENT</type>
+                    <key>discovery.services.windows</key>
+                    <delay>0</delay>
+                    <filter>
+                        <conditions>
+                            <condition>
+                                <macro>{#SERVICE.DISPLAYNAME.MATCH}</macro>
+                                <value>^Zabbix Agent 2$</value>
+                                <formulaid>A</formulaid>
+                            </condition>
+                        </conditions>
+                    </filter>
+                    <description>Esta regra de descoberta faz a coleta do item master e cria o item desejado passando pelo filtro e criando o dado.</description>
+                    <item_prototypes>
+                        <item_prototype>
+                            <uuid>ab69dbc4b6844c6f9c42bf26e46a9574</uuid>
+                            <name>Status do servico {#SERVICE.DISPLAYNAME.MATCH}</name>
+                            <type>ZABBIX_ACTIVE</type>
+                            <key>service.info[&quot;{#SERVICE.NAME.MATCH}&quot;,state]</key>
+                            <description>{#SERVICE.DESCRIPTION.MATCH}</description>
+                            <valuemap>
+                                <name>Mapeamento Windows Services</name>
+                            </valuemap>
+                            <tags>
+                                <tag>
+                                    <tag>Service</tag>
+                                    <value>{#SERVICE.NAME.MATCH}</value>
+                                </tag>
+                            </tags>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <uuid>8ebadd653eee4f268e0d3a43a067229a</uuid>
+                                    <expression>last(/Template_Zabbix-Agent-Ativo_Monitoracao_Servicos_Com_Reinicio-V1/service.info[&quot;{#SERVICE.NAME.MATCH}&quot;,state])&lt;&gt;0</expression>
+                                    <name>{#SERVICE.DISPLAYNAME.MATCH}” ({#SERVICE.NAME.MATCH}) is not running!</name>
+                                    <priority>HIGH</priority>
+                                    <description>Esta trigger e executada quando o valor e maior ou menor que 0</description>
+                                    <manual_close>YES</manual_close>
+                                    <tags>
+                                        <tag>
+                                            <tag>Service</tag>
+                                            <value>{#SERVICE.NAME.MATCH}</value>
+                                        </tag>
+                                    </tags>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                    </item_prototypes>
+                    <master_item>
+                        <key>service.discovery</key>
+                    </master_item>
+                    <preprocessing>
+                        <step>
+                            <type>JAVASCRIPT</type>
+                            <parameters>
+                                <parameter>output = JSON.parse(value).map(function(net){
+return {
+&quot;{#SERVICE.NAME.MATCH}&quot;: net.SERVICENAME,
+&quot;{#SERVICE.DISPLAYNAME.MATCH}&quot;: net.SERVICEDISPLAYNAME,
+&quot;{#SERVICE.DESCRIPTION.MATCH}&quot;: net.SERVICEDESCRIPTION
+
+}})
+return JSON.stringify({&quot;data&quot;: output})</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                </discovery_rule>
+            </discovery_rules>
+            <valuemaps>
+                <valuemap>
+                    <uuid>5e5aface9d7d4377abad85858f1382e0</uuid>
+                    <name>Mapeamento Windows Services</name>
+                    <mappings>
+                        <mapping>
+                            <value>0</value>
+                            <newvalue>Running</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>6</value>
+                            <newvalue>Stopped</newvalue>
+                        </mapping>
+                    </mappings>
+                </valuemap>
+            </valuemaps>
+        </template>
+    </templates>
+</zabbix_export>
